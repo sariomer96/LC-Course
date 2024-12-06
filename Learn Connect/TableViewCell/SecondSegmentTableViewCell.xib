@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SecondSegmentTableViewCell" customModule="Learn_Connect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lRj-ih-zbw">
+                        <rect key="frame" x="8" y="9.6666666666666679" width="60" height="56"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="0uv-S2-WoB"/>
+                            <constraint firstAttribute="width" constant="60" id="KLh-RN-I84"/>
+                        </constraints>
+                        <imageReference key="image" image="star" catalog="system" symbolScale="small"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yorumla ve degerlendir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBW-OC-ROR">
+                        <rect key="frame" x="82" y="27.666666666666671" width="176" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="lRj-ih-zbw" secondAttribute="bottom" constant="8" id="DyX-Ee-JTH"/>
+                    <constraint firstItem="yBW-OC-ROR" firstAttribute="centerY" secondItem="lRj-ih-zbw" secondAttribute="centerY" id="Hxo-8P-zJq"/>
+                    <constraint firstItem="lRj-ih-zbw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="U43-Am-Do5"/>
+                    <constraint firstItem="yBW-OC-ROR" firstAttribute="leading" secondItem="lRj-ih-zbw" secondAttribute="trailing" constant="14" id="nM5-ji-AM6"/>
+                    <constraint firstItem="lRj-ih-zbw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="va3-CR-Cds"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="icon" destination="lRj-ih-zbw" id="94T-lP-Tcz"/>
+                <outlet property="textLbl" destination="yBW-OC-ROR" id="mIS-od-uM2"/>
+            </connections>
+            <point key="canvasLocation" x="65.648854961832058" y="20.422535211267608"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
