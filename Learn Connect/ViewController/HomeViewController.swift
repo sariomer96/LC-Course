@@ -13,16 +13,19 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
+    var user:User?
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.hidesBackButton = true
     }
     override func viewDidLoad() {
+        print("Current HomeViewController instance: \(self)")
+
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
         let nibName = UINib(nibName: "CourseCollectionViewCell", bundle: nil)
-        
+         print(user)
         self.collectionView.register(nibName, forCellWithReuseIdentifier: "CourseCollectionViewCell")
     }
      

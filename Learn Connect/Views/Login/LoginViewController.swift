@@ -8,7 +8,7 @@ class LoginViewController: UIViewController {
     let loginViewModel = LoginViewModel()
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    
+ 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,28 +31,49 @@ class LoginViewController: UIViewController {
         
      
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTabBarSegue" {
+          
+         }
+    }
     @IBAction func loginClicked(_ sender: Any) {
-        guard var hashedPass = Helper.shared.hashPassword(password: passwordTF.text!) else { return  }
+        guard let hashedPass = Helper.shared.hashPassword(password: passwordTF.text!) else { return }
         
-        loginViewModel.login(email: emailTF.text!, password: hashedPass) { [self] isSuccess in
+        loginViewModel.login(email: emailTF.text!, password: hashedPass) { [weak self] isSuccess in
+            guard let self = self else { return }
             
             if isSuccess {
-                    performSegue(withIdentifier: "toTabBar", sender: nil)
-                 
-                if rememberSwitch.isOn {
-                    loginViewModel.saveUserCredentials(email: emailTF.text!, password: passwordTF.text!)
+                if let user = DatabaseManager.shared.fetchUserByEmail(email: self.emailTF.text!) {
+                    
+                  
+                            
+                    if let tabBarController = storyboard?.instantiateViewController(withIdentifier: "toTabBar") as? UITabBarController {
+                              
+               
+                              if let homeVC = tabBarController.viewControllers?.first as? HomeViewController {
+                                  homeVC.user    = user
+                              }
+                              
+            
+                              tabBarController.modalPresentationStyle = .fullScreen
+                              present(tabBarController, animated: true, completion: nil)
+                          }
+                        
+                    
+                    if self.rememberSwitch.isOn {
+                        self.loginViewModel.saveUserCredentials(email: self.emailTF.text!, password: self.passwordTF.text!)
+                    } else {
+                        self.loginViewModel.removeUserCredentials()
+                    }
                 } else {
-                    loginViewModel.removeUserCredentials()
+                    print("No user found with this email.")
                 }
-
             } else {
-                showAlert(message: "Geçersiz email veya parola",isSuccess: false)
+                self.showAlert(message: "Geçersiz email veya parola", isSuccess: false)
             }
         }
-     
-        }
-    
+    }
+
     func showAlert(message: String, isSuccess: Bool = false) {
         let alert = UIAlertController(title: isSuccess ? " Başarılı" : "Hata",
                                       message: message,

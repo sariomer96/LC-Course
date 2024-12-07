@@ -116,12 +116,13 @@
                         <outlet property="emailTF" destination="N86-L1-1FY" id="gec-le-Is0"/>
                         <outlet property="passwordTF" destination="5va-hP-05o" id="7Hq-an-Ur6"/>
                         <outlet property="rememberSwitch" destination="h6v-kD-rOv" id="RkV-Vr-JSN"/>
-                        <segue destination="fYU-CK-g1t" kind="show" identifier="toTabBar" id="ka5-r6-goV"/>
+                        <segue destination="fYU-CK-g1t" kind="show" identifier="toTabBarSegue" id="ka5-r6-goV"/>
+                        <segue destination="TLi-i8-0c4" kind="show" identifier="toTabBarSegue" id="1U4-u1-Kf5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631.8840579710145" y="31.473214285714285"/>
+            <point key="canvasLocation" x="222" y="34"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="CnO-JF-LXZ">
@@ -322,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMC-XO-hyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876.8115942028987" y="730.58035714285711"/>
+            <point key="canvasLocation" x="1700" y="1092"/>
         </scene>
         <!--Kurslarım-->
         <scene sceneID="gpr-ud-nwW">
@@ -767,7 +768,7 @@
         <!--Ana Sayfa-->
         <scene sceneID="8bt-GV-j62">
             <objects>
-                <viewController id="TLi-i8-0c4" customClass="HomeViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="toVC" id="TLi-i8-0c4" customClass="HomeViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mij-c5-gn3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -872,6 +873,7 @@
                     <tabBarItem key="tabBarItem" title="Ana Sayfa" id="su3-WJ-E7m">
                         <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="ViS-vq-gNX"/>
                     <connections>
                         <outlet property="collectionView" destination="ghf-xN-Ivk" id="eIB-pU-ZMs"/>
                         <segue destination="fV2-BQ-520" kind="show" identifier="toCourseDetailVC" id="kaY-eR-ubq"/>
@@ -892,12 +894,12 @@
                     </userDefinedRuntimeAttributes>
                 </button>
             </objects>
-            <point key="canvasLocation" x="2660.8695652173915" y="-309.375"/>
+            <point key="canvasLocation" x="2717" y="-275"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="twI-zJ-F7C">
             <objects>
-                <tabBarController id="fYU-CK-g1t" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="toTabBar" id="fYU-CK-g1t" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SyP-ci-nKp"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DQT-im-GvD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -915,7 +917,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP0-CQ-nzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755.072463768116" y="-4.0178571428571423"/>
+            <point key="canvasLocation" x="1581" y="363"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5lC-NX-wz5">
@@ -937,6 +939,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9tt-As-G7N"/>
+        <segue reference="91s-q7-TLR"/>
         <segue reference="W49-Su-SxG"/>
     </inferredMetricsTieBreakers>
     <resources>

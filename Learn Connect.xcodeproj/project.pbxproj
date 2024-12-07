@@ -41,6 +41,16 @@
 		179523F22D043DB600A1A973 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F02D043DB600A1A973 /* LoginViewModel.swift */; };
 		179523F52D04586500A1A973 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F42D04586500A1A973 /* MyProfileViewController.swift */; };
 		179523F62D04586500A1A973 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F42D04586500A1A973 /* MyProfileViewController.swift */; };
+		179523F92D04609000A1A973 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F82D04609000A1A973 /* Users.swift */; };
+		179523FA2D04609000A1A973 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F82D04609000A1A973 /* Users.swift */; };
+		179523FC2D0460C500A1A973 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523FB2D0460C500A1A973 /* Course.swift */; };
+		179523FD2D0460C500A1A973 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523FB2D0460C500A1A973 /* Course.swift */; };
+		179523FF2D0460EE00A1A973 /* UserCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523FE2D0460EE00A1A973 /* UserCourse.swift */; };
+		179524002D0460EE00A1A973 /* UserCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523FE2D0460EE00A1A973 /* UserCourse.swift */; };
+		179524022D04610600A1A973 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179524012D04610600A1A973 /* Video.swift */; };
+		179524032D04610600A1A973 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179524012D04610600A1A973 /* Video.swift */; };
+		179524052D04611D00A1A973 /* UserVideoProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179524042D04611D00A1A973 /* UserVideoProgress.swift */; };
+		179524062D04611D00A1A973 /* UserVideoProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179524042D04611D00A1A973 /* UserVideoProgress.swift */; };
 		179F12F12D023DB700442CCF /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12EF2D023DB700442CCF /* CommentTableViewCell.swift */; };
 		179F12F22D023DB700442CCF /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179F12F02D023DB700442CCF /* CommentTableViewCell.xib */; };
 		179F12F42D023EFB00442CCF /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */; };
@@ -112,6 +122,11 @@
 		179523ED2D043A5100A1A973 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		179523F02D043DB600A1A973 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		179523F42D04586500A1A973 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		179523F82D04609000A1A973 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		179523FB2D0460C500A1A973 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		179523FE2D0460EE00A1A973 /* UserCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCourse.swift; sourceTree = "<group>"; };
+		179524012D04610600A1A973 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		179524042D04611D00A1A973 /* UserVideoProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVideoProgress.swift; sourceTree = "<group>"; };
 		179F12EF2D023DB700442CCF /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		179F12F02D023DB700442CCF /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +248,18 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		179523F72D04607A00A1A973 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				179523F82D04609000A1A973 /* Users.swift */,
+				179523FB2D0460C500A1A973 /* Course.swift */,
+				179523FE2D0460EE00A1A973 /* UserCourse.swift */,
+				179524012D04610600A1A973 /* Video.swift */,
+				179524042D04611D00A1A973 /* UserVideoProgress.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		17DCE5C02D0192B900C59273 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +301,7 @@
 		17FA8D1B2D00DB1100050A10 /* Learn Connect */ = {
 			isa = PBXGroup;
 			children = (
+				179523F72D04607A00A1A973 /* Models */,
 				179523922D03910700A1A973 /* DBManager */,
 				1795238E2D03891C00A1A973 /* Views */,
 				179523892D03774B00A1A973 /* ViewController */,
@@ -471,13 +499,16 @@
 				179523F52D04586500A1A973 /* MyProfileViewController.swift in Sources */,
 				179523822D02F9E700A1A973 /* SecondSegmentTableViewCell.swift in Sources */,
 				179F12F12D023DB700442CCF /* CommentTableViewCell.swift in Sources */,
+				179524052D04611D00A1A973 /* UserVideoProgress.swift in Sources */,
 				1724763E2D01BCD200982CA6 /* MyCourseTableViewCell.swift in Sources */,
 				17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */,
 				179F12F62D02492500442CCF /* VideoLessonViewController.swift in Sources */,
 				1795238B2D03777300A1A973 /* SqlLiteManager.swift in Sources */,
 				172476392D01985800982CA6 /* WishListViewController.swift in Sources */,
 				179F12F42D023EFB00442CCF /* CourseDetailViewController.swift in Sources */,
+				179523FF2D0460EE00A1A973 /* UserCourse.swift in Sources */,
 				179F12F92D02E7B600442CCF /* CourseVideosTableViewCell.swift in Sources */,
+				179524022D04610600A1A973 /* Video.swift in Sources */,
 				179523CF2D042E4300A1A973 /* Temp.m in Sources */,
 				179523852D031F1200A1A973 /* CommentAndRateViewController.swift in Sources */,
 				172476472D01C4A800982CA6 /* CourseCollectionViewCell.swift in Sources */,
@@ -492,11 +523,13 @@
 				17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */,
 				179523F12D043DB600A1A973 /* LoginViewModel.swift in Sources */,
 				179523DD2D04334200A1A973 /* FMResultSet.m in Sources */,
+				179523FC2D0460C500A1A973 /* Course.swift in Sources */,
 				179523912D03896000A1A973 /* RegisterViewModel.swift in Sources */,
 				17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */,
 				1724763B2D01B6F900982CA6 /* MyCourseViewController.swift in Sources */,
 				179F12FE2D02E9CD00442CCF /* SecondSegmentViewController.swift in Sources */,
 				179F12FC2D02E9AD00442CCF /* FirstSegmentViewController.swift in Sources */,
+				179523F92D04609000A1A973 /* Users.swift in Sources */,
 				179523DF2D04334200A1A973 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,16 +538,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179524002D0460EE00A1A973 /* UserCourse.swift in Sources */,
+				179523FD2D0460C500A1A973 /* Course.swift in Sources */,
 				179523F62D04586500A1A973 /* MyProfileViewController.swift in Sources */,
 				179523DE2D04334200A1A973 /* FMResultSet.m in Sources */,
 				17FA8D342D00DB1300050A10 /* Learn_ConnectTests.swift in Sources */,
+				179524032D04610600A1A973 /* Video.swift in Sources */,
 				179523D02D042E4300A1A973 /* Temp.m in Sources */,
 				179523E22D04334200A1A973 /* FMDatabase.m in Sources */,
+				179524062D04611D00A1A973 /* UserVideoProgress.swift in Sources */,
 				179523E62D04334200A1A973 /* FMDatabasePool.m in Sources */,
 				179523E02D04334200A1A973 /* FMDatabaseAdditions.m in Sources */,
 				179523E42D04334200A1A973 /* FMDatabaseQueue.m in Sources */,
 				179523EF2D043A5100A1A973 /* Helper.swift in Sources */,
 				179523F22D043DB600A1A973 /* LoginViewModel.swift in Sources */,
+				179523FA2D04609000A1A973 /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
