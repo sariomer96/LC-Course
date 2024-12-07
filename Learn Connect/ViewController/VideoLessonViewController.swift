@@ -10,8 +10,10 @@ class VideoLessonViewController: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
+//        DatabaseManager.shared
+//        
         }
-    
+//    
      
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         switchToSegment(index: sender.selectedSegmentIndex, animated: true)

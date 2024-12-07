@@ -17,6 +17,30 @@
 		179523822D02F9E700A1A973 /* SecondSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523802D02F9E700A1A973 /* SecondSegmentTableViewCell.swift */; };
 		179523832D02F9E700A1A973 /* SecondSegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179523812D02F9E700A1A973 /* SecondSegmentTableViewCell.xib */; };
 		179523852D031F1200A1A973 /* CommentAndRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523842D031F1200A1A973 /* CommentAndRateViewController.swift */; };
+		1795238B2D03777300A1A973 /* SqlLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795238A2D03777300A1A973 /* SqlLiteManager.swift */; };
+		1795238D2D03884A00A1A973 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795238C2D03884A00A1A973 /* RegisterViewController.swift */; };
+		179523912D03896000A1A973 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523902D03896000A1A973 /* RegisterViewModel.swift */; };
+		179523962D04219000A1A973 /* LearnConnectDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 179523952D04219000A1A973 /* LearnConnectDB.sqlite */; };
+		179523972D04219000A1A973 /* LearnConnectDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 179523952D04219000A1A973 /* LearnConnectDB.sqlite */; };
+		179523CF2D042E4300A1A973 /* Temp.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523CE2D042E4300A1A973 /* Temp.m */; };
+		179523D02D042E4300A1A973 /* Temp.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523CE2D042E4300A1A973 /* Temp.m */; };
+		179523DD2D04334200A1A973 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523D32D04334100A1A973 /* FMResultSet.m */; };
+		179523DE2D04334200A1A973 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523D32D04334100A1A973 /* FMResultSet.m */; };
+		179523DF2D04334200A1A973 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523D42D04334100A1A973 /* FMDatabaseAdditions.m */; };
+		179523E02D04334200A1A973 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523D42D04334100A1A973 /* FMDatabaseAdditions.m */; };
+		179523E12D04334200A1A973 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523D52D04334100A1A973 /* FMDatabase.m */; };
+		179523E22D04334200A1A973 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523D52D04334100A1A973 /* FMDatabase.m */; };
+		179523E32D04334200A1A973 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523D62D04334100A1A973 /* FMDatabaseQueue.m */; };
+		179523E42D04334200A1A973 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523D62D04334100A1A973 /* FMDatabaseQueue.m */; };
+		179523E52D04334200A1A973 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523DB2D04334100A1A973 /* FMDatabasePool.m */; };
+		179523E62D04334200A1A973 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 179523DB2D04334100A1A973 /* FMDatabasePool.m */; };
+		179523EC2D0439A800A1A973 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 179523EB2D0439A800A1A973 /* SQLite */; };
+		179523EE2D043A5100A1A973 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523ED2D043A5100A1A973 /* Helper.swift */; };
+		179523EF2D043A5100A1A973 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523ED2D043A5100A1A973 /* Helper.swift */; };
+		179523F12D043DB600A1A973 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F02D043DB600A1A973 /* LoginViewModel.swift */; };
+		179523F22D043DB600A1A973 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F02D043DB600A1A973 /* LoginViewModel.swift */; };
+		179523F52D04586500A1A973 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F42D04586500A1A973 /* MyProfileViewController.swift */; };
+		179523F62D04586500A1A973 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F42D04586500A1A973 /* MyProfileViewController.swift */; };
 		179F12F12D023DB700442CCF /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12EF2D023DB700442CCF /* CommentTableViewCell.swift */; };
 		179F12F22D023DB700442CCF /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179F12F02D023DB700442CCF /* CommentTableViewCell.xib */; };
 		179F12F42D023EFB00442CCF /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */; };
@@ -29,7 +53,7 @@
 		17DCE5C42D0192E200C59273 /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17DCE5C22D0192E200C59273 /* WishListTableViewCell.xib */; };
 		17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */; };
 		17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */; };
-		17FA8D212D00DB1100050A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D202D00DB1100050A10 /* ViewController.swift */; };
+		17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D202D00DB1100050A10 /* LoginViewController.swift */; };
 		17FA8D242D00DB1100050A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FA8D222D00DB1100050A10 /* Main.storyboard */; };
 		17FA8D262D00DB1200050A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FA8D252D00DB1200050A10 /* Assets.xcassets */; };
 		17FA8D292D00DB1200050A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FA8D272D00DB1200050A10 /* LaunchScreen.storyboard */; };
@@ -67,6 +91,27 @@
 		179523802D02F9E700A1A973 /* SecondSegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegmentTableViewCell.swift; sourceTree = "<group>"; };
 		179523812D02F9E700A1A973 /* SecondSegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSegmentTableViewCell.xib; sourceTree = "<group>"; };
 		179523842D031F1200A1A973 /* CommentAndRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAndRateViewController.swift; sourceTree = "<group>"; };
+		1795238A2D03777300A1A973 /* SqlLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteManager.swift; sourceTree = "<group>"; };
+		1795238C2D03884A00A1A973 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		179523902D03896000A1A973 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		179523952D04219000A1A973 /* LearnConnectDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = LearnConnectDB.sqlite; sourceTree = "<group>"; };
+		179523B02D04240700A1A973 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		179523CE2D042E4300A1A973 /* Temp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Temp.m; sourceTree = "<group>"; };
+		179523D12D042E9100A1A973 /* Learn Connect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Learn Connect-Bridging-Header.h"; sourceTree = "<group>"; };
+		179523D22D04334000A1A973 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		179523D32D04334100A1A973 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		179523D42D04334100A1A973 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		179523D52D04334100A1A973 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		179523D62D04334100A1A973 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		179523D72D04334100A1A973 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		179523D82D04334100A1A973 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		179523D92D04334100A1A973 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		179523DA2D04334100A1A973 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		179523DB2D04334100A1A973 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		179523DC2D04334100A1A973 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		179523ED2D043A5100A1A973 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		179523F02D043DB600A1A973 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		179523F42D04586500A1A973 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		179F12EF2D023DB700442CCF /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		179F12F02D023DB700442CCF /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +125,7 @@
 		17FA8D192D00DB1100050A10 /* Learn Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		17FA8D202D00DB1100050A10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17FA8D202D00DB1100050A10 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		17FA8D232D00DB1100050A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17FA8D252D00DB1200050A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17FA8D282D00DB1200050A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179523EC2D0439A800A1A973 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +173,66 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		179523892D03774B00A1A973 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */,
+				17FA8D4C2D00DBEB00050A10 /* BaseViewController.swift */,
+				172476382D01985800982CA6 /* WishListViewController.swift */,
+				1724763A2D01B6F900982CA6 /* MyCourseViewController.swift */,
+				172476422D01C27100982CA6 /* HomeViewController.swift */,
+				179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */,
+				179F12F52D02492500442CCF /* VideoLessonViewController.swift */,
+				179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */,
+				179523842D031F1200A1A973 /* CommentAndRateViewController.swift */,
+				179523F42D04586500A1A973 /* MyProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1795238E2D03891C00A1A973 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				179523F32D043DBB00A1A973 /* Login */,
+				1795238F2D03894C00A1A973 /* Register */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1795238F2D03894C00A1A973 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				1795238C2D03884A00A1A973 /* RegisterViewController.swift */,
+				179523902D03896000A1A973 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		179523922D03910700A1A973 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				1795238A2D03777300A1A973 /* SqlLiteManager.swift */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		179523AF2D04240600A1A973 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				179523B02D04240700A1A973 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		179523F32D043DBB00A1A973 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				179523F02D043DB600A1A973 /* LoginViewModel.swift */,
+				17FA8D202D00DB1100050A10 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		17DCE5C02D0192B900C59273 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +257,7 @@
 				17FA8D322D00DB1300050A10 /* Learn ConnectTests */,
 				17FA8D3C2D00DB1300050A10 /* Learn ConnectUITests */,
 				17FA8D1A2D00DB1100050A10 /* Products */,
+				179523AF2D04240600A1A973 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,24 +274,32 @@
 		17FA8D1B2D00DB1100050A10 /* Learn Connect */ = {
 			isa = PBXGroup;
 			children = (
-				179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */,
+				179523922D03910700A1A973 /* DBManager */,
+				1795238E2D03891C00A1A973 /* Views */,
+				179523892D03774B00A1A973 /* ViewController */,
 				172476442D01C47700982CA6 /* CollectionViewCell */,
 				17DCE5C02D0192B900C59273 /* TableViewCell */,
 				17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */,
 				17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */,
-				17FA8D202D00DB1100050A10 /* ViewController.swift */,
 				17FA8D222D00DB1100050A10 /* Main.storyboard */,
 				17FA8D252D00DB1200050A10 /* Assets.xcassets */,
 				17FA8D272D00DB1200050A10 /* LaunchScreen.storyboard */,
 				17FA8D2A2D00DB1200050A10 /* Info.plist */,
-				17FA8D4C2D00DBEB00050A10 /* BaseViewController.swift */,
-				172476382D01985800982CA6 /* WishListViewController.swift */,
-				1724763A2D01B6F900982CA6 /* MyCourseViewController.swift */,
-				172476422D01C27100982CA6 /* HomeViewController.swift */,
-				179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */,
-				179F12F52D02492500442CCF /* VideoLessonViewController.swift */,
-				179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */,
-				179523842D031F1200A1A973 /* CommentAndRateViewController.swift */,
+				179523952D04219000A1A973 /* LearnConnectDB.sqlite */,
+				179523D82D04334100A1A973 /* FMDatabase.h */,
+				179523D52D04334100A1A973 /* FMDatabase.m */,
+				179523D22D04334000A1A973 /* FMDatabaseAdditions.h */,
+				179523D42D04334100A1A973 /* FMDatabaseAdditions.m */,
+				179523DA2D04334100A1A973 /* FMDatabasePool.h */,
+				179523DB2D04334100A1A973 /* FMDatabasePool.m */,
+				179523D72D04334100A1A973 /* FMDatabaseQueue.h */,
+				179523D62D04334100A1A973 /* FMDatabaseQueue.m */,
+				179523DC2D04334100A1A973 /* FMDB.h */,
+				179523D92D04334100A1A973 /* FMResultSet.h */,
+				179523D32D04334100A1A973 /* FMResultSet.m */,
+				179523CE2D042E4300A1A973 /* Temp.m */,
+				179523D12D042E9100A1A973 /* Learn Connect-Bridging-Header.h */,
+				179523ED2D043A5100A1A973 /* Helper.swift */,
 			);
 			path = "Learn Connect";
 			sourceTree = "<group>";
@@ -222,6 +337,9 @@
 			dependencies = (
 			);
 			name = "Learn Connect";
+			packageProductDependencies = (
+				179523EB2D0439A800A1A973 /* SQLite */,
+			);
 			productName = "Learn Connect";
 			productReference = 17FA8D192D00DB1100050A10 /* Learn Connect.app */;
 			productType = "com.apple.product-type.application";
@@ -274,9 +392,11 @@
 				TargetAttributes = {
 					17FA8D182D00DB1100050A10 = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 					};
 					17FA8D2E2D00DB1300050A10 = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 						TestTargetID = 17FA8D182D00DB1100050A10;
 					};
 					17FA8D382D00DB1300050A10 = {
@@ -294,6 +414,9 @@
 				Base,
 			);
 			mainGroup = 17FA8D102D00DB1100050A10;
+			packageReferences = (
+				179523EA2D0439A800A1A973 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 17FA8D1A2D00DB1100050A10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -317,6 +440,7 @@
 				179523832D02F9E700A1A973 /* SecondSegmentTableViewCell.xib in Resources */,
 				179F12FA2D02E7B600442CCF /* CourseVideosTableViewCell.xib in Resources */,
 				179F12F22D023DB700442CCF /* CommentTableViewCell.xib in Resources */,
+				179523962D04219000A1A973 /* LearnConnectDB.sqlite in Resources */,
 				17FA8D242D00DB1100050A10 /* Main.storyboard in Resources */,
 				172476482D01C4A800982CA6 /* CourseCollectionViewCell.xib in Resources */,
 			);
@@ -326,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179523972D04219000A1A973 /* LearnConnectDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,24 +468,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179523F52D04586500A1A973 /* MyProfileViewController.swift in Sources */,
 				179523822D02F9E700A1A973 /* SecondSegmentTableViewCell.swift in Sources */,
 				179F12F12D023DB700442CCF /* CommentTableViewCell.swift in Sources */,
 				1724763E2D01BCD200982CA6 /* MyCourseTableViewCell.swift in Sources */,
-				17FA8D212D00DB1100050A10 /* ViewController.swift in Sources */,
+				17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */,
 				179F12F62D02492500442CCF /* VideoLessonViewController.swift in Sources */,
+				1795238B2D03777300A1A973 /* SqlLiteManager.swift in Sources */,
 				172476392D01985800982CA6 /* WishListViewController.swift in Sources */,
 				179F12F42D023EFB00442CCF /* CourseDetailViewController.swift in Sources */,
 				179F12F92D02E7B600442CCF /* CourseVideosTableViewCell.swift in Sources */,
+				179523CF2D042E4300A1A973 /* Temp.m in Sources */,
 				179523852D031F1200A1A973 /* CommentAndRateViewController.swift in Sources */,
 				172476472D01C4A800982CA6 /* CourseCollectionViewCell.swift in Sources */,
+				1795238D2D03884A00A1A973 /* RegisterViewController.swift in Sources */,
+				179523E52D04334200A1A973 /* FMDatabasePool.m in Sources */,
+				179523E12D04334200A1A973 /* FMDatabase.m in Sources */,
+				179523EE2D043A5100A1A973 /* Helper.swift in Sources */,
 				17FA8D4D2D00DBEB00050A10 /* BaseViewController.swift in Sources */,
 				17DCE5C32D0192E200C59273 /* WishListTableViewCell.swift in Sources */,
 				172476432D01C27100982CA6 /* HomeViewController.swift in Sources */,
+				179523E32D04334200A1A973 /* FMDatabaseQueue.m in Sources */,
 				17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */,
+				179523F12D043DB600A1A973 /* LoginViewModel.swift in Sources */,
+				179523DD2D04334200A1A973 /* FMResultSet.m in Sources */,
+				179523912D03896000A1A973 /* RegisterViewModel.swift in Sources */,
 				17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */,
 				1724763B2D01B6F900982CA6 /* MyCourseViewController.swift in Sources */,
 				179F12FE2D02E9CD00442CCF /* SecondSegmentViewController.swift in Sources */,
 				179F12FC2D02E9AD00442CCF /* FirstSegmentViewController.swift in Sources */,
+				179523DF2D04334200A1A973 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +505,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179523F62D04586500A1A973 /* MyProfileViewController.swift in Sources */,
+				179523DE2D04334200A1A973 /* FMResultSet.m in Sources */,
 				17FA8D342D00DB1300050A10 /* Learn_ConnectTests.swift in Sources */,
+				179523D02D042E4300A1A973 /* Temp.m in Sources */,
+				179523E22D04334200A1A973 /* FMDatabase.m in Sources */,
+				179523E62D04334200A1A973 /* FMDatabasePool.m in Sources */,
+				179523E02D04334200A1A973 /* FMDatabaseAdditions.m in Sources */,
+				179523E42D04334200A1A973 /* FMDatabaseQueue.m in Sources */,
+				179523EF2D043A5100A1A973 /* Helper.swift in Sources */,
+				179523F22D043DB600A1A973 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +621,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Learn Connect/Learn Connect-Bridging-Header.h\n";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -531,6 +678,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Learn Connect/Learn Connect-Bridging-Header.h\n";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -540,6 +688,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DHW3U468H5;
@@ -561,6 +710,8 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Learn Connect/Learn Connect-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -571,6 +722,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DHW3U468H5;
@@ -592,6 +744,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Learn Connect/Learn Connect-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -602,6 +755,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DHW3U468H5;
@@ -611,6 +765,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sariomer.Learn-ConnectTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Learn Connect/Learn ConnectTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learn Connect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Learn Connect";
@@ -622,6 +778,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DHW3U468H5;
@@ -631,6 +788,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sariomer.Learn-ConnectTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Learn Connect/Learn ConnectTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learn Connect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Learn Connect";
@@ -713,6 +871,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		179523EA2D0439A800A1A973 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		179523EB2D0439A800A1A973 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 179523EA2D0439A800A1A973 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17FA8D112D00DB1100050A10 /* Project object */;
 }

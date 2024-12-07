@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q9U-gR-26u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="90p-ff-HJy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,12 +12,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Connect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pne-hS-tIU">
@@ -50,7 +50,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Giriş Yap"/>
                                 <connections>
-                                    <segue destination="fYU-CK-g1t" kind="presentation" modalPresentationStyle="fullScreen" id="9Sr-CU-hwd"/>
+                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NxO-B5-IsR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabınız yok mu? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWv-yo-Eue">
@@ -112,15 +112,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d8g-XM-BE0"/>
+                    <connections>
+                        <outlet property="emailTF" destination="N86-L1-1FY" id="gec-le-Is0"/>
+                        <outlet property="passwordTF" destination="5va-hP-05o" id="7Hq-an-Ur6"/>
+                        <outlet property="rememberSwitch" destination="h6v-kD-rOv" id="RkV-Vr-JSN"/>
+                        <segue destination="fYU-CK-g1t" kind="show" identifier="toTabBar" id="ka5-r6-goV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="631.8840579710145" y="31.473214285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="CnO-JF-LXZ">
             <objects>
-                <viewController id="QUf-sb-01g" sceneMemberID="viewController">
+                <viewController id="QUf-sb-01g" customClass="RegisterViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ldp-wN-IVx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +141,10 @@
                                 <rect key="frame" x="52" y="175" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <connections>
+                                    <action selector="changedEmailTF:" destination="QUf-sb-01g" eventType="editingDidEnd" id="8w3-SD-8lf"/>
+                                    <action selector="emailTF:" destination="Ahn-XP-IPz" eventType="editingDidEnd" id="0Yx-TK-YMS"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx7-YJ-5Z4">
                                 <rect key="frame" x="52" y="155" width="39" height="16"/>
@@ -146,6 +156,9 @@
                                 <rect key="frame" x="52" y="249" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passwordTF:" destination="Ahn-XP-IPz" eventType="editingDidEnd" id="slR-Ab-ZMj"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCS-tt-ASU">
                                 <rect key="frame" x="52" y="229" width="38" height="16"/>
@@ -162,12 +175,21 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola tekrarı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d8d-rL-c0F">
                                 <rect key="frame" x="52" y="323" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                <connections>
+                                    <action selector="passwordConfirmTF:" destination="Ahn-XP-IPz" eventType="editingDidEnd" id="0Eo-jF-4Db"/>
+                                    <action selector="passwordConfirmTF:" destination="QUf-sb-01g" eventType="editingDidEnd" id="rDl-Eg-ySH"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9e-3L-78Y">
                                 <rect key="frame" x="52" y="397" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameTF:" destination="QUf-sb-01g" eventType="editingDidEnd" id="7wt-Mh-kkv"/>
+                                    <action selector="nameTF:" destination="Ahn-XP-IPz" eventType="editingDidEnd" id="npO-hm-rcw"/>
+                                    <action selector="passwordTF:" destination="QUf-sb-01g" eventType="editingDidEnd" id="gek-Ne-kOl"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSa-PI-XCI">
                                 <rect key="frame" x="52" y="377" width="17" height="16"/>
@@ -179,6 +201,9 @@
                                 <rect key="frame" x="52" y="471" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="surnameTF:" destination="QUf-sb-01g" eventType="editingDidEnd" id="5dm-O2-din"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soyad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgr-iU-kf9">
                                 <rect key="frame" x="52" y="451" width="38" height="16"/>
@@ -191,6 +216,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Kayıt Ol"/>
                                 <connections>
+                                    <action selector="clickedRegister:" destination="QUf-sb-01g" eventType="touchUpInside" id="go7-IP-8Sm"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="BgQ-CK-D8d"/>
                                 </connections>
                             </button>
@@ -233,8 +259,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fYw-35-8na"/>
+                    <connections>
+                        <outlet property="emailTF" destination="Di9-8s-KCc" id="Ix2-7l-wHD"/>
+                        <outlet property="nameTF" destination="J9e-3L-78Y" id="tf0-fM-Web"/>
+                        <outlet property="passwordConfirmTF" destination="d8d-rL-c0F" id="4KS-vs-I4C"/>
+                        <outlet property="passwordTF" destination="55w-Gy-5rR" id="x2l-Xl-9xJ"/>
+                        <outlet property="surnameTF" destination="l2E-Iq-4dU" id="03h-zi-Lsu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0J-zo-Njb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ahn-XP-IPz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-599" y="781"/>
         </scene>
@@ -243,7 +277,7 @@
             <objects>
                 <viewController id="0sb-ne-s2m" customClass="WishListViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ciF-WQ-3gu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-lJ-QDg">
@@ -253,7 +287,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-9i-7BB">
-                                <rect key="frame" x="0.0" y="128" width="414" height="719"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="wishcell" rowHeight="47" id="8Qc-Ri-qqN" customClass="WishListTableViewCell" customModule="Learn_Connect" customModuleProvider="target">
@@ -295,7 +329,7 @@
             <objects>
                 <viewController id="8nr-Lx-Fu8" customClass="MyCourseViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2kA-vr-wHS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cP3-Ff-NUn">
@@ -306,7 +340,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9G4-iK-YMc">
-                                <rect key="frame" x="0.0" y="216" width="414" height="631"/>
+                                <rect key="frame" x="0.0" y="216" width="414" height="621"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Qxo-6K-aLc" customClass="MyCourseTableViewCell" customModule="Learn_Connect" customModuleProvider="target">
@@ -383,9 +417,9 @@
         <!--Hesap-->
         <scene sceneID="cOM-Lq-5H2">
             <objects>
-                <viewController id="2l2-z4-Jm4" sceneMemberID="viewController">
+                <viewController id="2l2-z4-Jm4" customClass="MyProfileViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOP-iG-8tU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hLN-7R-0wD">
@@ -414,7 +448,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="SRu-u7-BtH"/>
+                                    <action selector="clickedExit:" destination="2l2-z4-Jm4" eventType="touchUpInside" id="Lau-uw-oBq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -436,6 +470,9 @@
                     <tabBarItem key="tabBarItem" title="Hesap" id="GaM-XP-sdh">
                         <imageReference key="image" image="person.crop.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLoginVC" id="xIJ-1O-zlm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9a-x5-Dqv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -732,11 +769,11 @@
             <objects>
                 <viewController id="TLi-i8-0c4" customClass="HomeViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mij-c5-gn3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-xN-Ivk">
-                                <rect key="frame" x="0.0" y="228.5" width="414" height="618.5"/>
+                                <rect key="frame" x="0.0" y="228.5" width="414" height="608.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1" id="tlV-2n-dul">
@@ -900,7 +937,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SRu-u7-BtH"/>
+        <segue reference="xIJ-1O-zlm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
