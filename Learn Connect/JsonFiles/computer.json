@@ -1,0 +1,176 @@
+{
+  "total": 2105,
+  "totalHits": 500,
+  "hits": [
+    {
+      "id": 183107,
+      "pageURL": "https://pixabay.com/videos/id-183107/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, robot",
+      "duration": 17,
+      "title": "Robot Teknolojisi ve Yapay Zeka",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5974842,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 215751,
+      "pageURL": "https://pixabay.com/videos/id-215751/",
+      "type": "film",
+      "tags": "man, office work, business",
+      "duration": 18,
+      "title": "Ofiste Çalışan Adam",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/06/07/215751_medium.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 3329059,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/06/07/215751_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 174086,
+      "pageURL": "https://pixabay.com/videos/id-174086/",
+      "type": "animation",
+      "tags": "robot, artificial intelligence, technology",
+      "duration": 15,
+      "title": "Yapay Zeka ve Robot İnovasyonu",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/08/01/174086-850404739_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 4353480,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/08/01/174086-850404739_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 202987,
+      "pageURL": "https://pixabay.com/videos/id-202987/",
+      "type": "film",
+      "tags": "phone, smartphone, mobile",
+      "duration": 15,
+      "title": "Akıllı Telefon Kullanımı",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/03/04/202987-919379330_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 9353596,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/03/04/202987-919379330_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 208682,
+      "pageURL": "https://pixabay.com/videos/id-208682/",
+      "type": "animation",
+      "tags": "brain, robot, computer science",
+      "duration": 20,
+      "title": "Bilgisayar Bilimi ve Beyin İnovasyonu",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/04/20/208682_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 37681803,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/04/20/208682_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 137265,
+      "pageURL": "https://pixabay.com/videos/id-137265/",
+      "type": "film",
+      "tags": "office, business, contemporary",
+      "duration": 14,
+      "title": "Modern Ofis Çalışma Ortamı",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 25312779,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 150883,
+      "pageURL": "https://pixabay.com/videos/id-150883/",
+      "type": "animation",
+      "tags": "computers, office, desk",
+      "duration": 21,
+      "title": "Ofiste Bilgisayar ve Masa Çalışması",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/02/16/150883-799711528_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 12551286,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/02/16/150883-799711528_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 129422,
+      "pageURL": "https://pixabay.com/videos/id-129422/",
+      "type": "film",
+      "tags": "hand, help, company partner",
+      "duration": 8,
+      "title": "Şirket Ortaklığı ve Destek",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2022/08/28/129422-744370591_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 965398,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/08/28/129422-744370591_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 1360,
+      "pageURL": "https://pixabay.com/videos/id-1360/",
+      "type": "film",
+      "tags": "social media, smart phone, mobile",
+      "duration": 20,
+      "title": "Sosyal Medya ve Akıllı Telefonlar",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2015/11/25/1360-147055409_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5101137,
+          "thumbnail": "https://cdn.pixabay.com/video/2015/11/25/1360-147055409_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 183108,
+      "pageURL": "https://pixabay.com/videos/id-183108/",
+      "type": "animation",
+      "tags": "tech, laptop, artificial intelligence",
+      "duration": 15,
+      "title": "Teknoloji ve Dizüstü Bilgisayar",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/10/01/183108-870151713_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 3614028,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183108-870151713_medium.jpg"
+        }
+      }
+    }
+  ]
+}

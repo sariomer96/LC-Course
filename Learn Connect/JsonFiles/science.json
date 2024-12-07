@@ -1,0 +1,176 @@
+{
+  "total": 5678,
+  "totalHits": 500,
+  "hits": [
+    {
+      "id": 215500,
+      "pageURL": "https://pixabay.com/videos/id-215500/",
+      "type": "animation",
+      "tags": "artificial intelligence, robot, technology",
+      "duration": 15,
+      "title": "Fütüristik Yapay Zeka Robotu",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/06/06/215500_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 2495745,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/06/06/215500_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 204292,
+      "pageURL": "https://pixabay.com/videos/id-204292/",
+      "type": "animation",
+      "tags": "investment, finance, business",
+      "duration": 15,
+      "title": "Finansal Yatırım Animasyonu",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/03/15/204292-923909617_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 13224007,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/03/15/204292-923909617_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 183107,
+      "pageURL": "https://pixabay.com/videos/id-183107/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, robot",
+      "duration": 17,
+      "title": "Gelişmiş Robot Teknolojisi",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5974842,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 192281,
+      "pageURL": "https://pixabay.com/videos/id-192281/",
+      "type": "film",
+      "tags": "scientist, laboratory, research",
+      "duration": 15,
+      "title": "Bilim Laboratuvarı Deneyleri",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/12/06/192281-892475127_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 3708830,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/12/06/192281-892475127_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 203987,
+      "pageURL": "https://pixabay.com/videos/id-203987/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, network",
+      "duration": 5,
+      "title": "Yapay Zeka Ağları",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/03/12/203987-923133879_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 1684415,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/03/12/203987-923133879_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 174086,
+      "pageURL": "https://pixabay.com/videos/id-174086/",
+      "type": "animation",
+      "tags": "robot, artificial intelligence, technology",
+      "duration": 15,
+      "title": "Geleceğin Robot Teknolojisi",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/08/01/174086-850404739_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 4353480,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/08/01/174086-850404739_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 208682,
+      "pageURL": "https://pixabay.com/videos/id-208682/",
+      "type": "animation",
+      "tags": "brain, robot, computer science",
+      "duration": 20,
+      "title": "Beyin ve Bilgisayar Teknolojisi",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/04/20/208682_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 37681803,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/04/20/208682_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 232561,
+      "pageURL": "https://pixabay.com/videos/id-232561/",
+      "type": "film",
+      "tags": "tractor, field, wheat",
+      "duration": 19,
+      "title": "Tarımda Modern Traktörler",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/09/21/232561_medium.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 30591181,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/09/21/232561_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 137265,
+      "pageURL": "https://pixabay.com/videos/id-137265/",
+      "type": "film",
+      "tags": "office, business, contemporary",
+      "duration": 14,
+      "title": "Modern Ofis ve İş Dünyası",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 25312779,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 172170,
+      "pageURL": "https://pixabay.com/videos/id-172170/",
+      "type": "animation",
+      "tags": "ai, artificial, artificial intelligence",
+      "duration": 11,
+      "title": "Yapay Zeka Algoritmaları",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/07/19/172170-846731303_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 20261345,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/07/19/172170-846731303_medium.jpg"
+        }
+      }
+    }
+  ]
+}

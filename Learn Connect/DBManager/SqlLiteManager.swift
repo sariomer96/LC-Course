@@ -14,9 +14,7 @@ final class DatabaseManager {
         let fileURL = try! FileManager.default
             .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             .appendingPathComponent("LearnConnectDB.sqlite")
-
-        
-        print(fileURL.path)
+ 
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
             print("Error opening database")
         } else
@@ -102,8 +100,7 @@ final class DatabaseManager {
  
 
     func insertUser(email: String, password: String, name: String, surname: String, isSuccess: (Bool) -> ()) {
-        
-        print(type(of: email))
+         
         let query = "INSERT INTO User (email, password, name, surname) VALUES (?, ?, ?, ?);"
         var statement: OpaquePointer?
 

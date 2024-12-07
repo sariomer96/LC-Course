@@ -1,0 +1,176 @@
+{
+  "total": 642,
+  "totalHits": 500,
+  "hits": [
+    {
+      "id": 185096,
+      "pageURL": "https://pixabay.com/videos/id-185096/",
+      "type": "film",
+      "tags": "book, pages, literature",
+      "duration": 13,
+      "title": "Sayfaları Uçuşan Kitap",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/10/15/185096-874643413_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 4146309,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/15/185096-874643413_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 183107,
+      "pageURL": "https://pixabay.com/videos/id-183107/",
+      "type": "animation",
+      "tags": "artificial intelligence, technology, robot",
+      "duration": 17,
+      "title": "Gelişmiş Robot ve Yapay Zeka",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 5974842,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 159049,
+      "pageURL": "https://pixabay.com/videos/id-159049/",
+      "type": "animation",
+      "tags": "brain, nervous, sci fi",
+      "duration": 20,
+      "title": "Bilim Kurgu Beyin Sinirleri",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/04/15/159049-818026306_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 7231351,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/04/15/159049-818026306_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 214500,
+      "pageURL": "https://pixabay.com/videos/id-214500/",
+      "type": "animation",
+      "tags": "girl, study, relaxing",
+      "duration": 63,
+      "title": "Rahatlatıcı Çalışma Zamanı",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/05/30/214500_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 4954213,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/05/30/214500_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 206779,
+      "pageURL": "https://pixabay.com/videos/id-206779/",
+      "type": "film",
+      "tags": "people, group, students",
+      "duration": 17,
+      "title": "Grup Çalışması Yapan Öğrenciler",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/04/03/206779_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 17432918,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/04/03/206779_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 215407,
+      "pageURL": "https://pixabay.com/videos/id-215407/",
+      "type": "animation",
+      "tags": "girl, study, lamp",
+      "duration": 60,
+      "title": "Masanın Başında Çalışma",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/06/05/215407_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 21575987,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/06/05/215407_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 185092,
+      "pageURL": "https://pixabay.com/videos/id-185092/",
+      "type": "film",
+      "tags": "book, wind, literature",
+      "duration": 19,
+      "title": "Rüzgarda Uçan Kitap Sayfaları",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/10/15/185092-874643408_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 4499448,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/10/15/185092-874643408_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 182592,
+      "pageURL": "https://pixabay.com/videos/id-182592/",
+      "type": "animation",
+      "tags": "room, fireplace, rain",
+      "duration": 39,
+      "title": "Yağmurlu Bir Akşamda Şömine",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2023/09/27/182592-868916643_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 19961089,
+          "thumbnail": "https://cdn.pixabay.com/video/2023/09/27/182592-868916643_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 110879,
+      "pageURL": "https://pixabay.com/videos/id-110879/",
+      "type": "film",
+      "tags": "fish, underwater, aquarium",
+      "duration": 20,
+      "title": "Akvaryumda Balıkların Dansı",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2022/03/15/110879-689510470_medium.mp4",
+          "width": 1280,
+          "height": 720,
+          "size": 7150479,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/03/15/110879-689510470_medium.jpg"
+        }
+      }
+    },
+    {
+      "id": 215475,
+      "pageURL": "https://pixabay.com/videos/id-215475/",
+      "type": "film",
+      "tags": "students, class, classroom",
+      "duration": 10,
+      "title": "Sınıfta Dikkat Çeken Öğrenciler",
+      "videos": {
+        "medium": {
+          "url": "https://cdn.pixabay.com/video/2024/06/06/215475_medium.mp4",
+          "width": 2560,
+          "height": 1440,
+          "size": 5745031,
+          "thumbnail": "https://cdn.pixabay.com/video/2024/06/06/215475_medium.jpg"
+        }
+      }
+    }
+  ]
+}
