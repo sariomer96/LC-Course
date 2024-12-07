@@ -86,7 +86,12 @@ class RegisterViewController: BaseViewController {
         let alert = UIAlertController(title: isSuccess ? "Başarılı" : "Hata",
                                       message: message,
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Tamam", style: .default) {
+            _ in
+            if isSuccess {
+                self.performSegue(withIdentifier:  "toLoginVc", sender: nil)
+            }
+        })
         present(alert, animated: true, completion: nil)
     }
     

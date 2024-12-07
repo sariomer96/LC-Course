@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DatabaseManager.shared
         let isRemembered = UserDefaults.standard.bool(forKey: "isRemembered")
            rememberSwitch.isOn = isRemembered
  

@@ -217,7 +217,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Kayıt Ol"/>
                                 <connections>
                                     <action selector="clickedRegister:" destination="QUf-sb-01g" eventType="touchUpInside" id="go7-IP-8Sm"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="BgQ-CK-D8d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -265,6 +264,7 @@
                         <outlet property="passwordConfirmTF" destination="d8d-rL-c0F" id="4KS-vs-I4C"/>
                         <outlet property="passwordTF" destination="55w-Gy-5rR" id="x2l-Xl-9xJ"/>
                         <outlet property="surnameTF" destination="l2E-Iq-4dU" id="03h-zi-Lsu"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLoginVc" id="W49-Su-SxG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M0J-zo-Njb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -937,7 +937,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xIJ-1O-zlm"/>
+        <segue reference="W49-Su-SxG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.circle.fill" catalog="system" width="128" height="123"/>

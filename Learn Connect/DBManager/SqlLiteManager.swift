@@ -36,13 +36,15 @@ final class DatabaseManager {
             surname TEXT
         );
         """
+       
 
         let createCoursesTable = """
         CREATE TABLE IF NOT EXISTS Courses (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT,
             description TEXT,
-            category TEXT
+            category TEXT,
+            instructor TEXT
         );
         """
 
