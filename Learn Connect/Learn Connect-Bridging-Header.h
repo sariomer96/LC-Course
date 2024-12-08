@@ -11,4 +11,6 @@
 
 #endif /* Learn_Connect_Bridging_Header_h__h */
 #import "FMDB.h"
+#import <CommonCrypto/CommonCrypto.h>
+
 

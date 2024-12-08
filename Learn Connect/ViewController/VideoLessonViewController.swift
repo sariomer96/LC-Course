@@ -10,25 +10,45 @@ class VideoLessonViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     private var currentViewController: UIViewController?
     private var playerViewController: AVPlayerViewController?
+       var downloadViewModel = DownloadViewModel()
+    
+   
     @IBOutlet weak var bottomView: UIView!
     override func viewDidLoad() {
             super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
 //        DatabaseManager.shared
-     
-        }
+ 
+  
+        startDownloading()
+   
+//        print(downloadViewModel.progress * 100)
+  
+    }
 //    
     
-    let videoURL = "https://uc5a4c65c7607710ae85e86abec6.dl.dropboxusercontent.com/cd/0/inline/Cf0EhHCvWT_pSRIXuBATC83WTwJy5-9RXb4pTxB2lBjPtGYdx-cXuPqREMoph4xCLUFhU6JsjAz_H8u6TnY6m32JyKax4oFkHt6vsRX8zSl6xIri05LydT1AvLJOnxsyPfxJdDIzoKSCh9SIYqrYhEmv/file#"
+    
+    let videoURL = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
        private var player: AVPlayer?
        private var playerLayer: AVPlayerLayer?
  
        override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
-           self.setupVideoPlayer()
+//           self.setupVideoPlayer()
        }
        
    
+    // İndirme işlemini başlat
+        func startDownloading() {
+         
+            if let url = URL(string: videoURL) {
+                downloadViewModel.downloadVideo(url: url, videoID: "12334")
+                           }
+           
+        }
+   
+   
+    
        private func updatePlayerFrame() {
            self.playerLayer?.frame = self.videoView.bounds
        }
@@ -37,11 +57,20 @@ class VideoLessonViewController: UIViewController {
            super.viewDidLayoutSubviews()
            self.updatePlayerFrame()
        }
-       
+    
+    func playVideo(from url: URL) {
+           let player = AVPlayer(url: url)
+           let playerViewController = AVPlayerViewController()
+           playerViewController.player = player
+           present(playerViewController, animated: true) {
+               player.play()
+           }
+       }
+    
     
    
     
-    private func setupVideoPlayer() {
+    private func setupVideoPlayer(videoURL:String) {
         guard let url = URL(string: videoURL) else { return }
         
         self.player = AVPlayer(url: url)

@@ -66,6 +66,7 @@
 		17DF195B2D056E53002EAB90 /* CourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF195A2D056E53002EAB90 /* CourseContent.swift */; };
 		17DF19612D0574EE002EAB90 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19602D0574EE002EAB90 /* TestViewController.swift */; };
 		17DF19632D057CB6002EAB90 /* Jsons in Resources */ = {isa = PBXBuildFile; fileRef = 17DF19622D057CB6002EAB90 /* Jsons */; };
+		17DF19652D05B6E6002EAB90 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19642D05B6E6002EAB90 /* DownloadViewModel.swift */; };
 		17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */; };
 		17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */; };
 		17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D202D00DB1100050A10 /* LoginViewController.swift */; };
@@ -147,6 +148,7 @@
 		17DF195A2D056E53002EAB90 /* CourseContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseContent.swift; sourceTree = "<group>"; };
 		17DF19602D0574EE002EAB90 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		17DF19622D057CB6002EAB90 /* Jsons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Jsons; sourceTree = "<group>"; };
+		17DF19642D05B6E6002EAB90 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		17FA8D192D00DB1100050A10 /* Learn Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				179523CE2D042E4300A1A973 /* Temp.m */,
 				179523D12D042E9100A1A973 /* Learn Connect-Bridging-Header.h */,
 				179523ED2D043A5100A1A973 /* Helper.swift */,
+				17DF19642D05B6E6002EAB90 /* DownloadViewModel.swift */,
 			);
 			path = "Learn Connect";
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				179F12FE2D02E9CD00442CCF /* SecondSegmentViewController.swift in Sources */,
 				179F12FC2D02E9AD00442CCF /* FirstSegmentViewController.swift in Sources */,
 				179523F92D04609000A1A973 /* Users.swift in Sources */,
+				17DF19652D05B6E6002EAB90 /* DownloadViewModel.swift in Sources */,
 				179523DF2D04334200A1A973 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
