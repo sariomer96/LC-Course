@@ -18,12 +18,17 @@ class VideoLessonViewController: UIViewController {
             super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
 //        DatabaseManager.shared
- 
+        // Dosya adını ve uzantısını belirleyin
+          
   
-        startDownloading()
+      //  startDownloading()
    
 //        print(downloadViewModel.progress * 100)
-  
+//             startDownloading()
+        downloadViewModel.playVideoByFileName(fileName: "aga.mp4")
+        downloadViewModel.onCompletion = { url in
+              self.setupVideoPlayer(videoURL: "\(url)")
+        }
     }
 //    
     
@@ -42,11 +47,10 @@ class VideoLessonViewController: UIViewController {
         func startDownloading() {
          
             if let url = URL(string: videoURL) {
-                downloadViewModel.downloadVideo(url: url, videoID: "12334")
-                           }
+                downloadViewModel.downloadVideo(url: url, videoID: "aga")
+              }
            
         }
-   
    
     
        private func updatePlayerFrame() {
@@ -68,24 +72,65 @@ class VideoLessonViewController: UIViewController {
        }
     
     
-   
-    
-    private func setupVideoPlayer(videoURL:String) {
-        guard let url = URL(string: videoURL) else { return }
-        
-        self.player = AVPlayer(url: url)
-        self.playerViewController = AVPlayerViewController()
-        self.playerViewController?.player = self.player
-        
-        // Ekleniyor: videoView üzerine AVPlayerViewController'ı bindiriyoruz
-        if let playerViewController = self.playerViewController {
-            playerViewController.view.frame = videoView.bounds
-            playerViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            self.videoView.addSubview(playerViewController.view)
-            self.addChild(playerViewController)
-            playerViewController.didMove(toParent: self)
+    private func setupVideoPlayer(videoURL: String) {
+        // Validate the video URL
+        guard let url = URL(string: videoURL) else {
+            print("Invalid video URL: \(videoURL)")
+            return
         }
+
+        // Initialize AVPlayer
+        self.player = AVPlayer(url: url)
+        guard let player = self.player else {
+            print("Failed to initialize AVPlayer.")
+            return
+        }
+
+        // Initialize AVPlayerViewController
+        self.playerViewController = AVPlayerViewController()
+        guard let playerViewController = self.playerViewController else {
+            print("Failed to initialize AVPlayerViewController.")
+            return
+        }
+
+        // Assign the AVPlayer to the AVPlayerViewController
+        playerViewController.player = player
+
+        // Check if videoView is available and valid
+        guard let videoView = self.videoView else {
+            print("Video view is nil or not available.")
+            return
+        }
+
+        // Add AVPlayerViewController's view to videoView
+        playerViewController.view.frame = videoView.bounds
+        playerViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        videoView.addSubview(playerViewController.view)
+
+        // Ensure that the playerViewController is added as a child view controller
+        self.addChild(playerViewController)
+        playerViewController.didMove(toParent: self)
+ 
     }
+
+    
+//    private func setupVideoPlayer(videoURL:String) {
+//        guard let url = URL(string: videoURL) else { return }
+//
+//        print(url)
+//        self.player = AVPlayer(url: url)
+//        self.playerViewController = AVPlayerViewController()
+//        self.playerViewController?.player = self.player
+//
+//        // Ekleniyor: videoView üzerine AVPlayerViewController'ı bindiriyoruz
+//        if let playerViewController = self.playerViewController {
+//            playerViewController.view.frame = videoView.bounds
+//            playerViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//            self.videoView.addSubview(playerViewController.view)
+//            self.addChild(playerViewController)
+//            playerViewController.didMove(toParent: self)
+//        }
+//    }
 
   
     

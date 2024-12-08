@@ -3,9 +3,14 @@ import SwiftUI
 import Photos
 import AVFoundation
 
+typealias VoidCallback = (String) -> Void
+
 class DownloadViewModel: NSObject, ObservableObject, URLSessionDownloadDelegate {
+    var onCompletion: VoidCallback?
     @Published var progress: Float = 0
+    @Published var videoPlayer: AVPlayer? // AVP
     var videoId: String?
+    
     func downloadVideo(url: URL , videoID: String) {
         self.videoId = videoID
         print(videoID)
@@ -19,6 +24,20 @@ class DownloadViewModel: NSObject, ObservableObject, URLSessionDownloadDelegate 
         }
         task.resume()
     }
+    func playVideoByFileName(fileName: String) {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileURL = documentsURL.appendingPathComponent(fileName)
+        
+        if FileManager.default.fileExists(atPath: fileURL.path) {
+            DispatchQueue.main.async {
+                self.onCompletion?(fileURL.absoluteString)
+                
+             
+            }
+        } else {
+            print("File not found at path: \(fileURL.path)")
+        }
+    }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         guard let data = try? Data(contentsOf: location) else {
@@ -26,7 +45,7 @@ class DownloadViewModel: NSObject, ObservableObject, URLSessionDownloadDelegate 
         }
         
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let destinationURL = documentsURL.appendingPathComponent("\(videoId).mp4")
+        let destinationURL = documentsURL.appendingPathComponent("\(videoId!).mp4")
         do {
             try data.write(to: destinationURL)
             saveVideoToAlbum(videoURL: destinationURL, albumName: "MyAlbums")
