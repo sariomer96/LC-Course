@@ -3,4 +3,54 @@
    uuid = "DFC2CAC2-C033-48E2-8007-E5F84E313867"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F901BF20-F4C6-4FE6-8458-FEA1557D54D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Learn Connect/DBManager/SqlLiteManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "insertToDownloadsTable(userId:videoId:title:image:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F901BF20-F4C6-4FE6-8458-FEA1557D54D7 - 4d729a358b0bca9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Learn_Connect.DatabaseManager.insertToDownloadsTable(userId: Swift.String, videoId: Swift.String, title: Swift.String, image: __C.UIImage) -&gt; ()"
+                  moduleName = "Learn Connect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omer/Desktop/Learn%20Connect/Learn%20Connect/DBManager/SqlLiteManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "F901BF20-F4C6-4FE6-8458-FEA1557D54D7 - 4d729a358b0bcabe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Learn_Connect.DatabaseManager.insertToDownloadsTable(userId: Swift.String, videoId: Swift.String, title: Swift.String, image: __C.UIImage) -&gt; ()"
+                  moduleName = "Learn Connect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omer/Desktop/Learn%20Connect/Learn%20Connect/DBManager/SqlLiteManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "387">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

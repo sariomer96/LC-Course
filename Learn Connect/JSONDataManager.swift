@@ -15,7 +15,7 @@ final class JSONDataManager {
     static let shared = JSONDataManager()
     
     func loadJSONData(categoryName:String) {
-        guard let path = Bundle.main.path(forResource: "all", ofType: "json", inDirectory: "Jsons") else {
+        guard let path = Bundle.main.path(forResource: categoryName, ofType: "json", inDirectory: "Jsons") else {
             print("JSON dosyası bulunamadı.")
             return
         }

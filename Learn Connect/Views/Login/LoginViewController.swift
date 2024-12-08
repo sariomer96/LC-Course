@@ -17,7 +17,20 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DatabaseManager.shared
+        let systemImage = UIImage(systemName: "star.fill")
+
+       var a =   DatabaseManager.shared.fetchAllDownloads()
+        
+      
+        for download in a {
+            print("User ID: \(download.userId), Video ID: \(download.videoId), Title: \(download.title)")
+            // İsteğe bağlı olarak görüntüyü kullanabilirsiniz
+            let imageView = UIImageView(image: download.image)
+            print(imageView)
+        }
+
+        print(a)
+        
         let isRemembered = UserDefaults.standard.bool(forKey: "isRemembered")
            rememberSwitch.isOn = isRemembered
  

@@ -1,6 +1,4 @@
 {
-  "total": 5678,
-  "totalHits": 500,
   "hits": [
     {
       "id": 215500,
@@ -11,7 +9,7 @@
       "title": "Fütüristik Yapay Zeka Robotu",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/06/06/215500_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
           "width": 1280,
           "height": 720,
           "size": 2495745,
@@ -28,7 +26,7 @@
       "title": "Finansal Yatırım Animasyonu",
       "videos": {
         "medium": {
-            "url": "https://cdn.pixabay.com/video/2024/03/15/204292-923909617_small.mp4",
+            "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
                       "width": 1920,
                       "height": 1080,
                       "size": 8543778,
@@ -45,7 +43,7 @@
       "title": "Gelişmiş Robot Teknolojisi",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
           "width": 1280,
           "height": 720,
           "size": 5974842,
@@ -62,7 +60,7 @@
       "title": "Bilim Laboratuvarı Deneyleri",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/12/06/192281-892475127_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
           "width": 1280,
           "height": 720,
           "size": 3708830,
@@ -79,96 +77,11 @@
       "title": "Yapay Zeka Ağları",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/03/12/203987-923133879_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
           "width": 1280,
           "height": 720,
           "size": 1684415,
           "thumbnail": "https://cdn.pixabay.com/video/2024/03/12/203987-923133879_medium.jpg"
-        }
-      }
-    },
-    {
-      "id": 174086,
-      "pageURL": "https://pixabay.com/videos/id-174086/",
-      "type": "animation",
-      "tags": "robot, artificial intelligence, technology",
-      "duration": 15,
-      "title": "Geleceğin Robot Teknolojisi",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/08/01/174086-850404739_medium.mp4",
-          "width": 1280,
-          "height": 720,
-          "size": 4353480,
-          "thumbnail": "https://cdn.pixabay.com/video/2023/08/01/174086-850404739_medium.jpg"
-        }
-      }
-    },
-    {
-      "id": 208682,
-      "pageURL": "https://pixabay.com/videos/id-208682/",
-      "type": "animation",
-      "tags": "brain, robot, computer science",
-      "duration": 20,
-      "title": "Beyin ve Bilgisayar Teknolojisi",
-      "videos": {
-        "medium": {
-            "url": "https://cdn.pixabay.com/video/2024/04/20/208682_small.mp4",
-                     "width": 1920,
-                     "height": 1080,
-                     "size": 24452214,
-                     "thumbnail": "https://cdn.pixabay.com/video/2024/04/20/208682_small.jpg"
-        }
-      }
-    },
-    {
-      "id": 232561,
-      "pageURL": "https://pixabay.com/videos/id-232561/",
-      "type": "film",
-      "tags": "tractor, field, wheat",
-      "duration": 19,
-      "title": "Tarımda Modern Traktörler",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/09/21/232561_medium.mp4",
-          "width": 1920,
-          "height": 1080,
-          "size": 30591181,
-          "thumbnail": "https://cdn.pixabay.com/video/2024/09/21/232561_medium.jpg"
-        }
-      }
-    },
-    {
-      "id": 137265,
-      "pageURL": "https://pixabay.com/videos/id-137265/",
-      "type": "film",
-      "tags": "office, business, contemporary",
-      "duration": 14,
-      "title": "Modern Ofis ve İş Dünyası",
-      "videos": {
-        "medium": {
-            "url": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_small.mp4",
-                     "width": 1920,
-                     "height": 1080,
-                     "size": 11033268,
-                     "thumbnail": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_small.jpg"
-        }
-      }
-    },
-    {
-      "id": 172170,
-      "pageURL": "https://pixabay.com/videos/id-172170/",
-      "type": "animation",
-      "tags": "ai, artificial, artificial intelligence",
-      "duration": 11,
-      "title": "Yapay Zeka Algoritmaları",
-      "videos": {
-        "medium": {
-            "url": "https://cdn.pixabay.com/video/2023/07/19/172170-846731303_small.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 8574390,
-            "thumbnail": "https://cdn.pixabay.com/video/2023/07/19/172170-846731303_small.jpg"
         }
       }
     }

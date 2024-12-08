@@ -1,6 +1,5 @@
 {
-  "total": 642,
-  "totalHits": 500,
+
   "hits": [
     {
       "id": 185096,
@@ -11,7 +10,7 @@
       "title": "Sayfaları Uçuşan Kitap",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/10/15/185096-874643413_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
           "width": 1280,
           "height": 720,
           "size": 4146309,
@@ -28,7 +27,7 @@
       "title": "Gelişmiş Robot ve Yapay Zeka",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/10/01/183107-870151708_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
           "width": 1280,
           "height": 720,
           "size": 5974842,
@@ -45,7 +44,7 @@
       "title": "Bilim Kurgu Beyin Sinirleri",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/04/15/159049-818026306_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
           "width": 1280,
           "height": 720,
           "size": 7231351,
@@ -62,7 +61,7 @@
              "title": "Eğitim ve Tasarım İçin Silüet Çizim Animasyonu",
              "videos": {
                "medium": {
-                 "url": "https://cdn.pixabay.com/video/2018/09/24/18399-291585366_large.mp4",
+                 "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
                  "width": 1920,
                  "height": 1080,
                  "size": 6534754,
@@ -79,96 +78,11 @@
           "title": "Öğrenci veya Profesyonel İçin Çalışma Anlar",
           "videos": {
             "medium": {
-              "url": "https://cdn.pixabay.com/video/2022/09/20/131993-751915314_large.mp4",
+              "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
               "width": 1920,
               "height": 1080,
               "size": 11027730,
               "thumbnail": "https://cdn.pixabay.com/video/2022/09/20/131993-751915314_large.jpg"
-        }
-      }
-    },
-    {
-        "id": 229513,
-             "pageURL": "https://pixabay.com/videos/id-229513/",
-             "type": "animation",
-             "tags": "girl, anime, rain",
-             "duration": 9,
-      "title": "Masanın Başında Çalışma",
-      "videos": {
-        "medium": { 
-            "url": "https://cdn.pixabay.com/video/2024/09/03/229513_small.mp4",
-            "width": 1926,
-            "height": 1079,
-            "size": 3354602,
-            "thumbnail": "https://cdn.pixabay.com/video/2024/09/03/229513_small.jpg"
-        }
-      }
-    },
-    {
-      "id": 185092,
-      "pageURL": "https://pixabay.com/videos/id-185092/",
-      "type": "film",
-      "tags": "book, wind, literature",
-      "duration": 19,
-      "title": "Rüzgarda Uçan Kitap Sayfaları",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/10/15/185092-874643408_medium.mp4",
-          "width": 1280,
-          "height": 720,
-          "size": 4499448,
-          "thumbnail": "https://cdn.pixabay.com/video/2023/10/15/185092-874643408_medium.jpg"
-        }
-      }
-    },
-    {
-        "id": 1046,
-             "pageURL": "https://pixabay.com/videos/id-1046/",
-             "type": "film",
-             "tags": "keyboard, hands, writing",
-             "duration": 17,
-      "title": "Yağmurlu Bir Akşamda Şömine",
-      "videos": {
-        "medium": {
-            "url": "https://cdn.pixabay.com/video/2015/10/16/1046-142621379_large.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 7301842,
-            "thumbnail": "https://cdn.pixabay.com/video/2015/10/16/1046-142621379_large.jpg"
-        }
-      }
-    },
-    {
-      "id": 110879,
-      "pageURL": "https://pixabay.com/videos/id-110879/",
-      "type": "film",
-      "tags": "fish, underwater, aquarium",
-      "duration": 20,
-      "title": "Akvaryumda Balıkların Dansı",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2022/03/15/110879-689510470_medium.mp4",
-          "width": 1280,
-          "height": 720,
-          "size": 7150479,
-          "thumbnail": "https://cdn.pixabay.com/video/2022/03/15/110879-689510470_medium.jpg"
-        }
-      }
-    },
-    {
-        "id": 201906,
-             "pageURL": "https://pixabay.com/videos/id-201906/",
-             "type": "animation",
-             "tags": "brain, neurology, memory",
-             "duration": 18,
-      "title": "Sınıfta Dikkat Çeken Öğrenciler",
-      "videos": {
-        "medium": {
-            "url": "https://cdn.pixabay.com/video/2024/02/25/201906-916894582_small.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 2451036,
-            "thumbnail": "https://cdn.pixabay.com/video/2024/02/25/201906-916894582_small.jpg"
         }
       }
     }

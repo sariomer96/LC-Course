@@ -11,7 +11,7 @@
       "title": "Yıldız Tüneli Işık Geçidi",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2022/07/21/124983-732319296_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
           "width": 1280,
           "height": 720,
           "size": 7264096,
@@ -28,7 +28,7 @@
       "title": "Yapay Zeka Destekli Kafe Deneyimi",
       "videos": {
         "medium": {
-            "url": "https://cdn.pixabay.com/video/2024/02/26/202004-916894674_tiny.mp4",
+            "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
                      "width": 1280,
                      "height": 720,
                      "size": 3795921,
@@ -45,7 +45,7 @@
       "title": "Işık Tüneli ve Yıldız Geçidi",
       "videos": {
         "medium": {
-            "url": "https://cdn.pixabay.com/video/2022/08/17/128215-740854706_tiny.mp4",
+            "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                       "width": 1280,
                       "height": 720,
                       "size": 7228591,
@@ -62,7 +62,7 @@
       "title": "Uzun Yıldız Tüneli",
       "videos": {
         "medium": {
-            "url": "https://cdn.pixabay.com/video/2023/02/15/150865-799327571_small.mp4",
+            "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
                       "width": 1920,
                       "height": 1080,
                       "size": 21359058,
@@ -79,96 +79,11 @@
       "title": "Animasyonlu Abone Ol Düğmesi",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2022/06/14/120302-720505018_medium.mp4",
+          "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
           "width": 1280,
           "height": 720,
           "size": 265417,
           "thumbnail": "https://cdn.pixabay.com/video/2022/06/14/120302-720505018_medium.jpg"
-        }
-      }
-    },
-    {
-      "id": 154610,
-      "pageURL": "https://pixabay.com/videos/id-154610/",
-      "type": "animation",
-      "tags": "skeleton, skull, dj",
-      "duration": 59,
-      "title": "İskelet DJ Sahnesi",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/03/13/154610-807726772_medium.mp4",
-          "width": 1280,
-          "height": 720,
-          "size": 22283975,
-          "thumbnail": "https://cdn.pixabay.com/video/2023/03/13/154610-807726772_medium.jpg"
-        }
-      }
-    },
-    {
-      "id": 57307,
-      "pageURL": "https://pixabay.com/videos/id-57307/",
-      "type": "film",
-      "tags": "vinyl, lp, turntable",
-      "duration": 30,
-      "title": "Vinyl ve Pikap Nostaljisi",
-      "videos": {
-        "medium": {
-            "url": "https://cdn.pixabay.com/video/2020/11/25/57307-484331149_small.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 18640559,
-            "thumbnail": "https://cdn.pixabay.com/video/2020/11/25/57307-484331149_small.jpg"
-        }
-      }
-    },
-    {
-      "id": 224328,
-      "pageURL": "https://pixabay.com/videos/id-224328/",
-      "type": "animation",
-      "tags": "disco ball, disco, club",
-      "duration": 19,
-      "title": "Disko Topu ve Kulüp Atmosferi",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/08/01/224328_medium.mp4",
-          "width": 1280,
-          "height": 720,
-          "size": 18977231,
-          "thumbnail": "https://cdn.pixabay.com/video/2024/08/01/224328_medium.jpg"
-        }
-      }
-    },
-    {
-      "id": 150110,
-      "pageURL": "https://pixabay.com/videos/id-150110/",
-      "type": "animation",
-      "tags": "audio, music, spectrum",
-      "duration": 10,
-      "title": "Müzik Spektrumu",
-      "videos": {
-        "medium": {
-            "url": "https://cdn.pixabay.com/video/2023/02/10/150110-797862889_small.mp4",
-                    "width": 1920,
-                    "height": 1080,
-                    "size": 3756382,
-                    "thumbnail": "https://cdn.pixabay.com/video/2023/02/10/150110-797862889_small.jpg"
-        }
-      }
-    },
-    {
-      "id": 100549,
-      "pageURL": "https://pixabay.com/videos/id-100549/",
-      "type": "animation",
-      "tags": "tunnel, scifi, futuristic",
-      "duration": 17,
-      "title": "Fütüristik Bilimkurgu Tüneli",
-      "videos": {
-        "medium": {
-            "url": "https://cdn.pixabay.com/video/2021/12/14/100549-657153127_small.mp4",
-                      "width": 1920,
-                      "height": 1080,
-                      "size": 10369895,
-                      "thumbnail": "https://cdn.pixabay.com/video/2021/12/14/100549-657153127_small.jpg"
         }
       }
     }

@@ -15,15 +15,23 @@ class VideoLessonViewController: UIViewController {
     private var timeObserverToken: Any? // Gözlemci referansı
      var videoId = "aa"
     @IBOutlet weak var bottomView: UIView!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
         
         setupVideoPlayer(videoURL:videoURL)
+        JSONDataManager.shared.loadJSONData(categoryName: "education")
+        let systemImage = UIImage(systemName: "star.fill")
+
+        DatabaseManager.shared.insertToDownloadsTable(userId:  "000" ,
+                                                      videoId:  "111", title:  "DENEME", image: systemImage!)
         
         
         
-        //        downloadViewModel.playVideoByFileName(fileName: "aga.mp4")
+//             LOCAL VIDEO LOAD FUNCS
+        //        downloadViewModel.playVideoByFileName(fileName: "test.mp4")
         //        downloadViewModel.onCompletion = { url in
         //              self.setupVideoPlayer(videoURL: "\(url)")
         //        }
@@ -39,14 +47,16 @@ class VideoLessonViewController: UIViewController {
        override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
 //           self.setupVideoPlayer()
+           let systemImage = UIImage(systemName: "star.fill")
+           
+
        }
-       
-   
-    // İndirme işlemini başlat
-        func startDownloading() {
+        
+    
+             func startDownloading() {
          
             if let url = URL(string: videoURL) {
-                downloadViewModel.downloadVideo(url: url, videoID: "aga")
+                downloadViewModel.downloadVideo(url: url, videoID: "0")
               }
            
         }

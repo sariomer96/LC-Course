@@ -1,4 +1,5 @@
 import SQLite3
+import UIKit
 import Foundation
 
 final class DatabaseManager {
@@ -46,6 +47,16 @@ final class DatabaseManager {
         );
         """
 
+        let downloadsTable = """
+        CREATE TABLE IF NOT EXISTS Downloads (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            userId TEXT,
+            videoId TEXT,
+            title TEXT,
+            image BLOB
+            
+        );
+        """
         let createUserCoursesTable = """
         CREATE TABLE IF NOT EXISTS UserCourse (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -82,6 +93,7 @@ final class DatabaseManager {
         executeQuery(createUserCoursesTable)
         executeQuery(createVideosTable)
         executeQuery(createUserVideoProgressTable)
+        executeQuery(downloadsTable)
     }
 
     private func executeQuery(_ query: String) {
@@ -98,6 +110,62 @@ final class DatabaseManager {
         sqlite3_finalize(statement)
     }
  
+    
+    func insertToDownloadsTable(userId:String,videoId:String, title:String, image: UIImage) {
+        let query = "INSERT INTO Downloads (userId, videoId, title, image) VALUES (?, ?, ?, ?);"
+        var statement: OpaquePointer?
+                print( "burada")
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
+            
+                   // Görüntüyü NSData'ya çevir
+                   let imageData = image.jpegData(compressionQuality: 1.0)! as NSData
+                   sqlite3_bind_text(statement, 1, (userId as NSString).utf8String, -1, nil)
+                    sqlite3_bind_text(statement, 2, (videoId as NSString).utf8String, -1, nil)
+                    sqlite3_bind_text(statement, 3, (title as NSString).utf8String, -1, nil)
+                   sqlite3_bind_blob(statement, 4, imageData.bytes, Int32(imageData.length), nil)
+
+                   if sqlite3_step(statement) == SQLITE_DONE {
+                       print("Görüntü başarıyla kaydedildi.")
+                   } else {
+                       print("Görüntü ekleme hatası.")
+                   }
+               }
+        
+        // Belleği serbest bırakma
+        sqlite3_finalize(statement)
+    }
+    
+    func fetchAllDownloads() -> [(userId: String, videoId: String, title: String, image: UIImage)] {
+        let query = "SELECT userId, videoId, title, image FROM Downloads;"
+        var statement: OpaquePointer?
+        var downloads: [(userId: String, videoId: String, title: String, image: UIImage)] = []
+
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
+            while sqlite3_step(statement) == SQLITE_ROW {
+                // userId sütununu oku
+                let userId = String(cString: sqlite3_column_text(statement, 0))
+                // videoId sütununu oku
+                let videoId = String(cString: sqlite3_column_text(statement, 1))
+                // title sütununu oku
+                let title = String(cString: sqlite3_column_text(statement, 2))
+                // image sütununu oku
+                if let imageData = sqlite3_column_blob(statement, 3) {
+                    let imageSize = sqlite3_column_bytes(statement, 3)
+                    let data = Data(bytes: imageData, count: Int(imageSize))
+                    if let image = UIImage(data: data) {
+                        // Her bir satırı tuple olarak ekle
+                        downloads.append((userId: userId, videoId: videoId, title: title, image: image))
+                    }
+                }
+            }
+        } else {
+            print("Sorgu hazırlanamadı.")
+        }
+
+        // Belleği serbest bırakma
+        sqlite3_finalize(statement)
+        return downloads
+    }
 
     func insertUser(email: String, password: String, name: String, surname: String, isSuccess: (Bool) -> ()) {
          
@@ -204,6 +272,7 @@ final class DatabaseManager {
         sqlite3_finalize(statement)
     }
 
+    
     func fetchAllUsers() -> [(id: Int, email: String, name: String, surname: String)] {
         let query = "SELECT id, email, name, surname FROM User;"
         var statement: OpaquePointer?
