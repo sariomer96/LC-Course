@@ -11,27 +11,26 @@ class VideoLessonViewController: UIViewController {
     private var currentViewController: UIViewController?
     private var playerViewController: AVPlayerViewController?
        var downloadViewModel = DownloadViewModel()
-    
-   
+    let userDefaults = UserDefaults.standard
+    private var timeObserverToken: Any? // Gözlemci referansı
+     var videoId = "aa"
     @IBOutlet weak var bottomView: UIView!
     override func viewDidLoad() {
-            super.viewDidLoad()
+        super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
-//        DatabaseManager.shared
-        // Dosya adını ve uzantısını belirleyin
-          
-  
-      //  startDownloading()
-   
-//        print(downloadViewModel.progress * 100)
-//             startDownloading()
-        downloadViewModel.playVideoByFileName(fileName: "aga.mp4")
-        downloadViewModel.onCompletion = { url in
-              self.setupVideoPlayer(videoURL: "\(url)")
-        }
+        
+        setupVideoPlayer(videoURL:videoURL)
+        
+        
+        
+        //        downloadViewModel.playVideoByFileName(fileName: "aga.mp4")
+        //        downloadViewModel.onCompletion = { url in
+        //              self.setupVideoPlayer(videoURL: "\(url)")
+        //        }
+        
+         
     }
-//    
-    
+  
     
     let videoURL = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
        private var player: AVPlayer?
@@ -95,7 +94,18 @@ class VideoLessonViewController: UIViewController {
 
         // Assign the AVPlayer to the AVPlayerViewController
         playerViewController.player = player
-
+        let lastSavedTime = userDefaults.double(forKey: "\(videoId)_lastPosition")
+        
+        if lastSavedTime > 0 {
+                 let seekTime = CMTime(seconds: lastSavedTime, preferredTimescale: 1)
+            playerViewController.player!.seek(to: seekTime)
+             }
+        
+        removePeriodicTimeObserver()
+              
+              // Yeni observer ekle
+              addPeriodicTimeObserver()
+        
         // Check if videoView is available and valid
         guard let videoView = self.videoView else {
             print("Video view is nil or not available.")
@@ -112,29 +122,38 @@ class VideoLessonViewController: UIViewController {
         playerViewController.didMove(toParent: self)
  
     }
-
     
-//    private func setupVideoPlayer(videoURL:String) {
-//        guard let url = URL(string: videoURL) else { return }
-//
-//        print(url)
-//        self.player = AVPlayer(url: url)
-//        self.playerViewController = AVPlayerViewController()
-//        self.playerViewController?.player = self.player
-//
-//        // Ekleniyor: videoView üzerine AVPlayerViewController'ı bindiriyoruz
-//        if let playerViewController = self.playerViewController {
-//            playerViewController.view.frame = videoView.bounds
-//            playerViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//            self.videoView.addSubview(playerViewController.view)
-//            self.addChild(playerViewController)
-//            playerViewController.didMove(toParent: self)
-//        }
-//    }
-
-  
+    func removePeriodicTimeObserver() {
+         if let token = timeObserverToken {
+             playerViewController?.player?.removeTimeObserver(token)
+             timeObserverToken = nil
+         }
+     }
     
-   
+    func addPeriodicTimeObserver() {
+         let interval = CMTime(seconds: 1, preferredTimescale: 1)
+        player!.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] time in
+             guard let self = self else { return }
+             let currentTime = CMTimeGetSeconds(time)
+             self.userDefaults.set(currentTime, forKey: "\(self.videoId)_lastPosition")
+         }
+     }
+    override func viewWillDisappear(_ animated: Bool) {
+         super.viewWillDisappear(animated)
+          
+         if let currentTime = player?.currentTime() {
+             let seconds = CMTimeGetSeconds(currentTime)
+             userDefaults.set(seconds, forKey: "\(self.videoId)_lastPosition")
+         }
+     }
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         switchToSegment(index: sender.selectedSegmentIndex, animated: true)
 
