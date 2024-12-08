@@ -28,11 +28,11 @@
       "title": "Yapay Zeka Destekli Kafe Deneyimi",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/02/26/202004-916894674_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 12840453,
-          "thumbnail": "https://cdn.pixabay.com/video/2024/02/26/202004-916894674_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2024/02/26/202004-916894674_tiny.mp4",
+                     "width": 1280,
+                     "height": 720,
+                     "size": 3795921,
+                     "thumbnail": "https://cdn.pixabay.com/video/2024/02/26/202004-916894674_tiny.jpg"
         }
       }
     },
@@ -45,11 +45,11 @@
       "title": "Işık Tüneli ve Yıldız Geçidi",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2022/08/17/128215-740854706_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 34615835,
-          "thumbnail": "https://cdn.pixabay.com/video/2022/08/17/128215-740854706_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2022/08/17/128215-740854706_tiny.mp4",
+                      "width": 1280,
+                      "height": 720,
+                      "size": 7228591,
+                      "thumbnail": "https://cdn.pixabay.com/video/2022/08/17/128215-740854706_tiny.jpg"
         }
       }
     },
@@ -62,11 +62,11 @@
       "title": "Uzun Yıldız Tüneli",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/02/15/150865-799327571_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 51199036,
-          "thumbnail": "https://cdn.pixabay.com/video/2023/02/15/150865-799327571_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2023/02/15/150865-799327571_small.mp4",
+                      "width": 1920,
+                      "height": 1080,
+                      "size": 21359058,
+                      "thumbnail": "https://cdn.pixabay.com/video/2023/02/15/150865-799327571_small.jpg"
         }
       }
     },
@@ -113,11 +113,11 @@
       "title": "Vinyl ve Pikap Nostaljisi",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2020/11/25/57307-484331149_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 30839682,
-          "thumbnail": "https://cdn.pixabay.com/video/2020/11/25/57307-484331149_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2020/11/25/57307-484331149_small.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 18640559,
+            "thumbnail": "https://cdn.pixabay.com/video/2020/11/25/57307-484331149_small.jpg"
         }
       }
     },
@@ -147,11 +147,11 @@
       "title": "Müzik Spektrumu",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/02/10/150110-797862889_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 5134355,
-          "thumbnail": "https://cdn.pixabay.com/video/2023/02/10/150110-797862889_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2023/02/10/150110-797862889_small.mp4",
+                    "width": 1920,
+                    "height": 1080,
+                    "size": 3756382,
+                    "thumbnail": "https://cdn.pixabay.com/video/2023/02/10/150110-797862889_small.jpg"
         }
       }
     },
@@ -164,11 +164,11 @@
       "title": "Fütüristik Bilimkurgu Tüneli",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2021/12/14/100549-657153127_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 24888087,
-          "thumbnail": "https://cdn.pixabay.com/video/2021/12/14/100549-657153127_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2021/12/14/100549-657153127_small.mp4",
+                      "width": 1920,
+                      "height": 1080,
+                      "size": 10369895,
+                      "thumbnail": "https://cdn.pixabay.com/video/2021/12/14/100549-657153127_small.jpg"
         }
       }
     }

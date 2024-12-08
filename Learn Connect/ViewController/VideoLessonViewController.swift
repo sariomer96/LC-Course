@@ -1,20 +1,66 @@
 import UIKit
+import AVKit
+import AVFoundation
 
 class VideoLessonViewController: UIViewController {
 
+    @IBOutlet weak var videoHeight: NSLayoutConstraint!
     @IBOutlet weak var videoView: UIView!
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     private var currentViewController: UIViewController?
+    private var playerViewController: AVPlayerViewController?
     @IBOutlet weak var bottomView: UIView!
     override func viewDidLoad() {
             super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
 //        DatabaseManager.shared
-//        
+     
         }
 //    
-     
+    
+    let videoURL = "https://uc5a4c65c7607710ae85e86abec6.dl.dropboxusercontent.com/cd/0/inline/Cf0EhHCvWT_pSRIXuBATC83WTwJy5-9RXb4pTxB2lBjPtGYdx-cXuPqREMoph4xCLUFhU6JsjAz_H8u6TnY6m32JyKax4oFkHt6vsRX8zSl6xIri05LydT1AvLJOnxsyPfxJdDIzoKSCh9SIYqrYhEmv/file#"
+       private var player: AVPlayer?
+       private var playerLayer: AVPlayerLayer?
+ 
+       override func viewDidAppear(_ animated: Bool) {
+           super.viewDidAppear(animated)
+           self.setupVideoPlayer()
+       }
+       
+   
+       private func updatePlayerFrame() {
+           self.playerLayer?.frame = self.videoView.bounds
+       }
+       
+       override func viewDidLayoutSubviews() {
+           super.viewDidLayoutSubviews()
+           self.updatePlayerFrame()
+       }
+       
+    
+   
+    
+    private func setupVideoPlayer() {
+        guard let url = URL(string: videoURL) else { return }
+        
+        self.player = AVPlayer(url: url)
+        self.playerViewController = AVPlayerViewController()
+        self.playerViewController?.player = self.player
+        
+        // Ekleniyor: videoView üzerine AVPlayerViewController'ı bindiriyoruz
+        if let playerViewController = self.playerViewController {
+            playerViewController.view.frame = videoView.bounds
+            playerViewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            self.videoView.addSubview(playerViewController.view)
+            self.addChild(playerViewController)
+            playerViewController.didMove(toParent: self)
+        }
+    }
+
+  
+    
+   
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         switchToSegment(index: sender.selectedSegmentIndex, animated: true)
 
@@ -82,3 +128,4 @@ class VideoLessonViewController: UIViewController {
 
  
 
+ 

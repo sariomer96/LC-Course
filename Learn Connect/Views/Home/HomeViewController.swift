@@ -13,7 +13,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
-    var user:User?
+   
+    let homeViewModel = HomeViewModel()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.hidesBackButton = true
@@ -22,10 +23,12 @@ class HomeViewController: UIViewController {
         print("Current HomeViewController instance: \(self)")
 
         super.viewDidLoad()
+        
+        JSONDataManager.shared.loadJSONData(categoryName: "computer")
         collectionView.dataSource = self
         collectionView.delegate = self
         let nibName = UINib(nibName: "CourseCollectionViewCell", bundle: nil)
-         print(user)
+        print( homeViewModel.user)
         self.collectionView.register(nibName, forCellWithReuseIdentifier: "CourseCollectionViewCell")
     }
      
@@ -44,8 +47,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("you tapped")
-        print(indexPath.row)
+     
         performSegue(withIdentifier: "toCourseDetailVC", sender: nil)
         
     }

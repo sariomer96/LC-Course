@@ -7,12 +7,15 @@
 
 import Foundation
 
+
+
+
 final class JSONDataManager {
    
     static let shared = JSONDataManager()
     
-    func loadJSONData() {
-        guard let path = Bundle.main.path(forResource: "education", ofType: "json") else {
+    func loadJSONData(categoryName:String) {
+        guard let path = Bundle.main.path(forResource: "all", ofType: "json", inDirectory: "Jsons") else {
             print("JSON dosyası bulunamadı.")
             return
         }

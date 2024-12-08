@@ -61,6 +61,11 @@
 		179F12FE2D02E9CD00442CCF /* SecondSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */; };
 		17DCE5C32D0192E200C59273 /* WishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DCE5C12D0192E200C59273 /* WishListTableViewCell.swift */; };
 		17DCE5C42D0192E200C59273 /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17DCE5C22D0192E200C59273 /* WishListTableViewCell.xib */; };
+		17DF19552D056B84002EAB90 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19542D056B84002EAB90 /* HomeViewModel.swift */; };
+		17DF19592D056E3A002EAB90 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19582D056E3A002EAB90 /* JSONDataManager.swift */; };
+		17DF195B2D056E53002EAB90 /* CourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF195A2D056E53002EAB90 /* CourseContent.swift */; };
+		17DF19612D0574EE002EAB90 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19602D0574EE002EAB90 /* TestViewController.swift */; };
+		17DF19632D057CB6002EAB90 /* Jsons in Resources */ = {isa = PBXBuildFile; fileRef = 17DF19622D057CB6002EAB90 /* Jsons */; };
 		17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */; };
 		17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */; };
 		17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D202D00DB1100050A10 /* LoginViewController.swift */; };
@@ -137,6 +142,11 @@
 		179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegmentViewController.swift; sourceTree = "<group>"; };
 		17DCE5C12D0192E200C59273 /* WishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewCell.swift; sourceTree = "<group>"; };
 		17DCE5C22D0192E200C59273 /* WishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListTableViewCell.xib; sourceTree = "<group>"; };
+		17DF19542D056B84002EAB90 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		17DF19582D056E3A002EAB90 /* JSONDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
+		17DF195A2D056E53002EAB90 /* CourseContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseContent.swift; sourceTree = "<group>"; };
+		17DF19602D0574EE002EAB90 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		17DF19622D057CB6002EAB90 /* Jsons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Jsons; sourceTree = "<group>"; };
 		17FA8D192D00DB1100050A10 /* Learn Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,11 +201,11 @@
 		179523892D03774B00A1A973 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				17DF19602D0574EE002EAB90 /* TestViewController.swift */,
 				179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */,
 				17FA8D4C2D00DBEB00050A10 /* BaseViewController.swift */,
 				172476382D01985800982CA6 /* WishListViewController.swift */,
 				1724763A2D01B6F900982CA6 /* MyCourseViewController.swift */,
-				172476422D01C27100982CA6 /* HomeViewController.swift */,
 				179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */,
 				179F12F52D02492500442CCF /* VideoLessonViewController.swift */,
 				179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */,
@@ -208,6 +218,7 @@
 		1795238E2D03891C00A1A973 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				17DF19532D056B6D002EAB90 /* Home */,
 				179523F32D043DBB00A1A973 /* Login */,
 				1795238F2D03894C00A1A973 /* Register */,
 			);
@@ -251,6 +262,7 @@
 		179523F72D04607A00A1A973 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				17DF195A2D056E53002EAB90 /* CourseContent.swift */,
 				179523F82D04609000A1A973 /* Users.swift */,
 				179523FB2D0460C500A1A973 /* Course.swift */,
 				179523FE2D0460EE00A1A973 /* UserCourse.swift */,
@@ -277,6 +289,15 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		17DF19532D056B6D002EAB90 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				172476422D01C27100982CA6 /* HomeViewController.swift */,
+				17DF19542D056B84002EAB90 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		17FA8D102D00DB1100050A10 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +322,8 @@
 		17FA8D1B2D00DB1100050A10 /* Learn Connect */ = {
 			isa = PBXGroup;
 			children = (
+				17DF19582D056E3A002EAB90 /* JSONDataManager.swift */,
+				17DF19622D057CB6002EAB90 /* Jsons */,
 				179523F72D04607A00A1A973 /* Models */,
 				179523922D03910700A1A973 /* DBManager */,
 				1795238E2D03891C00A1A973 /* Views */,
@@ -467,6 +490,7 @@
 				172476412D01BDFE00982CA6 /* MyCourseTableViewCell.xib in Resources */,
 				179523832D02F9E700A1A973 /* SecondSegmentTableViewCell.xib in Resources */,
 				179F12FA2D02E7B600442CCF /* CourseVideosTableViewCell.xib in Resources */,
+				17DF19632D057CB6002EAB90 /* Jsons in Resources */,
 				179F12F22D023DB700442CCF /* CommentTableViewCell.xib in Resources */,
 				179523962D04219000A1A973 /* LearnConnectDB.sqlite in Resources */,
 				17FA8D242D00DB1100050A10 /* Main.storyboard in Resources */,
@@ -515,15 +539,19 @@
 				1795238D2D03884A00A1A973 /* RegisterViewController.swift in Sources */,
 				179523E52D04334200A1A973 /* FMDatabasePool.m in Sources */,
 				179523E12D04334200A1A973 /* FMDatabase.m in Sources */,
+				17DF19552D056B84002EAB90 /* HomeViewModel.swift in Sources */,
 				179523EE2D043A5100A1A973 /* Helper.swift in Sources */,
 				17FA8D4D2D00DBEB00050A10 /* BaseViewController.swift in Sources */,
 				17DCE5C32D0192E200C59273 /* WishListTableViewCell.swift in Sources */,
 				172476432D01C27100982CA6 /* HomeViewController.swift in Sources */,
+				17DF19592D056E3A002EAB90 /* JSONDataManager.swift in Sources */,
 				179523E32D04334200A1A973 /* FMDatabaseQueue.m in Sources */,
+				17DF195B2D056E53002EAB90 /* CourseContent.swift in Sources */,
 				17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */,
 				179523F12D043DB600A1A973 /* LoginViewModel.swift in Sources */,
 				179523DD2D04334200A1A973 /* FMResultSet.m in Sources */,
 				179523FC2D0460C500A1A973 /* Course.swift in Sources */,
+				17DF19612D0574EE002EAB90 /* TestViewController.swift in Sources */,
 				179523912D03896000A1A973 /* RegisterViewModel.swift in Sources */,
 				17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */,
 				1724763B2D01B6F900982CA6 /* MyCourseViewController.swift in Sources */,

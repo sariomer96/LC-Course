@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="90p-ff-HJy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q9U-gR-26u">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -273,6 +273,23 @@
             </objects>
             <point key="canvasLocation" x="-599" y="781"/>
         </scene>
+        <!--Search-->
+        <scene sceneID="vBu-C2-YIO">
+            <objects>
+                <viewController id="jh8-Jz-nX4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OzP-b1-YzF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="duL-e8-yXl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="lV7-xC-za0"/>
+                    <navigationItem key="navigationItem" id="MrY-2x-h5z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnK-aH-Pw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="984"/>
+        </scene>
         <!--Wishlist-->
         <scene sceneID="PY4-mz-pSA">
             <objects>
@@ -323,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMC-XO-hyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="1092"/>
+            <point key="canvasLocation" x="1274" y="1383"/>
         </scene>
         <!--Kurslarım-->
         <scene sceneID="gpr-ud-nwW">
@@ -413,7 +430,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUf-cI-DMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2660.8695652173915" y="405.80357142857139"/>
+            <point key="canvasLocation" x="2610" y="984"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="fZi-gY-tIM">
+            <objects>
+                <viewController id="Lsn-zF-rw4" customClass="TestViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K0i-1Y-TE9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="byl-r6-58n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKP-03-erY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4298" y="1211"/>
         </scene>
         <!--Hesap-->
         <scene sceneID="cOM-Lq-5H2">
@@ -588,15 +620,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqg-h4-NxA">
-                                <rect key="frame" x="0.0" y="64" width="414" height="144"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqg-h4-NxA">
+                                <rect key="frame" x="0.0" y="64" width="414" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="BFL-j7-JdE"/>
+                                    <constraint firstAttribute="height" constant="200" id="L1U-dJ-Ijy"/>
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vQ6-mR-Rym">
-                                <rect key="frame" x="16" y="276" width="382" height="32"/>
+                                <rect key="frame" x="16" y="280" width="382" height="32"/>
                                 <segments>
                                     <segment title="Dersler"/>
                                     <segment title="Daha Fazla"/>
@@ -606,7 +638,7 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRT-dI-ZY2">
-                                <rect key="frame" x="0.0" y="315" width="414" height="547"/>
+                                <rect key="frame" x="0.0" y="319" width="414" height="543"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
                         </subviews>
@@ -621,7 +653,7 @@
                             <constraint firstItem="Xqg-h4-NxA" firstAttribute="leading" secondItem="fXi-d8-Rzn" secondAttribute="leading" id="e6d-TQ-3LL"/>
                             <constraint firstItem="fXi-d8-Rzn" firstAttribute="trailing" secondItem="jRT-dI-ZY2" secondAttribute="trailing" id="fz0-kN-NSb"/>
                             <constraint firstItem="vQ6-mR-Rym" firstAttribute="leading" secondItem="fXi-d8-Rzn" secondAttribute="leading" constant="16" id="owb-UE-LQ4"/>
-                            <constraint firstItem="vQ6-mR-Rym" firstAttribute="top" secondItem="Xqg-h4-NxA" secondAttribute="bottom" constant="68" id="t44-a4-iLp"/>
+                            <constraint firstItem="vQ6-mR-Rym" firstAttribute="top" secondItem="Xqg-h4-NxA" secondAttribute="bottom" constant="16" id="t44-a4-iLp"/>
                             <constraint firstItem="Xqg-h4-NxA" firstAttribute="top" secondItem="fXi-d8-Rzn" secondAttribute="top" constant="16" id="usZ-Ep-zLA"/>
                         </constraints>
                     </view>
@@ -629,6 +661,7 @@
                     <connections>
                         <outlet property="bottomView" destination="jRT-dI-ZY2" id="5h7-wP-2wU"/>
                         <outlet property="segmentedControl" destination="vQ6-mR-Rym" id="zK9-KL-war"/>
+                        <outlet property="videoHeight" destination="L1U-dJ-Ijy" id="PhF-jR-qLB"/>
                         <outlet property="videoView" destination="Xqg-h4-NxA" id="oIZ-9d-I1A"/>
                     </connections>
                 </viewController>
@@ -794,13 +827,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Kurs Ara..." translatesAutoresizingMaskIntoConstraints="NO" id="7LT-XO-bib">
-                                <rect key="frame" x="0.0" y="133.5" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="TLi-i8-0c4" id="Q4r-RC-szw"/>
-                                </connections>
-                            </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-qC-hSA">
                                 <rect key="frame" x="8" y="64" width="398" height="33.5"/>
                                 <subviews>
@@ -860,13 +886,10 @@
                         <constraints>
                             <constraint firstItem="Zo2-qC-hSA" firstAttribute="leading" secondItem="bka-V8-2ko" secondAttribute="leading" constant="8" id="1Y9-G9-LR5"/>
                             <constraint firstItem="bka-V8-2ko" firstAttribute="trailing" secondItem="ghf-xN-Ivk" secondAttribute="trailing" id="4OC-RD-dav"/>
-                            <constraint firstItem="7LT-XO-bib" firstAttribute="trailing" secondItem="bka-V8-2ko" secondAttribute="trailing" id="EsO-rg-YU9"/>
                             <constraint firstItem="bka-V8-2ko" firstAttribute="trailing" secondItem="Zo2-qC-hSA" secondAttribute="trailing" constant="8" id="JZ3-8Q-FJS"/>
                             <constraint firstItem="Zo2-qC-hSA" firstAttribute="top" secondItem="bka-V8-2ko" secondAttribute="top" constant="64" id="Pz6-dH-zCY"/>
                             <constraint firstItem="ghf-xN-Ivk" firstAttribute="top" secondItem="Zo2-qC-hSA" secondAttribute="bottom" constant="131" id="W1Y-gq-i8i"/>
-                            <constraint firstItem="7LT-XO-bib" firstAttribute="leading" secondItem="bka-V8-2ko" secondAttribute="leading" id="b62-bw-cbi"/>
                             <constraint firstItem="bka-V8-2ko" firstAttribute="bottom" secondItem="ghf-xN-Ivk" secondAttribute="bottom" id="gpD-7S-Sal"/>
-                            <constraint firstItem="7LT-XO-bib" firstAttribute="top" secondItem="Zo2-qC-hSA" secondAttribute="bottom" constant="36" id="jaF-mn-Usk"/>
                             <constraint firstItem="ghf-xN-Ivk" firstAttribute="leading" secondItem="bka-V8-2ko" secondAttribute="leading" id="uWe-6a-A9O"/>
                         </constraints>
                     </view>
@@ -894,7 +917,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
             </objects>
-            <point key="canvasLocation" x="2717" y="-275"/>
+            <point key="canvasLocation" x="3001" y="242"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="twI-zJ-F7C">
@@ -909,10 +932,11 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="TLi-i8-0c4" kind="relationship" relationship="viewControllers" id="91s-q7-TLR"/>
-                        <segue destination="8nr-Lx-Fu8" kind="relationship" relationship="viewControllers" id="Ru7-Du-aaR"/>
-                        <segue destination="0sb-ne-s2m" kind="relationship" relationship="viewControllers" id="AZD-w8-VXB"/>
-                        <segue destination="2l2-z4-Jm4" kind="relationship" relationship="viewControllers" id="9fF-92-Fel"/>
+                        <segue destination="TLi-i8-0c4" kind="relationship" relationship="viewControllers" id="KdC-Vb-Wtc"/>
+                        <segue destination="jh8-Jz-nX4" kind="relationship" relationship="viewControllers" id="6T7-gX-kwB"/>
+                        <segue destination="8nr-Lx-Fu8" kind="relationship" relationship="viewControllers" id="fj8-w1-OGR"/>
+                        <segue destination="0sb-ne-s2m" kind="relationship" relationship="viewControllers" id="NBc-cH-RYJ"/>
+                        <segue destination="2l2-z4-Jm4" kind="relationship" relationship="viewControllers" id="pcz-9J-Gpj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP0-CQ-nzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -939,13 +963,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9tt-As-G7N"/>
-        <segue reference="91s-q7-TLR"/>
+        <segue reference="KdC-Vb-Wtc"/>
         <segue reference="W49-Su-SxG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="play.circle.fill" catalog="system" width="128" height="123"/>
@@ -955,9 +979,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

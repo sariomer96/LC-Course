@@ -53,71 +53,70 @@
         }
       }
     },
-    {
-      "id": 202987,
-      "pageURL": "https://pixabay.com/videos/id-202987/",
-      "type": "film",
-      "tags": "phone, smartphone, mobile",
-      "duration": 15,
-      "title": "Akıllı Telefon Kullanımı",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/03/04/202987-919379330_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 9353596,
-          "thumbnail": "https://cdn.pixabay.com/video/2024/03/04/202987-919379330_medium.jpg"
+    {  "id": 203986,
+        "pageURL": "https://pixabay.com/videos/id-203986/",
+        "type": "animation",
+        "tags": "artificial intelligence, technology, digital",
+        "duration": 6,
+        "title": "Yapay Zeka ve Dijital Teknoloji Animasyonu",
+        "videos": {
+          "medium": {
+            "url": "https://cdn.pixabay.com/video/2024/03/12/203986-923133871_large.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 4562080,
+            "thumbnail": "https://cdn.pixabay.com/video/2024/03/12/203986-923133871_large.jpg"
         }
       }
     },
     {
-      "id": 208682,
-      "pageURL": "https://pixabay.com/videos/id-208682/",
+        "id": 83875,
+             "pageURL": "https://pixabay.com/videos/id-83875/",
+             "type": "film",
+             "tags": "woman, office, notebook",
+             "duration": 15,
+             "title":"Üretkenlik ve Çalışma Anları",
+             "videos": {
+               "medium": {
+                 "url": "https://cdn.pixabay.com/video/2021/08/04/83875-584870588_large.mp4",
+                 "width": 1920,
+                 "height": 1080,
+                 "size": 11187259,
+                 "thumbnail": "https://cdn.pixabay.com/video/2021/08/04/83875-584870588_large.jpg"
+        }
+      }
+    },
+    {
+      "id": 144763,
+      "pageURL": "https://pixabay.com/videos/id-144763/",
       "type": "animation",
-      "tags": "brain, robot, computer science",
-      "duration": 20,
-      "title": "Bilgisayar Bilimi ve Beyin İnovasyonu",
+      "tags": "seo, information, beautiful wallpaper",
+      "duration": 6,
+      "title":"SEO İçin Bilgilendirici ve Görsel Sunum"
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/04/20/208682_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 37681803,
-          "thumbnail": "https://cdn.pixabay.com/video/2024/04/20/208682_medium.jpg"
+          "url": "https://cdn.pixabay.com/video/2022/12/30/144763-785265042_large.mp4",
+          "width": 1920,
+          "height": 1080,
+          "size": 840359,
+          "thumbnail": "https://cdn.pixabay.com/video/2022/12/30/144763-785265042_large.jpg"
         }
       }
     },
     {
-      "id": 137265,
-      "pageURL": "https://pixabay.com/videos/id-137265/",
-      "type": "film",
-      "tags": "office, business, contemporary",
-      "duration": 14,
-      "title": "Modern Ofis Çalışma Ortamı",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 25312779,
-          "thumbnail": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_medium.jpg"
-        }
-      }
-    },
-    {
-      "id": 150883,
-      "pageURL": "https://pixabay.com/videos/id-150883/",
-      "type": "animation",
-      "tags": "computers, office, desk",
-      "duration": 21,
-      "title": "Ofiste Bilgisayar ve Masa Çalışması",
-      "videos": {
-        "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/02/16/150883-799711528_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 12551286,
-          "thumbnail": "https://cdn.pixabay.com/video/2023/02/16/150883-799711528_medium.jpg"
+        "id": 25104,
+             "pageURL": "https://pixabay.com/videos/id-25104/",
+             "type": "animation",
+             "tags": "end screen, youtube, subscribe",
+             "duration": 20,
+             "title":"YouTube Bitiş Ekranı Tasarımı | Abone Ol ve Daha Fazlasını Keşfet"
+             "videos": {
+               "medium": {
+                 "url": "https://cdn.pixabay.com/video/2019/07/09/25104-347958104_large.mp4",
+                 "width": 1920,
+                 "height": 1080,
+                 "size": 2363486,
+                 "thumbnail": "https://cdn.pixabay.com/video/2019/07/09/25104-347958104_large.jpg"
         }
       }
     },

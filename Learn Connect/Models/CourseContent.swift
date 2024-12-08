@@ -1,6 +1,4 @@
- 
-
-import Foundation
+ import Foundation
  
 struct CourseContent: Codable {
     let total, totalHits: Int?

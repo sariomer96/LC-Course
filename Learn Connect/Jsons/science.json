@@ -28,11 +28,11 @@
       "title": "Finansal Yatırım Animasyonu",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/03/15/204292-923909617_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 13224007,
-          "thumbnail": "https://cdn.pixabay.com/video/2024/03/15/204292-923909617_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2024/03/15/204292-923909617_small.mp4",
+                      "width": 1920,
+                      "height": 1080,
+                      "size": 8543778,
+                      "thumbnail": "https://cdn.pixabay.com/video/2024/03/15/204292-923909617_small.jpg"
         }
       }
     },
@@ -113,11 +113,11 @@
       "title": "Beyin ve Bilgisayar Teknolojisi",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2024/04/20/208682_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 37681803,
-          "thumbnail": "https://cdn.pixabay.com/video/2024/04/20/208682_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2024/04/20/208682_small.mp4",
+                     "width": 1920,
+                     "height": 1080,
+                     "size": 24452214,
+                     "thumbnail": "https://cdn.pixabay.com/video/2024/04/20/208682_small.jpg"
         }
       }
     },
@@ -147,11 +147,11 @@
       "title": "Modern Ofis ve İş Dünyası",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 25312779,
-          "thumbnail": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_small.mp4",
+                     "width": 1920,
+                     "height": 1080,
+                     "size": 11033268,
+                     "thumbnail": "https://cdn.pixabay.com/video/2022/10/31/137265-766326232_small.jpg"
         }
       }
     },
@@ -164,11 +164,11 @@
       "title": "Yapay Zeka Algoritmaları",
       "videos": {
         "medium": {
-          "url": "https://cdn.pixabay.com/video/2023/07/19/172170-846731303_medium.mp4",
-          "width": 2560,
-          "height": 1440,
-          "size": 20261345,
-          "thumbnail": "https://cdn.pixabay.com/video/2023/07/19/172170-846731303_medium.jpg"
+            "url": "https://cdn.pixabay.com/video/2023/07/19/172170-846731303_small.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 8574390,
+            "thumbnail": "https://cdn.pixabay.com/video/2023/07/19/172170-846731303_small.jpg"
         }
       }
     }
