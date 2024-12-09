@@ -60,6 +60,8 @@ extension SearchViewController: UISearchBarDelegate {
                 // Arama yap
                 searchViewModel.filteredHits = searchViewModel.searchFilter(query: searchText)
             }
-            tableView.reloadData()
+        UIView.transition(with: tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.tableView.reloadData()
+        }, completion: nil)
         }
 }
