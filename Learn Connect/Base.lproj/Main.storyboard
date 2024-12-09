@@ -822,12 +822,13 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CourseCollectionViewCell" id="Dif-np-ev0" customClass="CourseCollectionViewCell" customModule="Learn_Connect" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="0.0" width="180" height="264"/>
+                                        <rect key="frame" x="5" y="0.0" width="180" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sdG-Wa-xYe">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="264"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="180"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

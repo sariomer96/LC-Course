@@ -19,6 +19,10 @@ class CourseDetailViewController: UIViewController {
             self.showAlert(message: error)
         }
         
+        DatabaseManager.shared.successCallback = { success in
+            self.showAlert(message: success,isSuccess:  true)
+        }
+        
         let nibName = UINib(nibName: "CommentTableViewCell", bundle: nil)
         
         self.tableView.register(nibName, forCellReuseIdentifier: "CommentTableViewCell")
@@ -30,12 +34,13 @@ class CourseDetailViewController: UIViewController {
         self.courseTitle = title
         }
     @IBAction func ClickedWishlist(_ sender: Any) {
-        courseDetailViewModel.subscribeAndWishListCourse(isLiked: 1, isSub: 0)
+//        courseDetailViewModel.subscribeAndWishListCourse(isLiked: 1, isSub: nil)
+        courseDetailViewModel.subscribeAndWishListCourse(isLiked: 1, isSub: nil)
     }
     
     @IBAction func ClickedSubscribeToCourse(_ sender: Any) {
-        courseDetailViewModel.subscribeAndWishListCourse(isLiked: 0, isSub: 1)
-        
+//        courseDetailViewModel.subscribeAndWishListCourse( isLiked: nil, isSub: 1)
+        courseDetailViewModel.subscribeAndWishListCourse(isLiked: nil, isSub: 1)
  
        
     }

@@ -7,6 +7,7 @@ final class DatabaseManager {
     static let shared = DatabaseManager()
     private var db: OpaquePointer?
     var errorCallback:VoidCallback?
+    var successCallback:VoidCallback?
     private init() {
         openDatabase()
         createTables()
@@ -48,8 +49,8 @@ final class DatabaseManager {
             image_url TEXT,
             video_url TEXT,
             title TEXT,
-            is_liked INTEGER,
-            is_sub INTEGER
+            is_liked INTEGER NULL,
+            is_sub INTEGER NULL
            
             
         );
@@ -105,35 +106,96 @@ final class DatabaseManager {
         }
         sqlite3_finalize(statement)
     }
- 
-    
-    func insertCourseTable(userId:Int,videoId:Int, imageUrl:String,videoUrl:String, title:String, isLiked: Int, isSub:Int) {
-        let query = "INSERT INTO Course (user_id, video_id, image_url, video_url, title, is_liked, is_sub ) VALUES (?, ?, ?, ?, ?, ?, ?);"
+    func upsertCourse(userId: Int, videoId: Int, imageUrl: String, videoUrl: String, title: String, isLiked: Int?, isSub: Int?) {
+        let selectQuery = "SELECT * FROM Course WHERE user_id = ? AND video_id = ?;"
+        let insertQuery = """
+        INSERT INTO Course (user_id, video_id, image_url, video_url, title, is_liked, is_sub)
+        VALUES (?, ?, ?, ?, ?, ?, ?);
+        """
+        let updateQuery = """
+        UPDATE Course
+        SET image_url = ?,
+            video_url = ?,
+            title = ?,
+            is_liked = COALESCE(?, is_liked),
+            is_sub = COALESCE(?, is_sub)
+        WHERE user_id = ? AND video_id = ?;
+        """
         var statement: OpaquePointer?
-       
-        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
-             
+
+        // 1. Kayıt kontrolü
+        if sqlite3_prepare_v2(db, selectQuery, -1, &statement, nil) == SQLITE_OK {
+            sqlite3_bind_int(statement, 1, Int32(userId))
+            sqlite3_bind_int(statement, 2, Int32(videoId))
+            
+            if sqlite3_step(statement) == SQLITE_ROW {
+                // 2. Eğer kayıt varsa güncelle
+                sqlite3_finalize(statement)
+                if sqlite3_prepare_v2(db, updateQuery, -1, &statement, nil) == SQLITE_OK {
+                    sqlite3_bind_text(statement, 1, (imageUrl as NSString).utf8String, -1, nil)
+                    sqlite3_bind_text(statement, 2, (videoUrl as NSString).utf8String, -1, nil)
+                    sqlite3_bind_text(statement, 3, (title as NSString).utf8String, -1, nil)
+                    
+                    if let isLiked = isLiked {
+                        sqlite3_bind_int(statement, 4, Int32(isLiked))
+                    } else {
+                        sqlite3_bind_null(statement, 4)
+                    }
+                    
+                    if let isSub = isSub {
+                        sqlite3_bind_int(statement, 5, Int32(isSub))
+                    } else {
+                        sqlite3_bind_null(statement, 5)
+                    }
+                    
+                    sqlite3_bind_int(statement, 6, Int32(userId))
+                    sqlite3_bind_int(statement, 7, Int32(videoId))
+                    
+                    if sqlite3_step(statement) == SQLITE_DONE {
+                        print("Kurs durumu başarıyla güncellendi.")
+                        successCallback?("Başarıyla eklendi.")
+                    } else {
+                        print("Güncelleme hatası.")
+                    }
+                }
+            } else {
+              
+                sqlite3_finalize(statement)
+                if sqlite3_prepare_v2(db, insertQuery, -1, &statement, nil) == SQLITE_OK {
                     sqlite3_bind_int(statement, 1, Int32(userId))
                     sqlite3_bind_int(statement, 2, Int32(videoId))
-                 
                     sqlite3_bind_text(statement, 3, (imageUrl as NSString).utf8String, -1, nil)
                     sqlite3_bind_text(statement, 4, (videoUrl as NSString).utf8String, -1, nil)
                     sqlite3_bind_text(statement, 5, (title as NSString).utf8String, -1, nil)
-                    sqlite3_bind_int(statement, 6, Int32(isLiked))
-                    sqlite3_bind_int(statement, 7, Int32(isSub))
+                    
+                    if let isLiked = isLiked {
+                        sqlite3_bind_int(statement, 6, Int32(isLiked))
+                    } else {
+                        sqlite3_bind_null(statement, 6)
+                    }
+                    
+                    if let isSub = isSub {
+                        sqlite3_bind_int(statement, 7, Int32(isSub))
+                    } else {
+                        sqlite3_bind_null(statement, 7)
+                    }
 
-    
+                    if sqlite3_step(statement) == SQLITE_DONE {
+                        print("Yeni kurs başarıyla kaydedildi.")
+                        successCallback?("Başarıyla eklendi.")
+                    } else {
+                        print("Kurs ekleme hatası.")
+                    }
+                }
+            }
+        } else {
+            print("Sorgu hazırlanırken hata oluştu.")
+        }
 
-                   if sqlite3_step(statement) == SQLITE_DONE {
-                       print("Kurs başarıyla kaydedildi.")
-                   } else {
-                       print("Kurs ekleme hatası.")
-                       errorCallback?("Tablo eklenirken bir hata olustu")
-                   }
-               }
-         
         sqlite3_finalize(statement)
     }
+
+
  
     func getWishListCourses(forUserId userId: Int) -> [MyCourse] {
         let query = "SELECT video_id, image_url, video_url, title, is_liked, is_sub FROM Course WHERE user_id = ? AND is_liked = 1;"
