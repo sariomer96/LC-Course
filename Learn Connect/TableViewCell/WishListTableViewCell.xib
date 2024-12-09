@@ -62,6 +62,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="courseLabel" destination="wRl-RR-Fwz" id="hu0-bI-Wra"/>
+                <outlet property="thumbImageView" destination="9c9-s7-V80" id="5FZ-Wd-gSC"/>
             </connections>
             <point key="canvasLocation" x="287.02290076335879" y="58.802816901408455"/>
         </tableViewCell>

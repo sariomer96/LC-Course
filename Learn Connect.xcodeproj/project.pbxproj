@@ -72,6 +72,7 @@
 		17E96BA22D076D2E0000C441 /* MyCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA12D076D2E0000C441 /* MyCourse.swift */; };
 		17E96BA42D076F930000C441 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA32D076F930000C441 /* UserProfile.swift */; };
 		17E96BA62D0772490000C441 /* MyCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA52D0772490000C441 /* MyCourseViewModel.swift */; };
+		17E96BA92D077AB90000C441 /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA82D077AB90000C441 /* WishListViewModel.swift */; };
 		17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */; };
 		17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */; };
 		17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D202D00DB1100050A10 /* LoginViewController.swift */; };
@@ -159,6 +160,7 @@
 		17E96BA12D076D2E0000C441 /* MyCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourse.swift; sourceTree = "<group>"; };
 		17E96BA32D076F930000C441 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		17E96BA52D0772490000C441 /* MyCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseViewModel.swift; sourceTree = "<group>"; };
+		17E96BA82D077AB90000C441 /* WishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModel.swift; sourceTree = "<group>"; };
 		17FA8D192D00DB1100050A10 /* Learn Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,7 +218,6 @@
 				17DF19602D0574EE002EAB90 /* TestViewController.swift */,
 				179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */,
 				17FA8D4C2D00DBEB00050A10 /* BaseViewController.swift */,
-				172476382D01985800982CA6 /* WishListViewController.swift */,
 				179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */,
 				179F12F52D02492500442CCF /* VideoLessonViewController.swift */,
 				179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */,
@@ -229,6 +230,7 @@
 		1795238E2D03891C00A1A973 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				17E96BAA2D077ACD0000C441 /* WishList */,
 				17E96BA72D07726F0000C441 /* MyCourse */,
 				17D404B22D07041F00EF36CF /* CourseDetailViewModel.swift */,
 				17DF19532D056B6D002EAB90 /* Home */,
@@ -319,6 +321,15 @@
 				17E96BA52D0772490000C441 /* MyCourseViewModel.swift */,
 			);
 			path = MyCourse;
+			sourceTree = "<group>";
+		};
+		17E96BAA2D077ACD0000C441 /* WishList */ = {
+			isa = PBXGroup;
+			children = (
+				172476382D01985800982CA6 /* WishListViewController.swift */,
+				17E96BA82D077AB90000C441 /* WishListViewModel.swift */,
+			);
+			path = WishList;
 			sourceTree = "<group>";
 		};
 		17FA8D102D00DB1100050A10 = {
@@ -571,6 +582,7 @@
 				17D404B32D07041F00EF36CF /* CourseDetailViewModel.swift in Sources */,
 				179523EE2D043A5100A1A973 /* Helper.swift in Sources */,
 				17FA8D4D2D00DBEB00050A10 /* BaseViewController.swift in Sources */,
+				17E96BA92D077AB90000C441 /* WishListViewModel.swift in Sources */,
 				17DCE5C32D0192E200C59273 /* WishListTableViewCell.swift in Sources */,
 				172476432D01C27100982CA6 /* HomeViewController.swift in Sources */,
 				17DF19592D056E3A002EAB90 /* JSONDataManager.swift in Sources */,

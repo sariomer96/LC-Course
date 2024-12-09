@@ -122,7 +122,7 @@ final class DatabaseManager {
                     sqlite3_bind_int(statement, 6, Int32(isLiked))
                     sqlite3_bind_int(statement, 7, Int32(isSub))
 
-                 print("AAAAAAA")
+    
 
                    if sqlite3_step(statement) == SQLITE_DONE {
                        print("Kurs başarıyla kaydedildi.")
@@ -135,7 +135,33 @@ final class DatabaseManager {
         sqlite3_finalize(statement)
     }
  
-    
+    func getWishListCourses(forUserId userId: Int) -> [MyCourse] {
+        let query = "SELECT video_id, image_url, video_url, title, is_liked, is_sub FROM Course WHERE user_id = ? AND is_liked = 1;"
+        var statement: OpaquePointer?
+        var courses: [MyCourse] = []
+
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
+            sqlite3_bind_int(statement, 1, Int32(userId)) // userId'yi bind et
+
+            while sqlite3_step(statement) == SQLITE_ROW {
+                let videoId = Int(sqlite3_column_int(statement, 0))
+                let imageUrl = String(cString: sqlite3_column_text(statement, 1))
+                let videoUrl = String(cString: sqlite3_column_text(statement, 2))
+                let title = String(cString: sqlite3_column_text(statement, 3))
+                let isLiked = Int(sqlite3_column_int(statement, 4))
+                let isSub = Int(sqlite3_column_int(statement, 5))
+
+               
+                let course = MyCourse(userId: userId, videoId: videoId, imageUrl: imageUrl, videoUrl: videoUrl, title: title, isLiked: isLiked, isSub: isSub)
+                courses.append(course)
+            }
+        } else {
+            print("Sorgu hazırlama hatası.")
+        }
+
+        sqlite3_finalize(statement)
+        return courses
+    }
     func getSubscribedCourses(forUserId userId: Int) -> [MyCourse] {
         let query = "SELECT video_id, image_url, video_url, title, is_liked, is_sub FROM Course WHERE user_id = ? AND is_sub = 1;"
         var statement: OpaquePointer?

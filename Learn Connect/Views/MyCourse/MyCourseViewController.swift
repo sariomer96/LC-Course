@@ -17,9 +17,11 @@ class MyCourseViewController: UIViewController {
         tableView.register(MyCourseTableViewCell.nib(), forCellReuseIdentifier:
                             MyCourseTableViewCell.identifier)
         
-        
+        if let tabBarController = self.tabBarController {
+            tabBarController.delegate = self
+        }
         myCourseViewModel.getAllMyCourse()
-        // Do any additional setup after loading the view.
+        tableView.reloadData()
     }
     
 
@@ -44,3 +46,16 @@ extension MyCourseViewController : UITableViewDataSource {
     
     
 }
+
+
+extension MyCourseViewController: UITabBarControllerDelegate {
+    // Tab bar değişikliklerini dinleme
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if viewController == self {
+            myCourseViewModel.getAllMyCourse()
+            tableView.reloadData()
+            print("secildi")
+        }
+   }
+}
+
