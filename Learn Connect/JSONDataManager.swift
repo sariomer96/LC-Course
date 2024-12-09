@@ -6,18 +6,15 @@
 //
 
 import Foundation
-
-
-
-
+ 
 final class JSONDataManager {
    
     static let shared = JSONDataManager()
     
-    func loadJSONData(categoryName:String) {
+    func loadJSONData(categoryName:String) -> CourseContent?{
         guard let path = Bundle.main.path(forResource: categoryName, ofType: "json", inDirectory: "Jsons") else {
             print("JSON dosyası bulunamadı.")
-            return
+           return nil
         }
 
         
@@ -27,11 +24,14 @@ final class JSONDataManager {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             let courseContent = try decoder.decode(CourseContent.self, from: data)
-            
+       
+              return courseContent
             print("Başarıyla okundu: \(courseContent)")
         } catch {
             print("JSON okuma/parsing hatası: \(error)")
         }
+        
+        return nil
     }
 
 }

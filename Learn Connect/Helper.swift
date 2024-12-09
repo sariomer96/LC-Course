@@ -27,8 +27,7 @@ class Helper {
         return hashString
     }
 
-
-//    if let hashedPassword = hashPassword(password: "mySecurePassword123") {
+ //    if let hashedPassword = hashPassword(password: "mySecurePassword123") {
 //        print("Hashed Password: \(hashedPassword)")
 //    }
 

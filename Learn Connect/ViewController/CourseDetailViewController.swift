@@ -1,14 +1,11 @@
-//
-//  CourseDetailViewController.swift
-//  Learn Connect
-//
-//  Created by Omer on 5.12.2024.
-//
+ 
 
 import UIKit
 
 class CourseDetailViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var courseName: UILabel!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +17,26 @@ class CourseDetailViewController: UIViewController {
         let nibName = UINib(nibName: "CommentTableViewCell", bundle: nil)
         
         self.tableView.register(nibName, forCellReuseIdentifier: "CommentTableViewCell")
-        // Do any additional setup after loading the view.
+       
     }
-  
-
+    @IBAction func ClickedWishlist(_ sender: Any) {
+    }
+    
+    @IBAction func ClickedSubscribeToCourse(_ sender: Any) {
+    }
+    
+    
+    func configure(with urlString: String?) {
+        guard let url = URL(string: urlString ?? "") else { return }
+      
+       URLSession.shared.dataTask(with: url) { data, response, error in
+           if let data = data, let image = UIImage(data: data) {
+               DispatchQueue.main.async {
+                   self.imageView.image = image
+               }
+           }
+       }.resume()
+   }
 }
 
 extension CourseDetailViewController: UITableViewDelegate, UITableViewDataSource {

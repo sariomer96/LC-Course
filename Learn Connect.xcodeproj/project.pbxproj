@@ -59,6 +59,7 @@
 		179F12FA2D02E7B600442CCF /* CourseVideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179F12F82D02E7B600442CCF /* CourseVideosTableViewCell.xib */; };
 		179F12FC2D02E9AD00442CCF /* FirstSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */; };
 		179F12FE2D02E9CD00442CCF /* SecondSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */; };
+		17D404B12D06D33000EF36CF /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D404B02D06D33000EF36CF /* ImageLoader.swift */; };
 		17DCE5C32D0192E200C59273 /* WishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DCE5C12D0192E200C59273 /* WishListTableViewCell.swift */; };
 		17DCE5C42D0192E200C59273 /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17DCE5C22D0192E200C59273 /* WishListTableViewCell.xib */; };
 		17DF19552D056B84002EAB90 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19542D056B84002EAB90 /* HomeViewModel.swift */; };
@@ -141,6 +142,7 @@
 		179F12F82D02E7B600442CCF /* CourseVideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseVideosTableViewCell.xib; sourceTree = "<group>"; };
 		179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSegmentViewController.swift; sourceTree = "<group>"; };
 		179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegmentViewController.swift; sourceTree = "<group>"; };
+		17D404B02D06D33000EF36CF /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		17DCE5C12D0192E200C59273 /* WishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewCell.swift; sourceTree = "<group>"; };
 		17DCE5C22D0192E200C59273 /* WishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListTableViewCell.xib; sourceTree = "<group>"; };
 		17DF19542D056B84002EAB90 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				179523D12D042E9100A1A973 /* Learn Connect-Bridging-Header.h */,
 				179523ED2D043A5100A1A973 /* Helper.swift */,
 				17DF19642D05B6E6002EAB90 /* DownloadViewModel.swift */,
+				17D404B02D06D33000EF36CF /* ImageLoader.swift */,
 			);
 			path = "Learn Connect";
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				17DF19612D0574EE002EAB90 /* TestViewController.swift in Sources */,
 				179523912D03896000A1A973 /* RegisterViewModel.swift in Sources */,
 				17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */,
+				17D404B12D06D33000EF36CF /* ImageLoader.swift in Sources */,
 				1724763B2D01B6F900982CA6 /* MyCourseViewController.swift in Sources */,
 				179F12FE2D02E9CD00442CCF /* SecondSegmentViewController.swift in Sources */,
 				179F12FC2D02E9AD00442CCF /* FirstSegmentViewController.swift in Sources */,

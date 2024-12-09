@@ -22,8 +22,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEG-aI-DHq">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurs Adı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hng-tO-ydI">
-                                <rect key="frame" x="88.666666666666671" y="169.66666666666666" width="63.000000000000014" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurs Adı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hng-tO-ydI">
+                                <rect key="frame" x="16" y="144" width="208" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                                 <imageReference key="image" image="play.rectangle.fill" catalog="system" symbolScale="medium"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puan: 4.3 (625)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD4-pd-Jcg">
-                                <rect key="frame" x="60.666666666666657" y="204" width="119" height="21"/>
+                                <rect key="frame" x="60.666666666666657" y="180.33333333333334" width="119" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,12 +46,14 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fh0-N8-O5Z" secondAttribute="trailing" id="1gm-K0-YAr"/>
+                            <constraint firstItem="Hng-tO-ydI" firstAttribute="top" secondItem="fh0-N8-O5Z" secondAttribute="bottom" constant="16" id="59R-qt-xdY"/>
                             <constraint firstItem="fh0-N8-O5Z" firstAttribute="leading" secondItem="XEG-aI-DHq" secondAttribute="leading" id="9rM-Yw-77q"/>
-                            <constraint firstItem="Hng-tO-ydI" firstAttribute="centerY" secondItem="XEG-aI-DHq" secondAttribute="centerY" id="K4w-cn-GGo"/>
+                            <constraint firstAttribute="trailing" secondItem="Hng-tO-ydI" secondAttribute="trailing" constant="16" id="BDc-k1-rXJ"/>
+                            <constraint firstItem="Hng-tO-ydI" firstAttribute="leading" secondItem="XEG-aI-DHq" secondAttribute="leading" constant="16" id="Cct-gz-ita"/>
                             <constraint firstItem="Hng-tO-ydI" firstAttribute="centerX" secondItem="XEG-aI-DHq" secondAttribute="centerX" id="SwC-LB-nqc"/>
                             <constraint firstItem="hD4-pd-Jcg" firstAttribute="centerX" secondItem="XEG-aI-DHq" secondAttribute="centerX" id="TtO-kY-Lts"/>
                             <constraint firstItem="fh0-N8-O5Z" firstAttribute="top" secondItem="XEG-aI-DHq" secondAttribute="top" id="oVW-FL-s7Q"/>
-                            <constraint firstItem="hD4-pd-Jcg" firstAttribute="top" secondItem="Hng-tO-ydI" secondAttribute="bottom" constant="13.333333333333343" id="vGX-hx-6ZW"/>
+                            <constraint firstItem="hD4-pd-Jcg" firstAttribute="top" secondItem="Hng-tO-ydI" secondAttribute="bottom" constant="16" id="vGX-hx-6ZW"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -64,6 +66,11 @@
                 <constraint firstItem="XEG-aI-DHq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hSK-8C-mrb"/>
             </constraints>
             <size key="customSize" width="144" height="181"/>
+            <connections>
+                <outlet property="courseTitle" destination="Hng-tO-ydI" id="Yh0-HG-k9l"/>
+                <outlet property="rateLabel" destination="hD4-pd-Jcg" id="18c-Pq-mch"/>
+                <outlet property="thumbnailImageView" destination="fh0-N8-O5Z" id="mRT-6h-Edo"/>
+            </connections>
             <point key="canvasLocation" x="59.541984732824424" y="-26.760563380281692"/>
         </collectionViewCell>
     </objects>

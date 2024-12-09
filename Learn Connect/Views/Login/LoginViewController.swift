@@ -14,8 +14,41 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
     }
+    
+    func scheduleLocalNotification() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                print("Notification permission granted.")
+            } else if let error = error {
+                print("Permission denied: \(error.localizedDescription)")
+            }
+        }
+        let content = UNMutableNotificationContent()
+        content.title = "Merhaba!"
+        content.body = "Bu bir yerel bildirim örneğidir."
+        content.sound = .default
+         
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        
+        // Bildirim isteği oluştur
+        let request = UNNotificationRequest(identifier: "localNotification", content: content, trigger: trigger)
+        
+        // Bildirimi planla
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Bildirim planlanamadı: \(error.localizedDescription)")
+            } else {
+                print("Bildirim planlandı!")
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+           scheduleLocalNotification()
+        
+        
+      
 
         let systemImage = UIImage(systemName: "star.fill")
 
@@ -23,13 +56,12 @@ class LoginViewController: UIViewController {
         
       
         for download in a {
-            print("User ID: \(download.userId), Video ID: \(download.videoId), Title: \(download.title)")
-            // İsteğe bağlı olarak görüntüyü kullanabilirsiniz
+             
             let imageView = UIImageView(image: download.image)
-            print(imageView)
+ 
         }
 
-        print(a)
+ 
         
         let isRemembered = UserDefaults.standard.bool(forKey: "isRemembered")
            rememberSwitch.isOn = isRemembered
