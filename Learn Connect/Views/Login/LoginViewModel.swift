@@ -9,7 +9,7 @@ import Foundation
 
 final class LoginViewModel {
    
-    var user:User?
+ 
     
     
     func login(email:String, password:String,success: @escaping (Bool) -> () ) {

@@ -99,6 +99,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                      
                  let imageUrl =   course.videos?.medium?.thumbnail
                   destinationVC.configure(with: imageUrl)
+                  destinationVC.setCourseName(title: course.title ?? "Kurs Adi")
+                  destinationVC.courseDetailViewModel.course = course
               }
           }
     }

@@ -97,7 +97,8 @@ class LoginViewController: UIViewController {
                               
                
                               if let homeVC = tabBarController.viewControllers?.first as? HomeViewController {
-                                  homeVC.homeViewModel.user = user
+                             
+                                  UserProfile.shared.user = user
                               }
                               
             

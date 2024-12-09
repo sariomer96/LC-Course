@@ -349,15 +349,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cP3-Ff-NUn">
-                                <rect key="frame" x="0.0" y="247" width="430" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="8nr-Lx-Fu8" id="XAF-wv-PQG"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9G4-iK-YMc">
-                                <rect key="frame" x="0.0" y="319" width="430" height="530"/>
+                                <rect key="frame" x="0.0" y="274.33333333333331" width="430" height="574.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Qxo-6K-aLc" customClass="MyCourseTableViewCell" customModule="Learn_Connect" customModuleProvider="target">
@@ -380,21 +373,14 @@
                                 <rect key="frame" x="16" y="150" width="398" height="29.666666666666657"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lER-We-LRo">
-                                        <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="29.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="29.666666666666668"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Tümü">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQ6-3w-45H">
-                                        <rect key="frame" x="139.33333333333334" y="0.0" width="119.33333333333334" height="29.666666666666668"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Favoriler">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
-                                        </buttonConfiguration>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c31-9o-6CW">
-                                        <rect key="frame" x="278.66666666666669" y="0.0" width="119.33333333333331" height="29.666666666666668"/>
+                                        <rect key="frame" x="209" y="0.0" width="189" height="29.666666666666668"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="İndirilenler">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
@@ -407,16 +393,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fEN-vD-Wio" firstAttribute="top" secondItem="pQD-t7-aGF" secondAttribute="top" constant="47" id="62d-Nc-L19"/>
+                            <constraint firstItem="9G4-iK-YMc" firstAttribute="top" secondItem="qaZ-NT-ciI" secondAttribute="bottom" constant="36" id="6OK-3M-Wgm"/>
                             <constraint firstItem="9G4-iK-YMc" firstAttribute="leading" secondItem="pQD-t7-aGF" secondAttribute="leading" id="Fj7-2x-CmN"/>
                             <constraint firstItem="qaZ-NT-ciI" firstAttribute="top" secondItem="pQD-t7-aGF" secondAttribute="top" constant="110" id="S4U-sF-tIi"/>
-                            <constraint firstItem="cP3-Ff-NUn" firstAttribute="trailing" secondItem="pQD-t7-aGF" secondAttribute="trailing" id="SRs-R8-ObS"/>
                             <constraint firstItem="pQD-t7-aGF" firstAttribute="trailing" secondItem="fEN-vD-Wio" secondAttribute="trailing" constant="16" id="WmM-3z-1Tx"/>
-                            <constraint firstItem="9G4-iK-YMc" firstAttribute="top" secondItem="cP3-Ff-NUn" secondAttribute="bottom" constant="16" id="aHK-Ve-XE9"/>
                             <constraint firstItem="qaZ-NT-ciI" firstAttribute="centerX" secondItem="2kA-vr-wHS" secondAttribute="centerX" id="ggS-jB-X2p"/>
                             <constraint firstItem="pQD-t7-aGF" firstAttribute="trailing" secondItem="9G4-iK-YMc" secondAttribute="trailing" id="huK-EJ-PD7"/>
-                            <constraint firstItem="cP3-Ff-NUn" firstAttribute="leading" secondItem="pQD-t7-aGF" secondAttribute="leading" id="ia4-8r-Mu9"/>
                             <constraint firstItem="fEN-vD-Wio" firstAttribute="leading" secondItem="pQD-t7-aGF" secondAttribute="leading" constant="16" id="j6R-3m-1aj"/>
-                            <constraint firstItem="cP3-Ff-NUn" firstAttribute="top" secondItem="pQD-t7-aGF" secondAttribute="top" constant="144" id="k9M-LK-K25"/>
                             <constraint firstItem="pQD-t7-aGF" firstAttribute="bottom" secondItem="9G4-iK-YMc" secondAttribute="bottom" id="r49-Be-dx1"/>
                         </constraints>
                     </view>
@@ -524,12 +507,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Yb-0A-Ti4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Yb-0A-Ti4">
                                 <rect key="frame" x="87" y="155.66666666666666" width="256" height="124.99999999999997"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="eVn-Hi-uMa"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KURS ADI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfc-kc-hXQ">
                                 <rect key="frame" x="16" y="298" width="398" height="21"/>
@@ -774,11 +762,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Yorum yapılıyor yorum yorum yorum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RxO-NK-m28">
-                                <rect key="frame" x="0.0" y="64" width="430" height="200"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Yorum yapılıyor yorum yorum yorum" translatesAutoresizingMaskIntoConstraints="NO" id="RxO-NK-m28">
+                                <rect key="frame" x="0.0" y="64" width="430" height="185"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="WXH-aX-I3W"/>
+                                    <constraint firstAttribute="height" constant="185" id="WXH-aX-I3W"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -812,7 +800,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPT-ei-sKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5946.376811594203" y="-1036.6071428571429"/>
+            <point key="canvasLocation" x="5945.5813953488368" y="-1037.1244635193134"/>
         </scene>
         <!--Ana Sayfa-->
         <scene sceneID="8bt-GV-j62">

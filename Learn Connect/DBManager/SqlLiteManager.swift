@@ -2,10 +2,11 @@ import SQLite3
 import UIKit
 import Foundation
 
+ 
 final class DatabaseManager {
     static let shared = DatabaseManager()
     private var db: OpaquePointer?
-
+    var errorCallback:VoidCallback?
     private init() {
         openDatabase()
         createTables()
@@ -22,6 +23,8 @@ final class DatabaseManager {
         {
             print("connected")
         }
+        
+        print(fileURL)
     }
       
 
@@ -40,10 +43,15 @@ final class DatabaseManager {
         let createCoursesTable = """
         CREATE TABLE IF NOT EXISTS Course (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+            video_id INTEGER,
+            user_id INTEGER,
+            image_url TEXT,
+            video_url TEXT,
             title TEXT,
-            description TEXT,
-            category TEXT,
-            instructor TEXT
+            is_liked INTEGER,
+            is_sub INTEGER
+           
+            
         );
         """
 
@@ -76,23 +84,11 @@ final class DatabaseManager {
             FOREIGN KEY(course_id) REFERENCES Course(id)
         );
         """
-
-        let createUserVideoProgressTable = """
-        CREATE TABLE IF NOT EXISTS UserVideoProgress (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id INTEGER,
-            video_id INTEGER,
-            progress REAL,
-            FOREIGN KEY(user_id) REFERENCES User(id),
-            FOREIGN KEY(video_id) REFERENCES Video(id)
-        );
-        """
-
+        
         executeQuery(createUsersTable)
         executeQuery(createCoursesTable)
         executeQuery(createUserCoursesTable)
         executeQuery(createVideosTable)
-        executeQuery(createUserVideoProgressTable)
         executeQuery(downloadsTable)
     }
 
@@ -111,6 +107,63 @@ final class DatabaseManager {
     }
  
     
+    func insertCourseTable(userId:Int,videoId:Int, imageUrl:String,videoUrl:String, title:String, isLiked: Int, isSub:Int) {
+        let query = "INSERT INTO Course (user_id, video_id, image_url, video_url, title, is_liked, is_sub ) VALUES (?, ?, ?, ?, ?, ?, ?);"
+        var statement: OpaquePointer?
+       
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
+             
+                    sqlite3_bind_int(statement, 1, Int32(userId))
+                    sqlite3_bind_int(statement, 2, Int32(videoId))
+                 
+                    sqlite3_bind_text(statement, 3, (imageUrl as NSString).utf8String, -1, nil)
+                    sqlite3_bind_text(statement, 4, (videoUrl as NSString).utf8String, -1, nil)
+                    sqlite3_bind_text(statement, 5, (title as NSString).utf8String, -1, nil)
+                    sqlite3_bind_int(statement, 6, Int32(isLiked))
+                    sqlite3_bind_int(statement, 7, Int32(isSub))
+
+                 print("AAAAAAA")
+
+                   if sqlite3_step(statement) == SQLITE_DONE {
+                       print("Kurs başarıyla kaydedildi.")
+                   } else {
+                       print("Kurs ekleme hatası.")
+                       errorCallback?("Tablo eklenirken bir hata olustu")
+                   }
+               }
+         
+        sqlite3_finalize(statement)
+    }
+ 
+    
+    func getSubscribedCourses(forUserId userId: Int) -> [MyCourse] {
+        let query = "SELECT video_id, image_url, video_url, title, is_liked, is_sub FROM Course WHERE user_id = ? AND is_sub = 1;"
+        var statement: OpaquePointer?
+        var courses: [MyCourse] = []
+
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
+            sqlite3_bind_int(statement, 1, Int32(userId)) // userId'yi bind et
+
+            while sqlite3_step(statement) == SQLITE_ROW {
+                let videoId = Int(sqlite3_column_int(statement, 0))
+                let imageUrl = String(cString: sqlite3_column_text(statement, 1))
+                let videoUrl = String(cString: sqlite3_column_text(statement, 2))
+                let title = String(cString: sqlite3_column_text(statement, 3))
+                let isLiked = Int(sqlite3_column_int(statement, 4))
+                let isSub = Int(sqlite3_column_int(statement, 5))
+
+               
+                let course = MyCourse(userId: userId, videoId: videoId, imageUrl: imageUrl, videoUrl: videoUrl, title: title, isLiked: isLiked, isSub: isSub)
+                courses.append(course)
+            }
+        } else {
+            print("Sorgu hazırlama hatası.")
+        }
+
+        sqlite3_finalize(statement)
+        return courses
+    }
+    
     func insertToDownloadsTable(userId:String,videoId:String, title:String, image: UIImage) {
         let query = "INSERT INTO Downloads (userId, videoId, title, image) VALUES (?, ?, ?, ?);"
         var statement: OpaquePointer?
@@ -128,6 +181,7 @@ final class DatabaseManager {
                        print("Görüntü başarıyla kaydedildi.")
                    } else {
                        print("Görüntü ekleme hatası.")
+                       errorCallback?("Tablo eklenirken bir hata olustu")
                    }
                }
         
@@ -160,6 +214,7 @@ final class DatabaseManager {
             }
         } else {
             print("Sorgu hazırlanamadı.")
+            errorCallback?("Sorgu hazırlanamadı.")
         }
 
         // Belleği serbest bırakma
@@ -192,6 +247,7 @@ final class DatabaseManager {
         } else {
             let errorMessage = String(cString: sqlite3_errmsg(db))
             print("Error inserting user: \(errorMessage)")
+            errorCallback?("Tablo eklenirken bir hata olustu")
             isSuccess(false)
         }
 
@@ -227,6 +283,7 @@ final class DatabaseManager {
         } else {
             let errorMessage = String(cString: sqlite3_errmsg(db))
             print("Error preparing fetch statement: \(errorMessage)")
+         
         }
 
         // Sorguyu temizle

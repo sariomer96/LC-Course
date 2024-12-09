@@ -11,6 +11,7 @@ class MyCourseTableViewCell: UITableViewCell {
 
     @IBOutlet weak var courseLabel: UILabel!
     
+    @IBOutlet weak var courseImageView: UIImageView!
     @IBOutlet weak var starRate: UILabel!
     
     static let identifier = "MyCourseTableViewCell"
@@ -29,5 +30,18 @@ class MyCourseTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configure(with urlString: String?) {
+        guard let url = URL(string: urlString ?? "") else { return }
+      
+       URLSession.shared.dataTask(with: url) { data, response, error in
+           if let data = data, let image = UIImage(data: data) {
+               DispatchQueue.main.async {
+                   self.courseImageView.image = image
+               }
+           }
+       }.resume()
+   }
+
     
 }

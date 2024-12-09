@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEG-aI-DHq">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEG-aI-DHq">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurs Adı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hng-tO-ydI">
@@ -28,13 +28,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fh0-N8-O5Z">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fh0-N8-O5Z">
                                 <rect key="frame" x="0.0" y="1.6666666666666572" width="240" height="125"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="vYm-Pn-LHD"/>
                                 </constraints>
                                 <imageReference key="image" image="play.rectangle.fill" catalog="system" symbolScale="medium"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puan: 4.3 (625)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD4-pd-Jcg">
                                 <rect key="frame" x="60.666666666666657" y="180.33333333333334" width="119" height="21"/>
@@ -55,6 +60,11 @@
                             <constraint firstItem="fh0-N8-O5Z" firstAttribute="top" secondItem="XEG-aI-DHq" secondAttribute="top" id="oVW-FL-s7Q"/>
                             <constraint firstItem="hD4-pd-Jcg" firstAttribute="top" secondItem="Hng-tO-ydI" secondAttribute="bottom" constant="16" id="vGX-hx-6ZW"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="14"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>

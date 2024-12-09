@@ -61,6 +61,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="courseImageView" destination="9c9-s7-V80" id="DZY-MZ-4zJ"/>
                 <outlet property="courseLabel" destination="wRl-RR-Fwz" id="SGt-w7-o3T"/>
                 <outlet property="starRate" destination="yNj-kI-DD6" id="77k-ZU-i2l"/>
             </connections>
