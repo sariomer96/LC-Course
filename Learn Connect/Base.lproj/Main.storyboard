@@ -275,15 +275,51 @@
         <!--Search-->
         <scene sceneID="vBu-C2-YIO">
             <objects>
-                <viewController id="jh8-Jz-nX4" sceneMemberID="viewController">
+                <viewController id="jh8-Jz-nX4" customClass="SearchViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OzP-b1-YzF">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3fm-CA-SqG">
+                                <rect key="frame" x="8" y="162" width="430" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jh8-Jz-nX4" id="Y1V-T3-iEa"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SLC-aJ-IMk">
+                                <rect key="frame" x="0.0" y="242" width="430" height="607"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WishListTableViewCell" id="Y95-sy-L5v" customClass="WishListTableViewCell" customModule="Learn_Connect" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y95-sy-L5v" id="GXv-cl-vXz">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="duL-e8-yXl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="duL-e8-yXl" firstAttribute="bottom" secondItem="SLC-aJ-IMk" secondAttribute="bottom" id="5Ng-Fg-igV"/>
+                            <constraint firstItem="duL-e8-yXl" firstAttribute="trailing" secondItem="SLC-aJ-IMk" secondAttribute="trailing" id="Ce7-X2-zJj"/>
+                            <constraint firstItem="3fm-CA-SqG" firstAttribute="trailing" secondItem="duL-e8-yXl" secondAttribute="trailing" constant="8" id="KCM-Br-Yhg"/>
+                            <constraint firstItem="SLC-aJ-IMk" firstAttribute="top" secondItem="3fm-CA-SqG" secondAttribute="bottom" constant="24" id="Tjr-jG-WPp"/>
+                            <constraint firstItem="3fm-CA-SqG" firstAttribute="leading" secondItem="duL-e8-yXl" secondAttribute="leading" constant="8" id="Uwn-SR-x4p"/>
+                            <constraint firstItem="3fm-CA-SqG" firstAttribute="top" secondItem="duL-e8-yXl" secondAttribute="top" constant="59" id="dlr-e8-sRm"/>
+                            <constraint firstItem="SLC-aJ-IMk" firstAttribute="leading" secondItem="duL-e8-yXl" secondAttribute="leading" id="mha-i2-69b"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="lV7-xC-za0"/>
                     <navigationItem key="navigationItem" id="MrY-2x-h5z"/>
+                    <connections>
+                        <outlet property="searchBar" destination="3fm-CA-SqG" id="9ag-P5-N0t"/>
+                        <outlet property="tableView" destination="SLC-aJ-IMk" id="bm6-vH-le3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnK-aH-Pw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

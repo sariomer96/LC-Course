@@ -73,6 +73,8 @@
 		17E96BA42D076F930000C441 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA32D076F930000C441 /* UserProfile.swift */; };
 		17E96BA62D0772490000C441 /* MyCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA52D0772490000C441 /* MyCourseViewModel.swift */; };
 		17E96BA92D077AB90000C441 /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA82D077AB90000C441 /* WishListViewModel.swift */; };
+		17E96BAD2D0795700000C441 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BAC2D0795700000C441 /* SearchViewController.swift */; };
+		17E96BAF2D07957E0000C441 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BAE2D07957E0000C441 /* SearchViewModel.swift */; };
 		17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */; };
 		17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */; };
 		17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D202D00DB1100050A10 /* LoginViewController.swift */; };
@@ -161,6 +163,8 @@
 		17E96BA32D076F930000C441 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		17E96BA52D0772490000C441 /* MyCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseViewModel.swift; sourceTree = "<group>"; };
 		17E96BA82D077AB90000C441 /* WishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModel.swift; sourceTree = "<group>"; };
+		17E96BAC2D0795700000C441 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		17E96BAE2D07957E0000C441 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		17FA8D192D00DB1100050A10 /* Learn Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 		1795238E2D03891C00A1A973 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				17E96BAB2D0795630000C441 /* Search */,
 				17E96BAA2D077ACD0000C441 /* WishList */,
 				17E96BA72D07726F0000C441 /* MyCourse */,
 				17D404B22D07041F00EF36CF /* CourseDetailViewModel.swift */,
@@ -330,6 +335,15 @@
 				17E96BA82D077AB90000C441 /* WishListViewModel.swift */,
 			);
 			path = WishList;
+			sourceTree = "<group>";
+		};
+		17E96BAB2D0795630000C441 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				17E96BAC2D0795700000C441 /* SearchViewController.swift */,
+				17E96BAE2D07957E0000C441 /* SearchViewModel.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		17FA8D102D00DB1100050A10 = {
@@ -565,6 +579,7 @@
 				1724763E2D01BCD200982CA6 /* MyCourseTableViewCell.swift in Sources */,
 				17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */,
 				179F12F62D02492500442CCF /* VideoLessonViewController.swift in Sources */,
+				17E96BAD2D0795700000C441 /* SearchViewController.swift in Sources */,
 				1795238B2D03777300A1A973 /* SqlLiteManager.swift in Sources */,
 				172476392D01985800982CA6 /* WishListViewController.swift in Sources */,
 				179F12F42D023EFB00442CCF /* CourseDetailViewController.swift in Sources */,
@@ -574,6 +589,7 @@
 				179523CF2D042E4300A1A973 /* Temp.m in Sources */,
 				179523852D031F1200A1A973 /* CommentAndRateViewController.swift in Sources */,
 				17E96BA42D076F930000C441 /* UserProfile.swift in Sources */,
+				17E96BAF2D07957E0000C441 /* SearchViewModel.swift in Sources */,
 				172476472D01C4A800982CA6 /* CourseCollectionViewCell.swift in Sources */,
 				1795238D2D03884A00A1A973 /* RegisterViewController.swift in Sources */,
 				179523E52D04334200A1A973 /* FMDatabasePool.m in Sources */,

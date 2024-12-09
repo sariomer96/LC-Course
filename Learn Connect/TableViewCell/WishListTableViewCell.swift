@@ -33,7 +33,7 @@ class WishListTableViewCell: UITableViewCell {
        URLSession.shared.dataTask(with: url) { data, response, error in
            if let data = data, let image = UIImage(data: data) {
                DispatchQueue.main.async {
-                   self.thumbImageView.image = image
+                    self.thumbImageView.image = image
                }
            }
        }.resume()
