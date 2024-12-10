@@ -50,12 +50,27 @@ final class DatabaseManager {
             video_url TEXT,
             title TEXT,
             is_liked INTEGER NULL,
-            is_sub INTEGER NULL
+            is_sub INTEGER NULL,
+            course_rate INTEGER
            
             
         );
         """
-
+        let commentTable = """
+        CREATE TABLE IF NOT EXISTS Comment (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            video_id INTEGER,
+            user_id INTEGER,
+            comment TEXT NULL,
+            user_rate INTEGER NULL,
+            name TEXT
+           
+           
+            
+        );
+        """
+        
+        
         let downloadsTable = """
         CREATE TABLE IF NOT EXISTS Downloads (
             id INTEGER PRIMARY KEY AUTOINCREMENT,

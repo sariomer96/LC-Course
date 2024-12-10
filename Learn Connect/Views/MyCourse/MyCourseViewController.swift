@@ -17,7 +17,7 @@ class MyCourseViewController: UIViewController {
         tableView.delegate = self
         tableView.register(MyCourseTableViewCell.nib(), forCellReuseIdentifier:
                             MyCourseTableViewCell.identifier)
-        
+         
         if let tabBarController = self.tabBarController {
             tabBarController.delegate = self
         }
@@ -26,23 +26,57 @@ class MyCourseViewController: UIViewController {
         
         
     }
+    @IBAction func clickedAllCourseBtn(_ sender: UIButton) {
+        myCourseViewModel.courseFilterType = .all
+        myCourseViewModel.getAllMyCourse()
+        UIView.transition(with: tableView, duration: 0.3, options: .transitionCrossDissolve, animations: {
+               self.tableView.reloadData()
+           })
+       
+    }
     
-
+    @IBAction func clickedDownloadsBtn(_ sender: UIButton) {
+        myCourseViewModel.courseFilterType = .downloads
+        myCourseViewModel.getDownloadedCourse()
+        UIView.transition(with: tableView, duration: 0.3, options: .transitionCrossDissolve, animations: {
+               self.tableView.reloadData()
+           })
+         
+    }
+    
+      
 }
 
 
 extension MyCourseViewController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myCourseViewModel.myCourses.count
-    }
+        if myCourseViewModel.courseFilterType == .all {
+              return myCourseViewModel.myCourses.count
+          } else if myCourseViewModel.courseFilterType == .downloads {
+              print(myCourseViewModel.downloadedCourse.count)
+              return myCourseViewModel.downloadedCourse.count
+          } else {
+              return 0
+          }    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MyCourseTableViewCell.identifier,for: indexPath) as! MyCourseTableViewCell
         
-        let myCourse = myCourseViewModel.myCourses[indexPath.row]
-        cell.courseLabel?.text = myCourse.title
-        cell.configure(with: myCourse.imageUrl)
-        return cell
+        if myCourseViewModel.courseFilterType == .all {
+            let myCourse = myCourseViewModel.myCourses[indexPath.row]
+            cell.courseLabel?.text = myCourse.title
+            cell.configure(with: myCourse.imageUrl)
+            
+    
+            return cell
+        } else {
+            let myCourse = myCourseViewModel.downloadedCourse[indexPath.row]
+         
+            cell.courseLabel?.text = myCourse.title
+            cell.courseImageView.image = myCourse.image
+            return cell
+        }
+      
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let myCourse = myCourseViewModel.myCourses[indexPath.row]
@@ -55,8 +89,7 @@ extension MyCourseViewController : UITableViewDataSource,UITableViewDelegate {
         
         navigationController?.pushViewController(videoLesson, animated: true)
 
-
-//         performSegue(withIdentifier: "toVideoLessonVC", sender: myCourse)
+ 
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

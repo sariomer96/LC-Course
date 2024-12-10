@@ -3,15 +3,16 @@ import SwiftUI
 import Photos
 import AVFoundation
 
-typealias VoidCallback = (String) -> Void
+typealias VoidCallback = (String?) -> Void
 
 class DownloadVideoHelper: NSObject, ObservableObject, URLSessionDownloadDelegate {
-    var onCompletion: VoidCallback?
+    var onCompletion: ((String?) -> Void)?
+
     @Published var progress: Float = 0
     @Published var videoPlayer: AVPlayer? // AVP
     var videoId: String?
     
-    func downloadVideo(url: URL , videoID: String) {
+    func downloadVideo(url: URL , videoID: String,  completion: @escaping () -> Void) {
         self.videoId = videoID
         print(videoID)
         let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
@@ -21,6 +22,7 @@ class DownloadVideoHelper: NSObject, ObservableObject, URLSessionDownloadDelegat
             }
             let downloadTask = session.downloadTask(with: url)
             downloadTask.resume()
+          completion()
         }
         task.resume()
     }

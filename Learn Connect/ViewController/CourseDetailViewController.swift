@@ -16,11 +16,11 @@ class CourseDetailViewController: UIViewController {
         tableView.dataSource = self
         
         DatabaseManager.shared.errorCallback = { error in
-            self.showAlert(message: error)
+            self.showAlert(message: error!)
         }
         
         DatabaseManager.shared.successCallback = { success in
-            self.showAlert(message: success,isSuccess:  true)
+            self.showAlert(message: success!,isSuccess:  true)
         }
         
         let nibName = UINib(nibName: "CommentTableViewCell", bundle: nil)
@@ -59,7 +59,7 @@ class CourseDetailViewController: UIViewController {
        URLSession.shared.dataTask(with: url) { data, response, error in
            if let data = data, let image = UIImage(data: data) {
                DispatchQueue.main.async {
-                   self.imageView.image = image
+                   self.imageView?.image = image
                }
            }
        }.resume()

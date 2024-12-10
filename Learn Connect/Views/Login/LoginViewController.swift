@@ -46,10 +46,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
            scheduleLocalNotification()
+         
         
-        
-      
-
+        let isDarkMode = UserDefaults.standard.bool(forKey: "isDarkMode")
+           let window = UIApplication.shared.windows.first
+           window?.overrideUserInterfaceStyle = isDarkMode ? .dark : .light
         let systemImage = UIImage(systemName: "star.fill")
 
        var a =   DatabaseManager.shared.fetchAllDownloads()

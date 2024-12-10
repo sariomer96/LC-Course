@@ -13,7 +13,7 @@ class VideoPlayListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var videoPlayListViewModel = VideoPlayListViewModel()
     weak var delegate: VideoPlayListDelegate?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +58,7 @@ extension VideoPlayListViewController: CourseVideosTableViewCellDelegate {
           if let indexPath = tableView.indexPath(for: cell) {
               if let parentVC = self.parent as? VideoLessonViewController
               {
-                  parentVC.startDownloading()
+                  parentVC.startDownloadingVideoAndImage()
               }
               
      
