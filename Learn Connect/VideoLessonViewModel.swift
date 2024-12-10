@@ -9,7 +9,7 @@ import Foundation
 
 final class VideoLessonViewModel {
      var myCourse:MyCourse?
-    
+    var isDownloaded = false
     func setMyCourse(myCourse: MyCourse) {
         self.myCourse = myCourse
     }

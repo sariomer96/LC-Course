@@ -6,15 +6,39 @@
 //
 
 import UIKit
+import Network
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
 
 
+    let monitor = NWPathMonitor()
+    let queue = DispatchQueue.global(qos: .background)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        monitor.pathUpdateHandler = { path in
+            print(path.status)
+            if path.status != .satisfied {
+                DispatchQueue.main.async {
+                    print("bağlantı yok")
+                    guard let rootVC = UIApplication.shared.windows.first?.rootViewController else { return }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        ToastManager.shared.showToast(
+                            message: "İnternet bağlantısı yok",
+                            buttonTitle: "İndirilenlere gözat",
+                            on: rootVC,
+                            transitionTo: MyCourseViewController()
+                        )
+                    }
+                }
+            } else {
+                print("var \(path.status)")
+            }
+        }
+
+               
+               monitor.start(queue: queue)
   // Override point for customization after application launch.
             UNUserNotificationCenter.current().delegate = self
         return true

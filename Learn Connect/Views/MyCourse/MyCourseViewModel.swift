@@ -36,4 +36,5 @@ final class MyCourseViewModel {
          downloadedCourse =  DatabaseManager.shared.fetchDownloadedCourseData(for: userId)
     }
     
+    
 }

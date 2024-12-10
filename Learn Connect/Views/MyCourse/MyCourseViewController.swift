@@ -70,6 +70,7 @@ extension MyCourseViewController : UITableViewDataSource,UITableViewDelegate {
     
             return cell
         } else {
+            
             let myCourse = myCourseViewModel.downloadedCourse[indexPath.row]
          
             cell.courseLabel?.text = myCourse.title
@@ -81,28 +82,23 @@ extension MyCourseViewController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let myCourse = myCourseViewModel.myCourses[indexPath.row]
         
-        let videoLessonVC = storyboard?.instantiateViewController(withIdentifier: "VideoLessonViewController") as! VideoLessonViewController
-        videoLessonVC.videoLessonViewModel.myCourse = myCourse
+//        print(myCourseViewModel.courseFilterType)
 
         let videoLesson = storyboard?.instantiateViewController(withIdentifier: "VideoLessonViewController") as! VideoLessonViewController
         videoLesson.videoLessonViewModel.myCourse = myCourse
         
+        if myCourseViewModel.courseFilterType == .downloads {
+            videoLesson.videoLessonViewModel.isDownloaded = true
+        } else {
+            videoLesson.videoLessonViewModel.isDownloaded = false
+        }
+       
         navigationController?.pushViewController(videoLesson, animated: true)
 
  
     }
    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toVideoLessonVC" {
-               if let destinationVC = segue.destination as? VideoLessonViewController,
-                 let course = sender as? MyCourse {
-                  
-                   destinationVC.videoLessonViewModel.setMyCourse(myCourse: course)
-                   destinationVC.modalPresentationStyle = .fullScreen
-//                  destinationVC.courseDetailViewModel.course = course
-              }
-          }
-    }
+ 
     
     
 }

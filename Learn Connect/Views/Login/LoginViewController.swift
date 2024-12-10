@@ -51,17 +51,9 @@ class LoginViewController: UIViewController {
         let isDarkMode = UserDefaults.standard.bool(forKey: "isDarkMode")
            let window = UIApplication.shared.windows.first
            window?.overrideUserInterfaceStyle = isDarkMode ? .dark : .light
-        let systemImage = UIImage(systemName: "star.fill")
-
-       var a =   DatabaseManager.shared.fetchAllDownloads()
-        
-      
-        for download in a {
-             
-            let imageView = UIImageView(image: download.image)
  
-        }
 
+ 
  
         
         let isRemembered = UserDefaults.standard.bool(forKey: "isRemembered")

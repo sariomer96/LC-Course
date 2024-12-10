@@ -26,19 +26,20 @@ class DownloadVideoHelper: NSObject, ObservableObject, URLSessionDownloadDelegat
         }
         task.resume()
     }
-    func playVideoByFileName(fileName: String) {
+    func playVideoByFileName(fileName: String) -> String {
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileURL = documentsURL.appendingPathComponent(fileName)
         
         if FileManager.default.fileExists(atPath: fileURL.path) {
-            DispatchQueue.main.async {
+          
                 self.onCompletion?(fileURL.absoluteString)
-                
-             
-            }
+                print("dosya bulundu \(fileURL.absoluteString)")
+            return fileURL.absoluteString
+            
         } else {
             print("File not found at path: \(fileURL.path)")
         }
+        return ""
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {

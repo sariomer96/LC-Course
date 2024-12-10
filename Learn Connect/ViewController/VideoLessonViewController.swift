@@ -17,22 +17,38 @@ class VideoLessonViewController: UIViewController {
     var downloadViewModel = DownloadVideoHelper()
     var videoLessonViewModel = VideoLessonViewModel()
     let userDefaults = UserDefaults.standard
-    var videoId = "aa"
+    var videoUrl:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
-
-        JSONDataManager.shared.loadJSONData(categoryName: "education")
-
-        let downloadedData = DatabaseManager.shared.fetchDownloadedCourseData(for: "000")
-        print(downloadedData)
+ 
+        downloadViewModel.onCompletion = { url in
+            self.videoUrl = url
+            print("ZAAAA")
+            let u = url!
+            print("\(u) AFADGADHAH ")
+            self.setupVideoPlayer(videoURL: u)
+            print("\(self.videoUrl) AAAAAAA")
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let videoUrl = videoLessonViewModel.myCourse?.videoUrl {
-            setupVideoPlayer(videoURL: videoUrl)
+          print("afds")
+        if videoLessonViewModel.isDownloaded == true {
+            print("trueee")
+            let id = videoLessonViewModel.myCourse?.videoId
+            
+            let strId = String(id!)
+           let url =  DownloadVideoHelper().playVideoByFileName(fileName: "\(strId).mp4" )
+              setupVideoPlayer(videoURL: url)
+             
+        }else {
+            if let videoUrl = videoLessonViewModel.myCourse?.videoUrl {
+                setupVideoPlayer(videoURL: videoUrl)
+            }
+
         }
     }
 
@@ -45,7 +61,7 @@ class VideoLessonViewController: UIViewController {
         super.viewWillDisappear(animated)
         if let currentTime = player?.currentTime() {
             let seconds = CMTimeGetSeconds(currentTime)
-            userDefaults.set(seconds, forKey: "\(videoId)_lastPosition")
+            userDefaults.set(seconds, forKey: "\(videoLessonViewModel.myCourse?.videoId!)_lastPosition")
         }
     }
 
@@ -69,7 +85,7 @@ class VideoLessonViewController: UIViewController {
         guard let playerViewController = playerViewController else { return }
         playerViewController.player = player
 
-        let lastSavedTime = userDefaults.double(forKey: "\(videoId)_lastPosition")
+        let lastSavedTime = userDefaults.double(forKey: "\(videoLessonViewModel.myCourse?.videoId!)_lastPosition")
         if lastSavedTime > 0 {
             let seekTime = CMTime(seconds: lastSavedTime, preferredTimescale: 1)
             player.seek(to: seekTime)
@@ -97,7 +113,7 @@ class VideoLessonViewController: UIViewController {
         timeObserverToken = player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] time in
             guard let self = self else { return }
             let currentTime = CMTimeGetSeconds(time)
-            self.userDefaults.set(currentTime, forKey: "\(self.videoId)_lastPosition")
+            self.userDefaults.set(currentTime, forKey: "\(videoLessonViewModel.myCourse?.videoId!)_lastPosition")
         }
     }
 

@@ -178,5 +178,131 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1D193A0-4792-420B-8AB9-D53F9A39562B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Learn Connect/ViewController/VideoLessonViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D1D193A0-4792-420B-8AB9-D53F9A39562B - 14252c2db15d6119"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Learn_Connect.VideoLessonViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Learn Connect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omer/Desktop/Learn%20Connect/Learn%20Connect/ViewController/VideoLessonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "D1D193A0-4792-420B-8AB9-D53F9A39562B - af94af2602a1a4d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Learn_Connect.VideoLessonViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Learn Connect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omer/Desktop/Learn%20Connect/Learn%20Connect/ViewController/VideoLessonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCC84DAA-BCD6-4D1B-A264-7E680466F081"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Learn Connect/ViewController/VideoLessonViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DCC84DAA-BCD6-4D1B-A264-7E680466F081 - af94af2602a1a55e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Learn_Connect.VideoLessonViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Learn Connect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omer/Desktop/Learn%20Connect/Learn%20Connect/ViewController/VideoLessonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "DCC84DAA-BCD6-4D1B-A264-7E680466F081 - af94af2602a1a55e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Learn_Connect.VideoLessonViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Learn Connect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omer/Desktop/Learn%20Connect/Learn%20Connect/ViewController/VideoLessonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  uuid = "DCC84DAA-BCD6-4D1B-A264-7E680466F081 - af94af2602a1a55e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Learn_Connect.VideoLessonViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Learn Connect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omer/Desktop/Learn%20Connect/Learn%20Connect/ViewController/VideoLessonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "381">
+               </Location>
+               <Location
+                  uuid = "DCC84DAA-BCD6-4D1B-A264-7E680466F081 - af94af2602a1a55e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Learn_Connect.VideoLessonViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Learn Connect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/omer/Desktop/Learn%20Connect/Learn%20Connect/ViewController/VideoLessonViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "601">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
