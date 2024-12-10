@@ -106,6 +106,44 @@ final class DatabaseManager {
         }
         sqlite3_finalize(statement)
     }
+    
+    func fetchDownloadedCourseData(for userId: String) -> [LocalCourseData] {
+        let query = "SELECT userId, videoId, title, image FROM Downloads WHERE userId = ?;"
+        var statement: OpaquePointer?
+        var donuts: [LocalCourseData] = []
+
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
+            // userId parametresini bağla
+            sqlite3_bind_text(statement, 1, (userId as NSString).utf8String, -1, nil)
+
+            while sqlite3_step(statement) == SQLITE_ROW {
+                // userId sütununu oku
+                let fetchedUserId = String(cString: sqlite3_column_text(statement, 0))
+                // videoId sütununu oku
+                let videoId = String(cString: sqlite3_column_text(statement, 1))
+                // title sütununu oku
+                let title = String(cString: sqlite3_column_text(statement, 2))
+                // image sütununu oku
+                if let imageData = sqlite3_column_blob(statement, 3) {
+                    let imageSize = sqlite3_column_bytes(statement, 3)
+                    let data = Data(bytes: imageData, count: Int(imageSize))
+                    if let image = UIImage(data: data) {
+                        // Her bir satır için bir Donut oluştur
+                        let donut = LocalCourseData(userId: fetchedUserId, videoId: videoId, title: title, image: image)
+                        donuts.append(donut)
+                    }
+                }
+            }
+        } else {
+            print("Sorgu hazırlanamadı.")
+            errorCallback?("Sorgu hazırlanamadı.")
+        }
+
+        // Belleği serbest bırakma
+        sqlite3_finalize(statement)
+        return donuts
+    }
+
     func upsertCourse(userId: Int, videoId: Int, imageUrl: String, videoUrl: String, title: String, isLiked: Int?, isSub: Int?) {
         let selectQuery = "SELECT * FROM Course WHERE user_id = ? AND video_id = ?;"
         let insertQuery = """

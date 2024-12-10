@@ -34,12 +34,12 @@ class CourseDetailViewController: UIViewController {
         self.courseTitle = title
         }
     @IBAction func ClickedWishlist(_ sender: Any) {
-//        courseDetailViewModel.subscribeAndWishListCourse(isLiked: 1, isSub: nil)
+ 
         courseDetailViewModel.subscribeAndWishListCourse(isLiked: 1, isSub: nil)
     }
     
     @IBAction func ClickedSubscribeToCourse(_ sender: Any) {
-//        courseDetailViewModel.subscribeAndWishListCourse( isLiked: nil, isSub: 1)
+ 
         courseDetailViewModel.subscribeAndWishListCourse(isLiked: nil, isSub: 1)
  
        

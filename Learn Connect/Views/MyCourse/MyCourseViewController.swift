@@ -14,6 +14,7 @@ class MyCourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(MyCourseTableViewCell.nib(), forCellReuseIdentifier:
                             MyCourseTableViewCell.identifier)
         
@@ -22,13 +23,15 @@ class MyCourseViewController: UIViewController {
         }
         myCourseViewModel.getAllMyCourse()
         tableView.reloadData()
+        
+        
     }
     
 
 }
 
 
-extension MyCourseViewController : UITableViewDataSource {
+extension MyCourseViewController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myCourseViewModel.myCourses.count
     }
@@ -41,8 +44,32 @@ extension MyCourseViewController : UITableViewDataSource {
         cell.configure(with: myCourse.imageUrl)
         return cell
     }
-    
-  
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let myCourse = myCourseViewModel.myCourses[indexPath.row]
+        
+        let videoLessonVC = storyboard?.instantiateViewController(withIdentifier: "VideoLessonViewController") as! VideoLessonViewController
+        videoLessonVC.videoLessonViewModel.myCourse = myCourse
+
+        let videoLesson = storyboard?.instantiateViewController(withIdentifier: "VideoLessonViewController") as! VideoLessonViewController
+        videoLesson.videoLessonViewModel.myCourse = myCourse
+        
+        navigationController?.pushViewController(videoLesson, animated: true)
+
+
+//         performSegue(withIdentifier: "toVideoLessonVC", sender: myCourse)
+    }
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toVideoLessonVC" {
+               if let destinationVC = segue.destination as? VideoLessonViewController,
+                 let course = sender as? MyCourse {
+                  
+                   destinationVC.videoLessonViewModel.setMyCourse(myCourse: course)
+                   destinationVC.modalPresentationStyle = .fullScreen
+//                  destinationVC.courseDetailViewModel.course = course
+              }
+          }
+    }
     
     
 }
@@ -54,7 +81,7 @@ extension MyCourseViewController: UITabBarControllerDelegate {
         if viewController == self {
             myCourseViewModel.getAllMyCourse()
             tableView.reloadData()
-            print("secildi")
+   
         }
    }
 }

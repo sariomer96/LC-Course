@@ -319,11 +319,12 @@
                     <connections>
                         <outlet property="searchBar" destination="3fm-CA-SqG" id="9ag-P5-N0t"/>
                         <outlet property="tableView" destination="SLC-aJ-IMk" id="bm6-vH-le3"/>
+                        <segue destination="fV2-BQ-520" kind="show" identifier="toCourseDetailVC" id="c9l-Kd-kaI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnK-aH-Pw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="984"/>
+            <point key="canvasLocation" x="755" y="680"/>
         </scene>
         <!--Wishlist-->
         <scene sceneID="PY4-mz-pSA">
@@ -371,6 +372,7 @@
                     <navigationItem key="navigationItem" id="4Sw-gh-T11"/>
                     <connections>
                         <outlet property="tableView" destination="ozn-9i-7BB" id="LJe-mM-GnR"/>
+                        <segue destination="fV2-BQ-520" kind="show" identifier="toCourseDetail" id="bE0-uL-v3c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMC-XO-hyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -442,13 +444,15 @@
                     <tabBarItem key="tabBarItem" title="Kurslarım" id="6ps-zl-eEf">
                         <imageReference key="image" image="play.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="lnM-bW-GQU"/>
                     <connections>
                         <outlet property="tableView" destination="9G4-iK-YMc" id="nMX-Lp-Ba2"/>
+                        <segue destination="Q9U-gR-26u" kind="show" identifier="toVideoLessonVC" id="Lmk-1y-dq0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUf-cI-DMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="984"/>
+            <point key="canvasLocation" x="2373" y="1407"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="fZi-gY-tIM">
@@ -650,25 +654,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CW5-pR-7O5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3466.666666666667" y="-864.50892857142856"/>
+            <point key="canvasLocation" x="2308" y="-240"/>
         </scene>
         <!--Video Lesson View Controller-->
         <scene sceneID="McN-sa-XKr">
             <objects>
-                <viewController id="Q9U-gR-26u" customClass="VideoLessonViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoLessonViewController" id="Q9U-gR-26u" customClass="VideoLessonViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKT-KV-xuD">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqg-h4-NxA">
-                                <rect key="frame" x="0.0" y="75" width="430" height="200"/>
+                                <rect key="frame" x="0.0" y="119" width="430" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="L1U-dJ-Ijy"/>
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vQ6-mR-Rym">
-                                <rect key="frame" x="16" y="291" width="398" height="32"/>
+                                <rect key="frame" x="16" y="335" width="398" height="32"/>
                                 <segments>
                                     <segment title="Dersler"/>
                                     <segment title="Daha Fazla"/>
@@ -678,7 +682,7 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRT-dI-ZY2">
-                                <rect key="frame" x="0.0" y="330" width="430" height="568"/>
+                                <rect key="frame" x="0.0" y="374" width="430" height="524"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
                         </subviews>
@@ -707,12 +711,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZf-1F-wmV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4278" y="-844"/>
+            <point key="canvasLocation" x="3370" y="988"/>
         </scene>
-        <!--First Segment View Controller-->
+        <!--Video Play List View Controller-->
         <scene sceneID="9cR-lm-3Az">
             <objects>
-                <viewController storyboardIdentifier="FirstSegmentViewController" id="G1a-mI-clG" customClass="FirstSegmentViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoPlayListViewController" id="G1a-mI-clG" customClass="VideoPlayListViewController" customModule="Learn_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K6E-7g-Kso">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -847,7 +851,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-xN-Ivk">
-                                <rect key="frame" x="0.0" y="329" width="430" height="520"/>
+                                <rect key="frame" x="0.0" y="329" width="430" height="569"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1" id="tlV-2n-dul">
@@ -887,7 +891,7 @@
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVe-jJ-Rsr">
                                         <rect key="frame" x="183" y="0.0" width="175" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Software"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Yazılım"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                                 <integer key="value" value="14"/>
@@ -1013,7 +1017,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP0-CQ-nzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581" y="363"/>
+            <point key="canvasLocation" x="2075" y="437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5lC-NX-wz5">
@@ -1035,7 +1039,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KdC-Vb-Wtc"/>
+        <segue reference="1U4-u1-Kf5"/>
+        <segue reference="kaY-eR-ubq"/>
         <segue reference="XGF-2z-LLk"/>
     </inferredMetricsTieBreakers>
     <resources>

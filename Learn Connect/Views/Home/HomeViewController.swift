@@ -105,4 +105,55 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
           }
     }
 }
+extension UIViewController {
+    func showToast(message: String, duration: Double = 2.0) {
+        let toastContainer = UIView(frame: CGRect())
+        toastContainer.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.9) // Arka plan rengi
+        toastContainer.layer.cornerRadius = 25
+        toastContainer.clipsToBounds = true
+        toastContainer.layer.shadowColor = UIColor.black.cgColor
+        toastContainer.layer.shadowOpacity = 0.4
+        toastContainer.layer.shadowOffset = CGSize(width: 0, height: 4)
+        toastContainer.layer.shadowRadius = 8
 
+        let toastLabel = UILabel(frame: CGRect())
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center
+        toastLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        toastLabel.text = message
+        toastLabel.numberOfLines = 0
+
+        toastContainer.addSubview(toastLabel)
+        self.view.addSubview(toastContainer)
+
+        // Otomatik boyutlandırma
+        toastLabel.translatesAutoresizingMaskIntoConstraints = false
+        toastContainer.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            toastLabel.leadingAnchor.constraint(equalTo: toastContainer.leadingAnchor, constant: 20),
+            toastLabel.trailingAnchor.constraint(equalTo: toastContainer.trailingAnchor, constant: -20),
+            toastLabel.topAnchor.constraint(equalTo: toastContainer.topAnchor, constant: 15),
+            toastLabel.bottomAnchor.constraint(equalTo: toastContainer.bottomAnchor, constant: -15),
+
+            toastContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            toastContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -120),
+            toastContainer.widthAnchor.constraint(lessThanOrEqualToConstant: 350)
+        ])
+
+        // Başlangıç konumu (Ekranın altından başlar)
+        toastContainer.transform = CGAffineTransform(translationX: 0, y: self.view.frame.size.height)
+
+        // Animasyon: aşağıdan yukarı kayarak gelir
+        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .curveEaseOut, animations: {
+            toastContainer.transform = .identity // Orijinal konuma gelir
+        }) { _ in
+            // Belirtilen süre sonra kaybolur
+            UIView.animate(withDuration: 0.4, delay: duration, options: .curveEaseIn, animations: {
+                toastContainer.alpha = 0.0 // Şeffaflaşarak kaybolur
+            }) { _ in
+                toastContainer.removeFromSuperview()
+            }
+        }
+    }
+}

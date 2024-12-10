@@ -47,6 +47,24 @@ extension SearchViewController: UITabBarDelegate,UITableViewDataSource,UITableVi
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let course =  searchViewModel.filteredHits[indexPath.row]
+           performSegue(withIdentifier: "toCourseDetailVC", sender: course)
+    }
+  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCourseDetailVC" {
+              if let destinationVC = segue.destination as? CourseDetailViewController,
+                 let course = sender as? Hit {
+                     
+                 let imageUrl =   course.videos?.medium?.thumbnail
+                  destinationVC.configure(with: imageUrl)
+                  destinationVC.setCourseName(title: course.title ?? "Kurs Adi")
+                  destinationVC.courseDetailViewModel.course = course
+              }
+          }
+    }
     
 }
 

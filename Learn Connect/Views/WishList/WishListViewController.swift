@@ -15,6 +15,8 @@ class WishListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
+
         tableView.register(WishListTableViewCell.nib(), forCellReuseIdentifier:
                             WishListTableViewCell.identifier)
  
@@ -31,7 +33,7 @@ class WishListViewController: UIViewController {
 
 }
 
-extension WishListViewController : UITableViewDataSource {
+extension WishListViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return wishListViewModel.myCourses.count
     }
@@ -44,13 +46,30 @@ extension WishListViewController : UITableViewDataSource {
         return cell
     }
     
-   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      
+        let course =  wishListViewModel.myCourses[indexPath.row]
+           performSegue(withIdentifier: "toCourseDetail", sender: course)
+    }
+  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCourseDetail" {
+               if let destinationVC = segue.destination as? CourseDetailViewController,
+                 let course = sender as? MyCourse {
+                     print("burdaaa")
+                   let imageUrl =   course.imageUrl
+                  destinationVC.configure(with: imageUrl)
+                  destinationVC.setCourseName(title: course.title ?? "Kurs Adi")
+//                  destinationVC.courseDetailViewModel.course = course
+              }
+          }
+    }
   
 }
 
 
 extension WishListViewController: UITabBarControllerDelegate {
-    // Tab bar değişikliklerini dinleme
+   
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if viewController == self {
             wishListViewModel.getAllMyCourse()

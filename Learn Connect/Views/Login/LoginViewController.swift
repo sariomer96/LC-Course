@@ -77,11 +77,7 @@ class LoginViewController: UIViewController {
         
      
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toTabBarSegue" {
-          
-         }
-    }
+  
     @IBAction func loginClicked(_ sender: Any) {
         guard let hashedPass = Helper.shared.hashPassword(password: passwordTF.text!) else { return }
         
@@ -90,27 +86,29 @@ class LoginViewController: UIViewController {
             
             if isSuccess {
                 if let user = DatabaseManager.shared.fetchUserByEmail(email: self.emailTF.text!) {
-                    
-                  
-                            
-                    if let tabBarController = storyboard?.instantiateViewController(withIdentifier: "toTabBar") as? UITabBarController {
-                              
-               
-                              if let homeVC = tabBarController.viewControllers?.first as? HomeViewController {
-                             
-                                  UserProfile.shared.user = user
-                              }
-                              
-            
-                              tabBarController.modalPresentationStyle = .fullScreen
-                              present(tabBarController, animated: true, completion: nil)
-                          }
+                     
+                    if let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: "toTabBar") as? UITabBarController {
                         
-                    
-                    if self.rememberSwitch.isOn {
-                        self.loginViewModel.saveUserCredentials(email: self.emailTF.text!, password: self.passwordTF.text!)
+                        if let homeVC = tabBarController.viewControllers?.first as? HomeViewController {
+                            UserProfile.shared.user = user
+                        }
+                        
+                        // NavigationController ile geçiş yap
+                        if let navigationController = self.navigationController {
+                            // TabBarController'ı root olarak ayarla
+                            navigationController.setViewControllers([tabBarController], animated: true)
+                        } else {
+                            print("NavigationController bulunamadı!")
+                        }
+                        
+                        // Eğer 'Hatırla' seçeneği aktifse kullanıcı bilgilerini kaydet
+                        if self.rememberSwitch.isOn {
+                            self.loginViewModel.saveUserCredentials(email: self.emailTF.text!, password: self.passwordTF.text!)
+                        } else {
+                            self.loginViewModel.removeUserCredentials()
+                        }
                     } else {
-                        self.loginViewModel.removeUserCredentials()
+                        print("TabBarController oluşturulamadı.")
                     }
                 } else {
                     print("No user found with this email.")

@@ -5,7 +5,7 @@ import AVFoundation
 
 typealias VoidCallback = (String) -> Void
 
-class DownloadViewModel: NSObject, ObservableObject, URLSessionDownloadDelegate {
+class DownloadVideoHelper: NSObject, ObservableObject, URLSessionDownloadDelegate {
     var onCompletion: VoidCallback?
     @Published var progress: Float = 0
     @Published var videoPlayer: AVPlayer? // AVP
@@ -43,6 +43,9 @@ class DownloadViewModel: NSObject, ObservableObject, URLSessionDownloadDelegate 
         guard let data = try? Data(contentsOf: location) else {
             return
         }
+        DispatchQueue.main.async {
+            self.onCompletion?("success")
+               }
         
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let destinationURL = documentsURL.appendingPathComponent("\(videoId!).mp4")

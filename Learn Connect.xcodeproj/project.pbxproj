@@ -57,7 +57,7 @@
 		179F12F62D02492500442CCF /* VideoLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12F52D02492500442CCF /* VideoLessonViewController.swift */; };
 		179F12F92D02E7B600442CCF /* CourseVideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12F72D02E7B600442CCF /* CourseVideosTableViewCell.swift */; };
 		179F12FA2D02E7B600442CCF /* CourseVideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179F12F82D02E7B600442CCF /* CourseVideosTableViewCell.xib */; };
-		179F12FC2D02E9AD00442CCF /* FirstSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */; };
+		179F12FC2D02E9AD00442CCF /* VideoPlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12FB2D02E9AD00442CCF /* VideoPlayListViewController.swift */; };
 		179F12FE2D02E9CD00442CCF /* SecondSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */; };
 		17D404B12D06D33000EF36CF /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D404B02D06D33000EF36CF /* ImageLoader.swift */; };
 		17D404B32D07041F00EF36CF /* CourseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D404B22D07041F00EF36CF /* CourseDetailViewModel.swift */; };
@@ -68,13 +68,16 @@
 		17DF195B2D056E53002EAB90 /* CourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF195A2D056E53002EAB90 /* CourseContent.swift */; };
 		17DF19612D0574EE002EAB90 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19602D0574EE002EAB90 /* TestViewController.swift */; };
 		17DF19632D057CB6002EAB90 /* Jsons in Resources */ = {isa = PBXBuildFile; fileRef = 17DF19622D057CB6002EAB90 /* Jsons */; };
-		17DF19652D05B6E6002EAB90 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19642D05B6E6002EAB90 /* DownloadViewModel.swift */; };
+		17DF19652D05B6E6002EAB90 /* DownloadVideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19642D05B6E6002EAB90 /* DownloadVideoHelper.swift */; };
 		17E96BA22D076D2E0000C441 /* MyCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA12D076D2E0000C441 /* MyCourse.swift */; };
 		17E96BA42D076F930000C441 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA32D076F930000C441 /* UserProfile.swift */; };
 		17E96BA62D0772490000C441 /* MyCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA52D0772490000C441 /* MyCourseViewModel.swift */; };
 		17E96BA92D077AB90000C441 /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA82D077AB90000C441 /* WishListViewModel.swift */; };
 		17E96BAD2D0795700000C441 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BAC2D0795700000C441 /* SearchViewController.swift */; };
 		17E96BAF2D07957E0000C441 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BAE2D07957E0000C441 /* SearchViewModel.swift */; };
+		17F47C922D081E5D00670F56 /* LocalCourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F47C912D081E5D00670F56 /* LocalCourseData.swift */; };
+		17F47C942D082C3B00670F56 /* VideoLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F47C932D082C3B00670F56 /* VideoLessonViewModel.swift */; };
+		17F47C962D08304C00670F56 /* VideoPlayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F47C952D08304C00670F56 /* VideoPlayListViewModel.swift */; };
 		17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */; };
 		17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */; };
 		17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D202D00DB1100050A10 /* LoginViewController.swift */; };
@@ -147,7 +150,7 @@
 		179F12F52D02492500442CCF /* VideoLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLessonViewController.swift; sourceTree = "<group>"; };
 		179F12F72D02E7B600442CCF /* CourseVideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseVideosTableViewCell.swift; sourceTree = "<group>"; };
 		179F12F82D02E7B600442CCF /* CourseVideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseVideosTableViewCell.xib; sourceTree = "<group>"; };
-		179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSegmentViewController.swift; sourceTree = "<group>"; };
+		179F12FB2D02E9AD00442CCF /* VideoPlayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayListViewController.swift; sourceTree = "<group>"; };
 		179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegmentViewController.swift; sourceTree = "<group>"; };
 		17D404B02D06D33000EF36CF /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		17D404B22D07041F00EF36CF /* CourseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewModel.swift; sourceTree = "<group>"; };
@@ -158,13 +161,16 @@
 		17DF195A2D056E53002EAB90 /* CourseContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseContent.swift; sourceTree = "<group>"; };
 		17DF19602D0574EE002EAB90 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		17DF19622D057CB6002EAB90 /* Jsons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Jsons; sourceTree = "<group>"; };
-		17DF19642D05B6E6002EAB90 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
+		17DF19642D05B6E6002EAB90 /* DownloadVideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadVideoHelper.swift; sourceTree = "<group>"; };
 		17E96BA12D076D2E0000C441 /* MyCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourse.swift; sourceTree = "<group>"; };
 		17E96BA32D076F930000C441 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		17E96BA52D0772490000C441 /* MyCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseViewModel.swift; sourceTree = "<group>"; };
 		17E96BA82D077AB90000C441 /* WishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModel.swift; sourceTree = "<group>"; };
 		17E96BAC2D0795700000C441 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		17E96BAE2D07957E0000C441 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		17F47C912D081E5D00670F56 /* LocalCourseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCourseData.swift; sourceTree = "<group>"; };
+		17F47C932D082C3B00670F56 /* VideoLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLessonViewModel.swift; sourceTree = "<group>"; };
+		17F47C952D08304C00670F56 /* VideoPlayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayListViewModel.swift; sourceTree = "<group>"; };
 		17FA8D192D00DB1100050A10 /* Learn Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,7 +230,6 @@
 				17FA8D4C2D00DBEB00050A10 /* BaseViewController.swift */,
 				179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */,
 				179F12F52D02492500442CCF /* VideoLessonViewController.swift */,
-				179F12FB2D02E9AD00442CCF /* FirstSegmentViewController.swift */,
 				179523842D031F1200A1A973 /* CommentAndRateViewController.swift */,
 				179523F42D04586500A1A973 /* MyProfileViewController.swift */,
 			);
@@ -234,6 +239,7 @@
 		1795238E2D03891C00A1A973 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				17F47C972D08306B00670F56 /* VideoPlaylist */,
 				17E96BAB2D0795630000C441 /* Search */,
 				17E96BAA2D077ACD0000C441 /* WishList */,
 				17E96BA72D07726F0000C441 /* MyCourse */,
@@ -289,6 +295,7 @@
 				179524012D04610600A1A973 /* Video.swift */,
 				179524042D04611D00A1A973 /* UserVideoProgress.swift */,
 				17E96BA12D076D2E0000C441 /* MyCourse.swift */,
+				17F47C912D081E5D00670F56 /* LocalCourseData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +353,15 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		17F47C972D08306B00670F56 /* VideoPlaylist */ = {
+			isa = PBXGroup;
+			children = (
+				17F47C952D08304C00670F56 /* VideoPlayListViewModel.swift */,
+				179F12FB2D02E9AD00442CCF /* VideoPlayListViewController.swift */,
+			);
+			path = VideoPlaylist;
+			sourceTree = "<group>";
+		};
 		17FA8D102D00DB1100050A10 = {
 			isa = PBXGroup;
 			children = (
@@ -399,9 +415,10 @@
 				179523CE2D042E4300A1A973 /* Temp.m */,
 				179523D12D042E9100A1A973 /* Learn Connect-Bridging-Header.h */,
 				179523ED2D043A5100A1A973 /* Helper.swift */,
-				17DF19642D05B6E6002EAB90 /* DownloadViewModel.swift */,
+				17DF19642D05B6E6002EAB90 /* DownloadVideoHelper.swift */,
 				17D404B02D06D33000EF36CF /* ImageLoader.swift */,
 				17E96BA32D076F930000C441 /* UserProfile.swift */,
+				17F47C932D082C3B00670F56 /* VideoLessonViewModel.swift */,
 			);
 			path = "Learn Connect";
 			sourceTree = "<group>";
@@ -593,6 +610,7 @@
 				172476472D01C4A800982CA6 /* CourseCollectionViewCell.swift in Sources */,
 				1795238D2D03884A00A1A973 /* RegisterViewController.swift in Sources */,
 				179523E52D04334200A1A973 /* FMDatabasePool.m in Sources */,
+				17F47C922D081E5D00670F56 /* LocalCourseData.swift in Sources */,
 				179523E12D04334200A1A973 /* FMDatabase.m in Sources */,
 				17DF19552D056B84002EAB90 /* HomeViewModel.swift in Sources */,
 				17D404B32D07041F00EF36CF /* CourseDetailViewModel.swift in Sources */,
@@ -615,9 +633,11 @@
 				17D404B12D06D33000EF36CF /* ImageLoader.swift in Sources */,
 				1724763B2D01B6F900982CA6 /* MyCourseViewController.swift in Sources */,
 				179F12FE2D02E9CD00442CCF /* SecondSegmentViewController.swift in Sources */,
-				179F12FC2D02E9AD00442CCF /* FirstSegmentViewController.swift in Sources */,
+				179F12FC2D02E9AD00442CCF /* VideoPlayListViewController.swift in Sources */,
+				17F47C962D08304C00670F56 /* VideoPlayListViewModel.swift in Sources */,
+				17F47C942D082C3B00670F56 /* VideoLessonViewModel.swift in Sources */,
 				179523F92D04609000A1A973 /* Users.swift in Sources */,
-				17DF19652D05B6E6002EAB90 /* DownloadViewModel.swift in Sources */,
+				17DF19652D05B6E6002EAB90 /* DownloadVideoHelper.swift in Sources */,
 				179523DF2D04334200A1A973 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

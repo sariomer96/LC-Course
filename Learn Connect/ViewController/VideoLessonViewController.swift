@@ -10,9 +10,10 @@ class VideoLessonViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     private var currentViewController: UIViewController?
     private var playerViewController: AVPlayerViewController?
-       var downloadViewModel = DownloadViewModel()
+       var downloadViewModel = DownloadVideoHelper()  
+    var videoLessonViewModel = VideoLessonViewModel()
     let userDefaults = UserDefaults.standard
-    private var timeObserverToken: Any? // Gözlemci referansı
+    private var timeObserverToken: Any?
      var videoId = "aa"
     @IBOutlet weak var bottomView: UIView!
     
@@ -21,14 +22,18 @@ class VideoLessonViewController: UIViewController {
         super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
         
-        setupVideoPlayer(videoURL:videoURL)
+       
         JSONDataManager.shared.loadJSONData(categoryName: "education")
         let systemImage = UIImage(systemName: "star.fill")
 
-        DatabaseManager.shared.insertToDownloadsTable(userId:  "000" ,
-                                                      videoId:  "111", title:  "DENEME", image: systemImage!)
+//           DATAYI INDIRME title image gibi
+//        DatabaseManager.shared.insertToDownloadsTable(userId:  "000" ,
+//                                                      videoId:  "11231", title:  "DENEM33E", image: systemImage!)
+//        
+//        DATAYI CEKME
+     var a =   DatabaseManager.shared.fetchDownloadedCourseData(for: "000")
         
-        
+        print(a)
         
 //             LOCAL VIDEO LOAD FUNCS
         //        downloadViewModel.playVideoByFileName(fileName: "test.mp4")
@@ -46,21 +51,36 @@ class VideoLessonViewController: UIViewController {
  
        override func viewDidAppear(_ animated: Bool) {
            super.viewDidAppear(animated)
-//           self.setupVideoPlayer()
-           let systemImage = UIImage(systemName: "star.fill")
-           
+ 
+        
+           let url =  videoLessonViewModel.myCourse?.videoUrl
+           guard let url = url else { return }
+           setupVideoPlayer(videoURL:url)
+                 
 
        }
         
-    
-             func startDownloading() {
-         
-            if let url = URL(string: videoURL) {
-                downloadViewModel.downloadVideo(url: url, videoID: "0")
-              }
-           
-        }
-   
+ 
+    func startDownloading() {
+        
+        guard  let course = videoLessonViewModel.myCourse else { return }
+        guard let videoUrl = course.videoUrl, let url = URL(string: videoUrl) else { return }
+
+         // Toast mesajı: İndirme başladı
+         showToast(message: "İndiriliyor...")
+            
+        let videoId = String(course.videoId!)
+         // İndirme işlemini başlat
+        downloadViewModel.downloadVideo(url: url, videoID: videoId)
+
+         // İndirme tamamlandığında işlem
+         downloadViewModel.onCompletion = { [weak self] message in
+             guard let self = self else { return }
+             DispatchQueue.main.async {
+                 self.showToast(message: "İndirme işlemi tamamlandı")
+             }
+         }
+     }
     
        private func updatePlayerFrame() {
            self.playerLayer?.frame = self.videoView.bounds
@@ -158,12 +178,6 @@ class VideoLessonViewController: UIViewController {
      }
     
     
-    
-    
-    
-    
-    
-    
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         switchToSegment(index: sender.selectedSegmentIndex, animated: true)
 
@@ -219,9 +233,13 @@ class VideoLessonViewController: UIViewController {
     
     
     
-    private lazy var firstViewController: UIViewController = {
-           storyboard?.instantiateViewController(withIdentifier: "FirstSegmentViewController") as! FirstSegmentViewController
-       }()
+    private lazy var firstViewController: VideoPlayListViewController = {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "VideoPlayListViewController") as! VideoPlayListViewController
+        vc.videoPlayListViewModel.setMyCourse(myCourse: videoLessonViewModel.myCourse!)
+        vc.delegate = self // Delegate’i burada bağladık
+        return vc
+    }()
+
        
        private lazy var secondViewController: UIViewController = {
            storyboard?.instantiateViewController(withIdentifier: "SecondSegmentViewController") as! SecondSegmentViewController
@@ -230,5 +248,22 @@ class VideoLessonViewController: UIViewController {
 }
 
  
+
+ 
+
+extension VideoLessonViewController: VideoPlayListDelegate {
+    func didSelectVideo(at index: Int) {
+        print("Video seçildi: \(index)")
+        // İlgili fonksiyonu burada çağırabilirsiniz
+        startPlayingVideo(at: index)
+    }
+    
+    func startPlayingVideo(at index: Int) {
+        guard let course = videoLessonViewModel.myCourse else { return }
+        guard let videoURL = course.videoUrl  else { return }
+        
+        setupVideoPlayer(videoURL: videoURL)
+    }
+}
 
  
