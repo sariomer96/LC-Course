@@ -62,7 +62,7 @@ Video Player Özellikleri
   
 * AVPlayer kullanılarak video stream ediliyor.
 * Video hızlandırma (1.25x, 1.5x, 2x)
-* İleri sarma 
+* İleri geri sarabilme 
 
 🎨 Tema Desteği
 
@@ -82,7 +82,6 @@ Video Player Özellikleri
 
 
 🌐 Network
-
 
 * Offline mod desteği
 * Bağlantı durumu kontrolü
