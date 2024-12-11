@@ -98,6 +98,7 @@ Bu iki  durum için test fonksiyonları yazıldı:
 Yeni versiyonda Yapılabilecekler 
 
   1- Yorum ve puanlama
+  
   2- İndirilen videolar özel bir klasörde ve encrypt halde tutulabilir. 
   
  
