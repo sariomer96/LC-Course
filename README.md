@@ -1,7 +1,8 @@
 LearnConnect
 
 LearnConnect, video tabanlı eğitim içerikleriyle kullanıcıların bilgi yolculuğunu zenginleştiren, kişiselleştirilmiş öğrenme deneyimlerini avuçlarınıza getiren modern bir iOS uygulamasıdır.
- 
+
+Video Linki: https://drive.google.com/file/d/1e8gXIX4BJlWwWw5feJn97Xx_G_3s6QGd/view?usp=sharing
 
 🌟 Özellikler
 
@@ -22,10 +23,10 @@ LearnConnect, video tabanlı eğitim içerikleriyle kullanıcıların bilgi yolc
 🏠 Ana Sayfa
 
 * Kategorize edilmiş içerik gösterimi
-    * Yazılım
-    * Eğitim
-    * Bilim
-    * Müzik
+   * Yazılım
+   * Eğitim
+   * Bilim
+   * Müzik
 
 📚 İçerik Yönetimi
 
@@ -41,7 +42,7 @@ LearnConnect, video tabanlı eğitim içerikleriyle kullanıcıların bilgi yolc
 * Bildirim yönetimi
 
 * Özelleştirilmiş bildirim mesajları:
-    * "Yüzlerce eğitim içeriği seni bekliyor."
+   * "Yüzlerce eğitim içeriği seni bekliyor."
 
 
 🎯 Toast ve Pop Up Bildirimleri
@@ -55,7 +56,7 @@ Aşağıdaki durumlarda toast bildirimleri gösterilir:
 
 Video Player Özellikleri
 
-   
+  
 * AVPlayer kullanılarak video stream ediliyor.
 * Video hızlandırma (1.25x, 1.5x, 2x)
 * İleri sarma 
@@ -86,14 +87,14 @@ Video Player Özellikleri
 
 🌐 Unit Test
 
- Bu iki  durum için test fonksiyonları yazıldı:
+Bu iki  durum için test fonksiyonları yazıldı:
 * Login success 
 * Video indirme
 
 
 Yeni versiyonda Yapılabilecekler 
 
-   1- Yorum ve puanlama
-   2- İndirilen videolar özel bir klasörde ve encrypt halde tutulabilir. 
-   
+  1- Yorum ve puanlama
+  2- İndirilen videolar özel bir klasörde ve encrypt halde tutulabilir. 
   
+ 
