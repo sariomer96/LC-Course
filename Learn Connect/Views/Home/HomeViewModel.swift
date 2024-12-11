@@ -43,8 +43,8 @@ final class HomeViewModel {
         content.title = "Yeni eğitimler başlıyor :)"
         content.body = "Yüzlerce eğitim içeriği seni bekliyor."
         content.sound = .default
-         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 4, repeats: false)
+                                                                // 120
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         
       
         let request = UNNotificationRequest(identifier: "localNotification", content: content, trigger: trigger)
