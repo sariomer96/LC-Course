@@ -2,7 +2,7 @@ LearnConnect
 
 LearnConnect, video tabanlı eğitim içerikleriyle kullanıcıların bilgi yolculuğunu zenginleştiren, kişiselleştirilmiş öğrenme deneyimlerini avuçlarınıza getiren modern bir iOS uygulamasıdır.
 
-Video Linki: https://drive.google.com/file/d/1e8gXIX4BJlWwWw5feJn97Xx_G_3s6QGd/view?usp=sharing
+Video Linki: https://drive.google.com/drive/folders/1PKdxYjQVGWPbVBcWhkUe_kaU9m_g8_wS?usp=sharing
 
 Screenshots: https://drive.google.com/drive/folders/1nAIBzUB4j42lpZh9k4U80oW2JzWWWicz?usp=sharing
 
