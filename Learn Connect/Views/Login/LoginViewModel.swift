@@ -1,7 +1,7 @@
 
 import Foundation
 
-final class LoginViewModel {
+ class LoginViewModel {
     
     let userMail = "userEmail"
     let userPassword = "userPassword"

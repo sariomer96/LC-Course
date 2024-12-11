@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  Learn Connect
-//
-//  Created by Omer on 4.12.2024.
-//
 
 import UIKit
 import Network
@@ -32,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
                         )
                     }
                 }
-            }  
+            }
         }
 
                

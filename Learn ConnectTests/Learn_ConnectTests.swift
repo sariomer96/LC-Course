@@ -1,36 +1,109 @@
 //
-//  Learn_ConnectTests.swift
-//  Learn ConnectTests
-//
-//  Created by Omer on 4.12.2024.
-//
-
 import XCTest
+ 
+import Foundation
+
 @testable import Learn_Connect
 
-final class Learn_ConnectTests: XCTestCase {
+final class MockDatabaseManager: DatabaseManager {
+    var shouldLoginSucceed = false
+    var providedEmail: String?
+    var providedPassword: String?
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override init() {
+        super.init()  
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func loginUser(email: String, password: String, isSuccess: @escaping (Bool) -> ()) {
+        providedEmail = email
+        providedPassword = password
+        isSuccess(shouldLoginSucceed)
+    }
+}
+
+final class LoginViewModelTests: XCTestCase {
+    var viewModel: LoginViewModel!
+    var mockDatabaseManager: MockDatabaseManager!
+
+    override func setUp() {
+        super.setUp()
+        mockDatabaseManager = MockDatabaseManager()
+        viewModel = LoginViewModel()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    override func tearDown() {
+        viewModel = nil
+        mockDatabaseManager = nil
+        super.tearDown()
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLogin_Successful() {
+        // Mock başarıyı döndürecek şekilde ayarlanır
+        mockDatabaseManager.shouldLoginSucceed = true
+
+        let email = "test@example.com"
+        let password = "hashedPassword"
+
+        // Giriş başarılı mı kontrol et
+        let expectation = self.expectation(description: "Login should succeed")
+        viewModel.login(email: email, password: password) { isSuccess in
+            XCTAssertTrue(isSuccess, "Login should succeed with correct credentials")
+            XCTAssertEqual(self.mockDatabaseManager.providedEmail, email, "Email should be passed correctly")
+            XCTAssertEqual(self.mockDatabaseManager.providedPassword, password, "Password should be passed correctly")
+            expectation.fulfill()
         }
+
+        wait(for: [expectation], timeout: 1.0)
     }
 
+    func testLogin_Failure() {
+        // Mock başarısızlığı döndürecek şekilde ayarlanır
+        mockDatabaseManager.shouldLoginSucceed = false
+
+        let email = "wrong@example.com"
+        let password = "wrongPassword"
+
+        // Giriş başarısız mı kontrol et
+        let expectation = self.expectation(description: "Login should fail")
+        viewModel.login(email: email, password: password) { isSuccess in
+            XCTAssertFalse(isSuccess, "Login should fail with incorrect credentials")
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+}
+
+final class LoginViewControllerTests: XCTestCase {
+    var viewController: LoginViewController!
+    var mockViewModel: MockLoginViewModel!
+
+    override func setUp() {
+        super.setUp()
+        // Storyboard üzerinden ViewController oluştur
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        mockViewModel = MockLoginViewModel()
+        viewController.loadViewIfNeeded()
+    }
+
+    func testLoginClicked_Success() {
+        mockViewModel.shouldLoginSucceed = true
+        viewController.emailTF.text = "test@example.com"
+        viewController.passwordTF.text = "password"
+
+        viewController.loginClicked(self)
+
+        XCTAssertTrue(mockViewModel.didCallLogin, "Login method should be called")
+    }
+
+    func testLoginClicked_Failure() {
+        mockViewModel.shouldLoginSucceed = false
+        viewController.emailTF.text = "wrong@example.com"
+        viewController.passwordTF.text = "wrongPassword"
+
+        viewController.loginClicked(self)
+
+        XCTAssertTrue(mockViewModel.didCallLogin, "Login method should be called")
+    }
 }

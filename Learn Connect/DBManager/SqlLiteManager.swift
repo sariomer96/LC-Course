@@ -3,16 +3,16 @@ import UIKit
 import Foundation
 
  
-final class DatabaseManager {
+ class DatabaseManager {
     static let shared = DatabaseManager()
     private var db: OpaquePointer?
     var errorCallback:VoidCallback?
     var successCallback:VoidCallback?
-    private init() {
+     init() {
         openDatabase()
         createTables()
     }
-
+      
     private func openDatabase() {
         let fileURL = try! FileManager.default
             .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
