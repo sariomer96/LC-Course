@@ -1,9 +1,4 @@
-//
-//  JSONDataManager.swift
-//  Learn Connect
-//
-//  Created by Omer on 8.12.2024.
-//
+
 
 import Foundation
  
@@ -24,9 +19,9 @@ final class JSONDataManager {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             let courseContent = try decoder.decode(CourseContent.self, from: data)
-       
+                print("Başarıyla okundu: \(courseContent)")
               return courseContent
-            print("Başarıyla okundu: \(courseContent)")
+
         } catch {
             print("JSON okuma/parsing hatası: \(error)")
         }

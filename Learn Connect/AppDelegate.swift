@@ -18,10 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         monitor.pathUpdateHandler = { path in
-            print(path.status)
+      
             if path.status != .satisfied {
                 DispatchQueue.main.async {
-                    print("bağlantı yok")
+                
                     guard let rootVC = UIApplication.shared.windows.first?.rootViewController else { return }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         ToastManager.shared.showToast(
@@ -32,9 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
                         )
                     }
                 }
-            } else {
-                print("var \(path.status)")
-            }
+            }  
         }
 
                
@@ -59,9 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
          let identifier = response.notification.request.identifier
-            
-         
-
+             
          completionHandler()
      }
     

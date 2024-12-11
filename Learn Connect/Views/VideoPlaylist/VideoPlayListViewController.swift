@@ -1,9 +1,3 @@
-//
-//  FirstSegmentedViewController.swift
-//  Learn Connect
-//
-//  Created by Omer on 6.12.2024.
-//
 
 import UIKit
 
@@ -19,7 +13,7 @@ class VideoPlayListViewController: UIViewController {
         
             tableView.delegate = self
             tableView.dataSource = self
-        print(videoPlayListViewModel.myCourse)
+ 
     
     let nibName = UINib(nibName: "CourseVideosTableViewCell", bundle: nil)
     
@@ -48,8 +42,6 @@ extension VideoPlayListViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.didSelectVideo(at: indexPath.row)
     }
-    
-    
 }
 
 extension VideoPlayListViewController: CourseVideosTableViewCellDelegate {
@@ -65,7 +57,6 @@ extension VideoPlayListViewController: CourseVideosTableViewCellDelegate {
           }
       }
     
-   
 }
 
 

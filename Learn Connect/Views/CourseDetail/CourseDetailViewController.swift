@@ -9,6 +9,7 @@ class CourseDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var courseTitle: String?
     let courseDetailViewModel = CourseDetailViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -33,6 +34,7 @@ class CourseDetailViewController: UIViewController {
     func setCourseName(title: String) {
         self.courseTitle = title
         }
+    
     @IBAction func ClickedWishlist(_ sender: Any) {
  
         courseDetailViewModel.subscribeAndWishListCourse(isLiked: 1, isSub: nil)
@@ -41,11 +43,7 @@ class CourseDetailViewController: UIViewController {
     @IBAction func ClickedSubscribeToCourse(_ sender: Any) {
  
         courseDetailViewModel.subscribeAndWishListCourse(isLiked: nil, isSub: 1)
- 
-       
     }
-    
-  
     func showAlert(message: String, isSuccess: Bool = false) {
         let alert = UIAlertController(title: isSuccess ? " Başarılı" : "Hata",
                                       message: message,

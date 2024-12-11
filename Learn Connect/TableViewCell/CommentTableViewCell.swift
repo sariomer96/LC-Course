@@ -1,10 +1,4 @@
-//
-//  CommentTableViewCell.swift
-//  Learn Connect
-//
-//  Created by Omer on 5.12.2024.
-//
-
+ 
 import UIKit
 
 class CommentTableViewCell: UITableViewCell {

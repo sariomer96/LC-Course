@@ -14,47 +14,13 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationItem.hidesBackButton = true
     }
-    
-    func scheduleLocalNotification() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-            if granted {
-                print("Notification permission granted.")
-            } else if let error = error {
-                print("Permission denied: \(error.localizedDescription)")
-            }
-        }
-        let content = UNMutableNotificationContent()
-        content.title = "Merhaba!"
-        content.body = "Bu bir yerel bildirim örneğidir."
-        content.sound = .default
-         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-        
-        // Bildirim isteği oluştur
-        let request = UNNotificationRequest(identifier: "localNotification", content: content, trigger: trigger)
-        
-        // Bildirimi planla
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("Bildirim planlanamadı: \(error.localizedDescription)")
-            } else {
-                print("Bildirim planlandı!")
-            }
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-           scheduleLocalNotification()
-         
-        
+  
         let isDarkMode = UserDefaults.standard.bool(forKey: "isDarkMode")
            let window = UIApplication.shared.windows.first
            window?.overrideUserInterfaceStyle = isDarkMode ? .dark : .light
- 
-
- 
- 
+  
         
         let isRemembered = UserDefaults.standard.bool(forKey: "isRemembered")
            rememberSwitch.isOn = isRemembered

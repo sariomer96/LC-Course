@@ -11,7 +11,6 @@ protocol VideoPlayListDelegate: AnyObject {
     func didSelectVideo(at index: Int)
 }
 
-
 final class VideoPlayListViewModel {
     var myCourse: MyCourse?
     

@@ -81,9 +81,7 @@ extension MyCourseViewController : UITableViewDataSource,UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let myCourse = myCourseViewModel.myCourses[indexPath.row]
-        
-//        print(myCourseViewModel.courseFilterType)
-
+         
         let videoLesson = storyboard?.instantiateViewController(withIdentifier: "VideoLessonViewController") as! VideoLessonViewController
         videoLesson.videoLessonViewModel.myCourse = myCourse
         
@@ -97,15 +95,11 @@ extension MyCourseViewController : UITableViewDataSource,UITableViewDelegate {
 
  
     }
-   
- 
-    
-    
 }
 
 
 extension MyCourseViewController: UITabBarControllerDelegate {
-    // Tab bar değişikliklerini dinleme
+ 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if viewController == self {
             myCourseViewModel.getAllMyCourse()

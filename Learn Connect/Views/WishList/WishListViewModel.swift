@@ -9,13 +9,13 @@ import Foundation
 
 final class WishListViewModel {
     var myCourses = [MyCourse]()
+    var wishListViewId = "toCourseDetail"
     func getAllMyCourse() {
         let id = UserProfile.shared.user?.id
         
         guard let id = id else { return }
        myCourses = DatabaseManager.shared.getWishListCourses(forUserId: id)
-        
-        print("\(myCourses)")
+         
     }
     
     

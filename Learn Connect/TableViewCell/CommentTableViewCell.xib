@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="240" id="KGk-i7-Jjw" customClass="CommentTableViewCell" customModule="Learn_Connect" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="535" height="240"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="210" id="KGk-i7-Jjw" customClass="CommentTableViewCell" customModule="Learn_Connect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="535" height="210"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="535" height="240"/>
+                <rect key="frame" x="0.0" y="0.0" width="535" height="210"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İsim Soyisim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucp-lT-a39">
@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hew-kO-SYs">
-                        <rect key="frame" x="37" y="97" width="428" height="93"/>
+                        <rect key="frame" x="37" y="93" width="428" height="109"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </string>
                         <color key="textColor" systemColor="labelColor"/>
@@ -41,9 +41,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="ucp-lT-a39" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="1zH-lu-shb"/>
-                    <constraint firstAttribute="bottom" secondItem="hew-kO-SYs" secondAttribute="bottom" constant="50" id="BJn-gt-ZfW"/>
+                    <constraint firstAttribute="bottom" secondItem="hew-kO-SYs" secondAttribute="bottom" constant="8" id="BJn-gt-ZfW"/>
                     <constraint firstItem="ucp-lT-a39" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="CC2-4s-wNE"/>
-                    <constraint firstItem="hew-kO-SYs" firstAttribute="top" secondItem="hE2-iu-4BV" secondAttribute="bottom" constant="24" id="Gl9-g3-FYV"/>
+                    <constraint firstItem="hew-kO-SYs" firstAttribute="top" secondItem="hE2-iu-4BV" secondAttribute="bottom" constant="20" id="Gl9-g3-FYV"/>
                     <constraint firstItem="hew-kO-SYs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="37" id="N7K-iU-lIa"/>
                     <constraint firstItem="hE2-iu-4BV" firstAttribute="top" secondItem="ucp-lT-a39" secondAttribute="bottom" constant="8" symbolic="YES" id="XfM-F3-AdK"/>
                     <constraint firstAttribute="trailing" secondItem="hew-kO-SYs" secondAttribute="trailing" constant="70" id="jKY-3G-WmQ"/>

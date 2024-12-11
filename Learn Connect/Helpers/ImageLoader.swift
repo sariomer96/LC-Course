@@ -1,9 +1,3 @@
-//
-//  ImageLoader.swift
-//  Learn Connect
-//
-//  Created by Omer on 9.12.2024.
-//
 
 import Foundation
 import UIKit

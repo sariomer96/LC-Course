@@ -10,7 +10,9 @@ import UIKit
 class SecondSegmentViewController: UIViewController {
  
     @IBOutlet weak var tableView: UITableView!
-    let textList = ["Yorum yap ve degerlendir","Favorilere ekle"]
+    let textList = ["Yorum yap ve degerlendir","Favorilere ekle", "Kurs Sertifikası", "Duyurular"]
+    let imgList = ["note.text","star.fill" , "doc.richtext.he" , "bell.fill" ]
+                   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +28,7 @@ class SecondSegmentViewController: UIViewController {
 
 extension SecondSegmentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 4
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -38,7 +40,8 @@ extension SecondSegmentViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "SecondSegmentTableViewCell", for: indexPath)
         as! SecondSegmentTableViewCell
         
-        cell.icon.image = UIImage(systemName: "star.fill")
+        let imgName = imgList[indexPath.row]
+        cell.icon.image = UIImage(systemName: imgName)
         cell.textLbl.text = textList[indexPath.row]
         return cell
     }

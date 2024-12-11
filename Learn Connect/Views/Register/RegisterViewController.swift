@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: BaseViewController {
+class RegisterViewController: UIViewController {
     
    
     
@@ -28,12 +28,16 @@ class RegisterViewController: BaseViewController {
     
     @IBAction func nameTF(_ sender: Any) {
     }
+    
     @IBAction func passwordTF(_ sender: Any) {
     }
+    
     @IBAction func passwordConfirmTF(_ sender: Any) {
     }
+    
     @IBAction func surnameTF(_ sender: Any) {
     }
+    
     let registerViewModel = RegisterViewModel()
     
     override func viewDidLoad() {

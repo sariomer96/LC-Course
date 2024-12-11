@@ -1,9 +1,3 @@
-//
-//  MyCourseViewModel.swift
-//  Learn Connect
-//
-//  Created by Omer on 9.12.2024.
-//
 
 import Foundation
 
@@ -23,9 +17,7 @@ final class MyCourseViewModel {
         
         guard let id = id else { return }
        myCourses = DatabaseManager.shared.getSubscribedCourses(forUserId: id)
-          
-        
-        print("\(myCourses)")
+           
     }
     
     func getDownloadedCourse() {

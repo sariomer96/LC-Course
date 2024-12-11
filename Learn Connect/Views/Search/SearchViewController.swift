@@ -1,9 +1,3 @@
-//
-//  SearchViewController.swift
-//  Learn Connect
-//
-//  Created by Omer on 10.12.2024.
-//
 
 import UIKit
 
@@ -20,7 +14,8 @@ class SearchViewController: UIViewController  {
         tableView.dataSource = self
         tableView.register(WishListTableViewCell.nib(), forCellReuseIdentifier:
                             WishListTableViewCell.identifier)
-          searchViewModel.getAllCourse()
+          
+        searchViewModel.getAllCourse()
           
     }
     

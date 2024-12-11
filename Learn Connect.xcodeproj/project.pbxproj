@@ -16,7 +16,6 @@
 		172476482D01C4A800982CA6 /* CourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 172476462D01C4A800982CA6 /* CourseCollectionViewCell.xib */; };
 		179523822D02F9E700A1A973 /* SecondSegmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523802D02F9E700A1A973 /* SecondSegmentTableViewCell.swift */; };
 		179523832D02F9E700A1A973 /* SecondSegmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 179523812D02F9E700A1A973 /* SecondSegmentTableViewCell.xib */; };
-		179523852D031F1200A1A973 /* CommentAndRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523842D031F1200A1A973 /* CommentAndRateViewController.swift */; };
 		1795238B2D03777300A1A973 /* SqlLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795238A2D03777300A1A973 /* SqlLiteManager.swift */; };
 		1795238D2D03884A00A1A973 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1795238C2D03884A00A1A973 /* RegisterViewController.swift */; };
 		179523912D03896000A1A973 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523902D03896000A1A973 /* RegisterViewModel.swift */; };
@@ -40,7 +39,6 @@
 		179523F12D043DB600A1A973 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F02D043DB600A1A973 /* LoginViewModel.swift */; };
 		179523F22D043DB600A1A973 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F02D043DB600A1A973 /* LoginViewModel.swift */; };
 		179523F52D04586500A1A973 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F42D04586500A1A973 /* MyProfileViewController.swift */; };
-		179523F62D04586500A1A973 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F42D04586500A1A973 /* MyProfileViewController.swift */; };
 		179523F92D04609000A1A973 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F82D04609000A1A973 /* Users.swift */; };
 		179523FA2D04609000A1A973 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523F82D04609000A1A973 /* Users.swift */; };
 		179523FC2D0460C500A1A973 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179523FB2D0460C500A1A973 /* Course.swift */; };
@@ -66,7 +64,6 @@
 		17DF19552D056B84002EAB90 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19542D056B84002EAB90 /* HomeViewModel.swift */; };
 		17DF19592D056E3A002EAB90 /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19582D056E3A002EAB90 /* JSONDataManager.swift */; };
 		17DF195B2D056E53002EAB90 /* CourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF195A2D056E53002EAB90 /* CourseContent.swift */; };
-		17DF19612D0574EE002EAB90 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19602D0574EE002EAB90 /* TestViewController.swift */; };
 		17DF19632D057CB6002EAB90 /* Jsons in Resources */ = {isa = PBXBuildFile; fileRef = 17DF19622D057CB6002EAB90 /* Jsons */; };
 		17DF19652D05B6E6002EAB90 /* DownloadVideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DF19642D05B6E6002EAB90 /* DownloadVideoHelper.swift */; };
 		17E96BA22D076D2E0000C441 /* MyCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E96BA12D076D2E0000C441 /* MyCourse.swift */; };
@@ -79,6 +76,7 @@
 		17F47C942D082C3B00670F56 /* VideoLessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F47C932D082C3B00670F56 /* VideoLessonViewModel.swift */; };
 		17F47C962D08304C00670F56 /* VideoPlayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F47C952D08304C00670F56 /* VideoPlayListViewModel.swift */; };
 		17F47C992D08DE8400670F56 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F47C982D08DE8400670F56 /* NetworkManager.swift */; };
+		17F47C9D2D090DE800670F56 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F47C9C2D090DE800670F56 /* MyProfileViewModel.swift */; };
 		17FA8D1D2D00DB1100050A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */; };
 		17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */; };
 		17FA8D212D00DB1100050A10 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D202D00DB1100050A10 /* LoginViewController.swift */; };
@@ -88,7 +86,6 @@
 		17FA8D342D00DB1300050A10 /* Learn_ConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D332D00DB1300050A10 /* Learn_ConnectTests.swift */; };
 		17FA8D3E2D00DB1300050A10 /* Learn_ConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D3D2D00DB1300050A10 /* Learn_ConnectUITests.swift */; };
 		17FA8D402D00DB1300050A10 /* Learn_ConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D3F2D00DB1300050A10 /* Learn_ConnectUITestsLaunchTests.swift */; };
-		17FA8D4D2D00DBEB00050A10 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FA8D4C2D00DBEB00050A10 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +115,6 @@
 		172476462D01C4A800982CA6 /* CourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseCollectionViewCell.xib; sourceTree = "<group>"; };
 		179523802D02F9E700A1A973 /* SecondSegmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegmentTableViewCell.swift; sourceTree = "<group>"; };
 		179523812D02F9E700A1A973 /* SecondSegmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSegmentTableViewCell.xib; sourceTree = "<group>"; };
-		179523842D031F1200A1A973 /* CommentAndRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAndRateViewController.swift; sourceTree = "<group>"; };
 		1795238A2D03777300A1A973 /* SqlLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteManager.swift; sourceTree = "<group>"; };
 		1795238C2D03884A00A1A973 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		179523902D03896000A1A973 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -160,7 +156,6 @@
 		17DF19542D056B84002EAB90 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		17DF19582D056E3A002EAB90 /* JSONDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
 		17DF195A2D056E53002EAB90 /* CourseContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseContent.swift; sourceTree = "<group>"; };
-		17DF19602D0574EE002EAB90 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		17DF19622D057CB6002EAB90 /* Jsons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Jsons; sourceTree = "<group>"; };
 		17DF19642D05B6E6002EAB90 /* DownloadVideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadVideoHelper.swift; sourceTree = "<group>"; };
 		17E96BA12D076D2E0000C441 /* MyCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourse.swift; sourceTree = "<group>"; };
@@ -173,6 +168,7 @@
 		17F47C932D082C3B00670F56 /* VideoLessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLessonViewModel.swift; sourceTree = "<group>"; };
 		17F47C952D08304C00670F56 /* VideoPlayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayListViewModel.swift; sourceTree = "<group>"; };
 		17F47C982D08DE8400670F56 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		17F47C9C2D090DE800670F56 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		17FA8D192D00DB1100050A10 /* Learn Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,7 +182,6 @@
 		17FA8D392D00DB1300050A10 /* Learn ConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Learn ConnectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FA8D3D2D00DB1300050A10 /* Learn_ConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn_ConnectUITests.swift; sourceTree = "<group>"; };
 		17FA8D3F2D00DB1300050A10 /* Learn_ConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn_ConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		17FA8D4C2D00DBEB00050A10 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,28 +219,17 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
-		179523892D03774B00A1A973 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				17DF19602D0574EE002EAB90 /* TestViewController.swift */,
-				179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */,
-				17FA8D4C2D00DBEB00050A10 /* BaseViewController.swift */,
-				179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */,
-				179F12F52D02492500442CCF /* VideoLessonViewController.swift */,
-				179523842D031F1200A1A973 /* CommentAndRateViewController.swift */,
-				179523F42D04586500A1A973 /* MyProfileViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		1795238E2D03891C00A1A973 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				17F47CA12D094FB200670F56 /* MyProfile */,
+				179F12FD2D02E9CD00442CCF /* SecondSegmentViewController.swift */,
+				17F47C9F2D094F1B00670F56 /* VideoLesson */,
+				17F47C9E2D094E7B00670F56 /* CourseDetail */,
 				17F47C972D08306B00670F56 /* VideoPlaylist */,
 				17E96BAB2D0795630000C441 /* Search */,
 				17E96BAA2D077ACD0000C441 /* WishList */,
 				17E96BA72D07726F0000C441 /* MyCourse */,
-				17D404B22D07041F00EF36CF /* CourseDetailViewModel.swift */,
 				17DF19532D056B6D002EAB90 /* Home */,
 				179523F32D043DBB00A1A973 /* Login */,
 				1795238F2D03894C00A1A973 /* Register */,
@@ -364,6 +348,52 @@
 			path = VideoPlaylist;
 			sourceTree = "<group>";
 		};
+		17F47C9E2D094E7B00670F56 /* CourseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				17D404B22D07041F00EF36CF /* CourseDetailViewModel.swift */,
+				179F12F32D023EFB00442CCF /* CourseDetailViewController.swift */,
+			);
+			path = CourseDetail;
+			sourceTree = "<group>";
+		};
+		17F47C9F2D094F1B00670F56 /* VideoLesson */ = {
+			isa = PBXGroup;
+			children = (
+				17F47C932D082C3B00670F56 /* VideoLessonViewModel.swift */,
+				179F12F52D02492500442CCF /* VideoLessonViewController.swift */,
+			);
+			path = VideoLesson;
+			sourceTree = "<group>";
+		};
+		17F47CA02D094F8000670F56 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				179523ED2D043A5100A1A973 /* Helper.swift */,
+				17DF19642D05B6E6002EAB90 /* DownloadVideoHelper.swift */,
+				17D404B02D06D33000EF36CF /* ImageLoader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		17F47CA12D094FB200670F56 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				179523F42D04586500A1A973 /* MyProfileViewController.swift */,
+				17F47C9C2D090DE800670F56 /* MyProfileViewModel.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		17F47CA22D094FDF00670F56 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				17DF19582D056E3A002EAB90 /* JSONDataManager.swift */,
+				17F47C982D08DE8400670F56 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		17FA8D102D00DB1100050A10 = {
 			isa = PBXGroup;
 			children = (
@@ -388,13 +418,14 @@
 		17FA8D1B2D00DB1100050A10 /* Learn Connect */ = {
 			isa = PBXGroup;
 			children = (
-				17DF19582D056E3A002EAB90 /* JSONDataManager.swift */,
+				17F47CA22D094FDF00670F56 /* Managers */,
+				17F47CA02D094F8000670F56 /* Helpers */,
 				17DF19622D057CB6002EAB90 /* Jsons */,
 				179523F72D04607A00A1A973 /* Models */,
 				179523922D03910700A1A973 /* DBManager */,
 				1795238E2D03891C00A1A973 /* Views */,
-				179523892D03774B00A1A973 /* ViewController */,
 				172476442D01C47700982CA6 /* CollectionViewCell */,
+				17E96BA32D076F930000C441 /* UserProfile.swift */,
 				17DCE5C02D0192B900C59273 /* TableViewCell */,
 				17FA8D1C2D00DB1100050A10 /* AppDelegate.swift */,
 				17FA8D1E2D00DB1100050A10 /* SceneDelegate.swift */,
@@ -416,12 +447,6 @@
 				179523D32D04334100A1A973 /* FMResultSet.m */,
 				179523CE2D042E4300A1A973 /* Temp.m */,
 				179523D12D042E9100A1A973 /* Learn Connect-Bridging-Header.h */,
-				179523ED2D043A5100A1A973 /* Helper.swift */,
-				17DF19642D05B6E6002EAB90 /* DownloadVideoHelper.swift */,
-				17D404B02D06D33000EF36CF /* ImageLoader.swift */,
-				17E96BA32D076F930000C441 /* UserProfile.swift */,
-				17F47C932D082C3B00670F56 /* VideoLessonViewModel.swift */,
-				17F47C982D08DE8400670F56 /* NetworkManager.swift */,
 			);
 			path = "Learn Connect";
 			sourceTree = "<group>";
@@ -605,10 +630,10 @@
 				179F12F42D023EFB00442CCF /* CourseDetailViewController.swift in Sources */,
 				179523FF2D0460EE00A1A973 /* UserCourse.swift in Sources */,
 				179F12F92D02E7B600442CCF /* CourseVideosTableViewCell.swift in Sources */,
+				17F47C9D2D090DE800670F56 /* MyProfileViewModel.swift in Sources */,
 				179524022D04610600A1A973 /* Video.swift in Sources */,
 				179523CF2D042E4300A1A973 /* Temp.m in Sources */,
 				17F47C992D08DE8400670F56 /* NetworkManager.swift in Sources */,
-				179523852D031F1200A1A973 /* CommentAndRateViewController.swift in Sources */,
 				17E96BA42D076F930000C441 /* UserProfile.swift in Sources */,
 				17E96BAF2D07957E0000C441 /* SearchViewModel.swift in Sources */,
 				172476472D01C4A800982CA6 /* CourseCollectionViewCell.swift in Sources */,
@@ -619,7 +644,6 @@
 				17DF19552D056B84002EAB90 /* HomeViewModel.swift in Sources */,
 				17D404B32D07041F00EF36CF /* CourseDetailViewModel.swift in Sources */,
 				179523EE2D043A5100A1A973 /* Helper.swift in Sources */,
-				17FA8D4D2D00DBEB00050A10 /* BaseViewController.swift in Sources */,
 				17E96BA92D077AB90000C441 /* WishListViewModel.swift in Sources */,
 				17DCE5C32D0192E200C59273 /* WishListTableViewCell.swift in Sources */,
 				172476432D01C27100982CA6 /* HomeViewController.swift in Sources */,
@@ -630,7 +654,6 @@
 				179523F12D043DB600A1A973 /* LoginViewModel.swift in Sources */,
 				179523DD2D04334200A1A973 /* FMResultSet.m in Sources */,
 				179523FC2D0460C500A1A973 /* Course.swift in Sources */,
-				17DF19612D0574EE002EAB90 /* TestViewController.swift in Sources */,
 				17E96BA62D0772490000C441 /* MyCourseViewModel.swift in Sources */,
 				179523912D03896000A1A973 /* RegisterViewModel.swift in Sources */,
 				17FA8D1F2D00DB1100050A10 /* SceneDelegate.swift in Sources */,
@@ -652,7 +675,6 @@
 			files = (
 				179524002D0460EE00A1A973 /* UserCourse.swift in Sources */,
 				179523FD2D0460C500A1A973 /* Course.swift in Sources */,
-				179523F62D04586500A1A973 /* MyProfileViewController.swift in Sources */,
 				179523DE2D04334200A1A973 /* FMResultSet.m in Sources */,
 				17FA8D342D00DB1300050A10 /* Learn_ConnectTests.swift in Sources */,
 				179524032D04610600A1A973 /* Video.swift in Sources */,

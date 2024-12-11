@@ -1,9 +1,3 @@
-//
-//  WishListViewController.swift
-//  Learn Connect
-//
-//  Created by Omer on 5.12.2024.
-//
 
 import UIKit
 
@@ -11,7 +5,7 @@ class WishListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var wishListViewModel = WishListViewModel()
-     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -27,10 +21,6 @@ class WishListViewController: UIViewController {
         wishListViewModel.getAllMyCourse()
         tableView.reloadData()
     }
-    
-
- 
-
 }
 
 extension WishListViewController : UITableViewDataSource, UITableViewDelegate {
@@ -49,32 +39,30 @@ extension WishListViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         let course =  wishListViewModel.myCourses[indexPath.row]
-           performSegue(withIdentifier: "toCourseDetail", sender: course)
+        performSegue(withIdentifier: wishListViewModel.wishListViewId, sender: course)
     }
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCourseDetail" {
+        if segue.identifier == wishListViewModel.wishListViewId {
                if let destinationVC = segue.destination as? CourseDetailViewController,
                  let course = sender as? MyCourse {
-                     print("burdaaa")
+           
                    let imageUrl =   course.imageUrl
                   destinationVC.configure(with: imageUrl)
                   destinationVC.setCourseName(title: course.title ?? "Kurs Adi")
-//                  destinationVC.courseDetailViewModel.course = course
+ 
               }
           }
     }
   
-}
-
-
+} 
 extension WishListViewController: UITabBarControllerDelegate {
    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if viewController == self {
             wishListViewModel.getAllMyCourse()
             tableView.reloadData()
-            print("secildi")
+ 
         }
    }
 }

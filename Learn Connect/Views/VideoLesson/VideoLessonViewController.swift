@@ -14,7 +14,7 @@ class VideoLessonViewController: UIViewController {
     private var player: AVPlayer?
     private var timeObserverToken: Any?
 
-    var downloadViewModel = DownloadVideoHelper()
+    var downloadVieHelper = DownloadVideoHelper()
     var videoLessonViewModel = VideoLessonViewModel()
     let userDefaults = UserDefaults.standard
     var videoUrl:String?
@@ -23,21 +23,19 @@ class VideoLessonViewController: UIViewController {
         super.viewDidLoad()
         switchToSegment(index: 0, animated: false)
  
-        downloadViewModel.onCompletion = { url in
+        downloadVieHelper.onCompletion = { url in
             self.videoUrl = url
-            print("ZAAAA")
-            let u = url!
-            print("\(u) AFADGADHAH ")
-            self.setupVideoPlayer(videoURL: u)
-            print("\(self.videoUrl) AAAAAAA")
+          
+            self.setupVideoPlayer(videoURL: url!)
+            
         }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-          print("afds")
+     
         if videoLessonViewModel.isDownloaded == true {
-            print("trueee")
+       
             let id = videoLessonViewModel.myCourse?.videoId
             
             let strId = String(id!)
@@ -117,7 +115,7 @@ class VideoLessonViewController: UIViewController {
         }
     }
 
-    func startDownloadingVideoAndImage() {
+    func startDownloadingVideoAndImage() {   // Video ve Kapak Fotoğrafı İndirme İşlemi
         guard let course = videoLessonViewModel.myCourse,
               let videoUrlString = course.videoUrl,
               let videoUrl = URL(string: videoUrlString),
@@ -133,7 +131,7 @@ class VideoLessonViewController: UIViewController {
         var downloadedImage: UIImage?
 
         group.enter()
-        downloadViewModel.downloadVideo(url: videoUrl, videoID: videoId) {
+        downloadVieHelper.downloadVideo(url: videoUrl, videoID: videoId) {
             group.leave()
         }
 

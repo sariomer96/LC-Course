@@ -13,7 +13,7 @@ class Helper {
    
 
     func hashPassword(password: String) -> String? {
-        // Şifrenin UTF-8 formatında verisini al
+    
         guard let passwordData = password.data(using: .utf8) else {
             return nil
         }
@@ -26,10 +26,5 @@ class Helper {
         let hashString = hash.map { String(format: "%02hhx", $0) }.joined()
         return hashString
     }
-
- //    if let hashedPassword = hashPassword(password: "mySecurePassword123") {
-//        print("Hashed Password: \(hashedPassword)")
-//    }
-
-     
+      
 }

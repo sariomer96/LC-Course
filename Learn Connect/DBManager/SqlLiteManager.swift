@@ -128,17 +128,17 @@ final class DatabaseManager {
         var donuts: [LocalCourseData] = []
 
         if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
-            // userId parametresini bağla
+       
             sqlite3_bind_text(statement, 1, (userId as NSString).utf8String, -1, nil)
 
             while sqlite3_step(statement) == SQLITE_ROW {
-                // userId sütununu oku
+  
                 let fetchedUserId = String(cString: sqlite3_column_text(statement, 0))
-                // videoId sütununu oku
+       
                 let videoId = String(cString: sqlite3_column_text(statement, 1))
-                // title sütununu oku
+   
                 let title = String(cString: sqlite3_column_text(statement, 2))
-                // image sütununu oku
+            
                 if let imageData = sqlite3_column_blob(statement, 3) {
                     let imageSize = sqlite3_column_bytes(statement, 3)
                     let data = Data(bytes: imageData, count: Int(imageSize))
@@ -176,7 +176,7 @@ final class DatabaseManager {
         """
         var statement: OpaquePointer?
 
-        // 1. Kayıt kontrolü
+      
         if sqlite3_prepare_v2(db, selectQuery, -1, &statement, nil) == SQLITE_OK {
             sqlite3_bind_int(statement, 1, Int32(userId))
             sqlite3_bind_int(statement, 2, Int32(videoId))
@@ -337,18 +337,18 @@ final class DatabaseManager {
 
         if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
             while sqlite3_step(statement) == SQLITE_ROW {
-                // userId sütununu oku
+         
                 let userId = String(cString: sqlite3_column_text(statement, 0))
-                // videoId sütununu oku
+      
                 let videoId = String(cString: sqlite3_column_text(statement, 1))
-                // title sütununu oku
+         
                 let title = String(cString: sqlite3_column_text(statement, 2))
-                // image sütununu oku
+         
                 if let imageData = sqlite3_column_blob(statement, 3) {
                     let imageSize = sqlite3_column_bytes(statement, 3)
                     let data = Data(bytes: imageData, count: Int(imageSize))
                     if let image = UIImage(data: data) {
-                        // Her bir satırı tuple olarak ekle
+                      
                         downloads.append((userId: userId, videoId: videoId, title: title, image: image))
                     }
                 }
@@ -358,7 +358,7 @@ final class DatabaseManager {
             errorCallback?("Sorgu hazırlanamadı.")
         }
 
-        // Belleği serbest bırakma
+ 
         sqlite3_finalize(statement)
         return downloads
     }
@@ -381,7 +381,7 @@ final class DatabaseManager {
         sqlite3_bind_text(statement, 4, (surname as NSString).utf8String, -1, unsafeBitCast(-1, to: sqlite3_destructor_type.self))
 
 
-        // SQL ifadesini yürütme
+        
         if sqlite3_step(statement) == SQLITE_DONE {
             print("User inserted successfully.")
             isSuccess(true)
@@ -400,7 +400,7 @@ final class DatabaseManager {
         let query = "SELECT id, email, password, name, surname FROM User WHERE email = ?;"
         var statement: OpaquePointer?
 
-        // Kullanıcı bilgilerini tutacak değişken
+        
         var user: User?
 
         // SQL sorgusunu hazırlama
@@ -416,7 +416,7 @@ final class DatabaseManager {
                 let name = String(cString: sqlite3_column_text(statement, 3))
                 let surname = String(cString: sqlite3_column_text(statement, 4))
 
-                // User modeli oluştur
+          
                 user = User(id: id, email: email, password: password, name: name, surname: surname)
             } else {
                 print("No user found with the provided email.")
@@ -427,7 +427,7 @@ final class DatabaseManager {
          
         }
 
-        // Sorguyu temizle
+ 
         sqlite3_finalize(statement)
 
         return user
@@ -443,7 +443,7 @@ final class DatabaseManager {
         let query = "SELECT * FROM User WHERE email = ? AND password = ?;"
         var statement: OpaquePointer?
 
-        // Hazırlama işlemi
+ 
         if sqlite3_prepare_v2(db, query, -1, &statement, nil) != SQLITE_OK {
             let errorMessage = String(cString: sqlite3_errmsg(db))
             print("Error preparing login statement: \(errorMessage)")
@@ -451,17 +451,17 @@ final class DatabaseManager {
             return
         }
 
-        // Parametreleri bağlama
+    
         sqlite3_bind_text(statement, 1, (email as NSString).utf8String, -1, unsafeBitCast(-1, to: sqlite3_destructor_type.self))
         sqlite3_bind_text(statement, 2, (password as NSString).utf8String, -1, unsafeBitCast(-1, to: sqlite3_destructor_type.self))
 
-        // Sorguyu çalıştırma
+  
         if sqlite3_step(statement) == SQLITE_ROW {
-            // Kullanıcı bulundu
+    
             print("Login successful!")
             isSuccess(true)
         } else {
-            // Kullanıcı bulunamadı veya şifre yanlış
+      
             print("Invalid email or password.")
             isSuccess(false)
         }

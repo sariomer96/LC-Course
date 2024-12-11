@@ -1,23 +1,8 @@
-//
-//  RegisterViewModel.swift
-//  Learn Connect
-//
-//  Created by Omer on 6.12.2024.
-//
 
 import Foundation
 
 final class RegisterViewModel {
-     
-    init() {
-//        print(DatabaseManager.shared.fetchAllUsers())
-        
-//        DatabaseManager.shared.insertUser(email: "john.doe@example.com", password: "password123", name: "John", surname: "Doe") { success in
-//            print(success ? "User added successfully." : "Failed to add user.")
-//        }
-
-    }
-    
+      
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z.-_%+]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
