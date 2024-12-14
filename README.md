@@ -7,6 +7,35 @@ Video Linki: https://drive.google.com/drive/folders/1PKdxYjQVGWPbVBcWhkUe_kaU9m_
 Screenshots: https://drive.google.com/drive/folders/1nAIBzUB4j42lpZh9k4U80oW2JzWWWicz?usp=sharing
 
 
+Kurulum Adımları:
+
+ 1- Gereksinimler
+ 
+  Xcode 15.1
+  
+  Swift Package Manager
+  
+
+
+2- Proje Klonlama
+
+
+    git clone https://github.com/sariomer96/LC-Course.git
+  
+    cd LC-Course
+  
+3- Proje Import
+
+  * Learn Connect.xcodeproj dosyasına tıklayarak xcode üzerinde açın. 
+  * Simülatör veya gerçek cihaz seçimi yaparak projeyi çalıştırın.
+    
+3- SQLite Kurulumu 
+
+   * Xcode üzerinden File > Swift Packages > Add Dependency menüsüne gidin.
+   * SQLite kütüphanesini ekleyin :  Search kısmına linki aşağıdaki linki yapıştırın.
+     
+         https://github.com/stephencelis/SQLite.swift.git
+    
 🌟 Özellikler
 
 📱 Kullanıcı Arayüzü
