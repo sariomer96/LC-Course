@@ -29,7 +29,7 @@ Kurulum Adımları:
   * Learn Connect.xcodeproj dosyasına tıklayarak xcode üzerinde açın. 
   * Simülatör veya gerçek cihaz seçimi yaparak projeyi çalıştırın.
     
-3- SQLite Kurulumu 
+4- SQLite Kurulumu 
 
    * Xcode üzerinden File > Swift Packages > Add Dependency menüsüne gidin.
    * SQLite kütüphanesini ekleyin :  Search kısmına linki aşağıdaki linki yapıştırın.
